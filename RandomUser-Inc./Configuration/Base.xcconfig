@@ -1,0 +1,11 @@
+//
+//  Base.xcconfig
+//  RandomUser-Inc.
+//
+//  Created by Pol Valls Ortiz on 1/4/22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+BASE_URL = https:/$()/randomuser.me/API
