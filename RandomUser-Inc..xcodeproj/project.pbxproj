@@ -10,6 +10,17 @@
 		2BC71DCB654D985EA1E9D2E9 /* Pods_RandomUser_Inc__RandomUser_Inc_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5353AA82E722CF6594780FBB /* Pods_RandomUser_Inc__RandomUser_Inc_UITests.framework */; };
 		34EE763091B29565EC7B1FBF /* Pods_RandomUser_Inc_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56CD7448FEB1D55296BD408B /* Pods_RandomUser_Inc_.framework */; };
 		BC2FC52B27F70CF100521784 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FC52A27F70CF100521784 /* Config.swift */; };
+		BC2FC53727F78EAD00521784 /* LocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FC53627F78EAD00521784 /* LocalManager.swift */; };
+		BC2FC53927F78ECC00521784 /* UserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FC53827F78ECC00521784 /* UserDefaultsRepository.swift */; };
+		BC2FC53B27F78F2900521784 /* DatabaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FC53A27F78F2900521784 /* DatabaseRepository.swift */; };
+		BC76B39127F7908B00489B57 /* MockLocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B39027F7908B00489B57 /* MockLocalManager.swift */; };
+		BC76B39327F7929700489B57 /* MockUserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B39227F7929700489B57 /* MockUserDefaultsRepository.swift */; };
+		BC76B39527F792C500489B57 /* MockDatabaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B39427F792C500489B57 /* MockDatabaseRepository.swift */; };
+		BC76B39B27F7936300489B57 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B39A27F7936300489B57 /* NetworkManager.swift */; };
+		BC76B39D27F7942800489B57 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B39C27F7942800489B57 /* BaseRequest.swift */; };
+		BC76B3A027F795EF00489B57 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B39F27F795EF00489B57 /* BaseRepository.swift */; };
+		BC76B3A327F796F900489B57 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3A227F796F900489B57 /* MockNetworkManager.swift */; };
+		BC76B3A627F7981600489B57 /* MockBaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3A527F7981600489B57 /* MockBaseRepository.swift */; };
 		BCE0D97427F6D6AA00CDBB6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE0D97327F6D6AA00CDBB6C /* AppDelegate.swift */; };
 		BCE0D97627F6D6AA00CDBB6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE0D97527F6D6AA00CDBB6C /* SceneDelegate.swift */; };
 		BCE0D97827F6D6AA00CDBB6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE0D97727F6D6AA00CDBB6C /* ViewController.swift */; };
@@ -51,6 +62,17 @@
 		BC283F7027F706C20054FBC5 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		BC2FC52A27F70CF100521784 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		BC2FC52C27F70D0900521784 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+		BC2FC53627F78EAD00521784 /* LocalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalManager.swift; sourceTree = "<group>"; };
+		BC2FC53827F78ECC00521784 /* UserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepository.swift; sourceTree = "<group>"; };
+		BC2FC53A27F78F2900521784 /* DatabaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRepository.swift; sourceTree = "<group>"; };
+		BC76B39027F7908B00489B57 /* MockLocalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocalManager.swift; sourceTree = "<group>"; };
+		BC76B39227F7929700489B57 /* MockUserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaultsRepository.swift; sourceTree = "<group>"; };
+		BC76B39427F792C500489B57 /* MockDatabaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDatabaseRepository.swift; sourceTree = "<group>"; };
+		BC76B39A27F7936300489B57 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BC76B39C27F7942800489B57 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		BC76B39F27F795EF00489B57 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
+		BC76B3A227F796F900489B57 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		BC76B3A527F7981600489B57 /* MockBaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBaseRepository.swift; sourceTree = "<group>"; };
 		BCE0D97027F6D6AA00CDBB6C /* RandomUser-Inc..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RandomUser-Inc..app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE0D97327F6D6AA00CDBB6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE0D97527F6D6AA00CDBB6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +152,150 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		BC2FC53227F78E6500521784 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				BC76B38E27F7905B00489B57 /* MockData */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		BC2FC53427F78E9600521784 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BC76B39E27F795DC00489B57 /* Repository */,
+				BC76B39627F7931000489B57 /* Network */,
+				BC2FC53527F78E9F00521784 /* Local */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BC2FC53527F78E9F00521784 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				BC2FC53627F78EAD00521784 /* LocalManager.swift */,
+				BC2FC53827F78ECC00521784 /* UserDefaultsRepository.swift */,
+				BC2FC53A27F78F2900521784 /* DatabaseRepository.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		BC76B38E27F7905B00489B57 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				BC76B3A427F7980700489B57 /* Repository */,
+				BC76B3A127F796BC00489B57 /* Network */,
+				BC76B38F27F7906200489B57 /* Local */,
+			);
+			path = MockData;
+			sourceTree = "<group>";
+		};
+		BC76B38F27F7906200489B57 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				BC76B39027F7908B00489B57 /* MockLocalManager.swift */,
+				BC76B39227F7929700489B57 /* MockUserDefaultsRepository.swift */,
+				BC76B39427F792C500489B57 /* MockDatabaseRepository.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		BC76B39627F7931000489B57 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BC76B39727F7933800489B57 /* Entities */,
+				BC76B39827F7934100489B57 /* Requests */,
+				BC76B39927F7934D00489B57 /* Targets */,
+				BC76B39A27F7936300489B57 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BC76B39727F7933800489B57 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		BC76B39827F7934100489B57 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				BC76B39C27F7942800489B57 /* BaseRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		BC76B39927F7934D00489B57 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		BC76B39E27F795DC00489B57 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				BC76B39F27F795EF00489B57 /* BaseRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		BC76B3A127F796BC00489B57 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BC76B3A227F796F900489B57 /* MockNetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BC76B3A427F7980700489B57 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				BC76B3A527F7981600489B57 /* MockBaseRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		BC76B3A727F7996600489B57 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BC76B3A827F7997100489B57 /* TestData */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		BC76B3A827F7997100489B57 /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				BC76B3AA27F7999A00489B57 /* Repository */,
+				BC76B3A927F7998600489B57 /* Network */,
+				BC76B3AB27F799A400489B57 /* Local */,
+			);
+			path = TestData;
+			sourceTree = "<group>";
+		};
+		BC76B3A927F7998600489B57 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BC76B3AA27F7999A00489B57 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		BC76B3AB27F799A400489B57 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
 		BCE0D96727F6D6A900CDBB6C = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +321,7 @@
 		BCE0D97227F6D6AA00CDBB6C /* RandomUser-Inc. */ = {
 			isa = PBXGroup;
 			children = (
+				BC2FC53427F78E9600521784 /* Data */,
 				BC283F6E27F7068A0054FBC5 /* Configuration */,
 				BCE0D97327F6D6AA00CDBB6C /* AppDelegate.swift */,
 				BCE0D97527F6D6AA00CDBB6C /* SceneDelegate.swift */,
@@ -170,6 +337,8 @@
 		BCE0D98927F6D6AC00CDBB6C /* RandomUser-Inc.Tests */ = {
 			isa = PBXGroup;
 			children = (
+				BC2FC53227F78E6500521784 /* Mocks */,
+				BC76B3A727F7996600489B57 /* Tests */,
 				BCE0D98A27F6D6AC00CDBB6C /* RandomUser_Inc_Tests.swift */,
 			);
 			path = "RandomUser-Inc.Tests";
@@ -460,10 +629,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC2FC53B27F78F2900521784 /* DatabaseRepository.swift in Sources */,
+				BC2FC53927F78ECC00521784 /* UserDefaultsRepository.swift in Sources */,
+				BC2FC53727F78EAD00521784 /* LocalManager.swift in Sources */,
 				BCE0D97827F6D6AA00CDBB6C /* ViewController.swift in Sources */,
+				BC76B39B27F7936300489B57 /* NetworkManager.swift in Sources */,
 				BC2FC52B27F70CF100521784 /* Config.swift in Sources */,
 				BCE0D97427F6D6AA00CDBB6C /* AppDelegate.swift in Sources */,
 				BCE0D97627F6D6AA00CDBB6C /* SceneDelegate.swift in Sources */,
+				BC76B3A027F795EF00489B57 /* BaseRepository.swift in Sources */,
+				BC76B39D27F7942800489B57 /* BaseRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +647,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCE0D98B27F6D6AC00CDBB6C /* RandomUser_Inc_Tests.swift in Sources */,
+				BC76B39127F7908B00489B57 /* MockLocalManager.swift in Sources */,
+				BC76B3A627F7981600489B57 /* MockBaseRepository.swift in Sources */,
+				BC76B39527F792C500489B57 /* MockDatabaseRepository.swift in Sources */,
+				BC76B39327F7929700489B57 /* MockUserDefaultsRepository.swift in Sources */,
+				BC76B3A327F796F900489B57 /* MockNetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
