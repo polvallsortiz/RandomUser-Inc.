@@ -156,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				BC76B38E27F7905B00489B57 /* MockData */,
+				BC76B3AD27F79B5600489B57 /* MockDomain */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -261,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				BC76B3A827F7997100489B57 /* TestData */,
+				BC76B3B027F79BEF00489B57 /* TestDomain */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -296,6 +298,59 @@
 			path = Local;
 			sourceTree = "<group>";
 		};
+		BC76B3AC27F79B4E00489B57 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				BC76B3AF27F79B7200489B57 /* Model */,
+				BC76B3AE27F79B6A00489B57 /* Interactor */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		BC76B3AD27F79B5600489B57 /* MockDomain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MockDomain;
+			sourceTree = "<group>";
+		};
+		BC76B3AE27F79B6A00489B57 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		BC76B3AF27F79B7200489B57 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC76B3B027F79BEF00489B57 /* TestDomain */ = {
+			isa = PBXGroup;
+			children = (
+				BC76B3B127F79BFA00489B57 /* Model */,
+				BC76B3B227F79C0000489B57 /* Interactor */,
+			);
+			path = TestDomain;
+			sourceTree = "<group>";
+		};
+		BC76B3B127F79BFA00489B57 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC76B3B227F79C0000489B57 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		BCE0D96727F6D6A900CDBB6C = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				BC2FC53427F78E9600521784 /* Data */,
+				BC76B3AC27F79B4E00489B57 /* Domain */,
 				BC283F6E27F7068A0054FBC5 /* Configuration */,
 				BCE0D97327F6D6AA00CDBB6C /* AppDelegate.swift */,
 				BCE0D97527F6D6AA00CDBB6C /* SceneDelegate.swift */,
