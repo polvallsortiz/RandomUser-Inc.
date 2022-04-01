@@ -21,10 +21,14 @@
 		BC76B3A027F795EF00489B57 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B39F27F795EF00489B57 /* BaseRepository.swift */; };
 		BC76B3A327F796F900489B57 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3A227F796F900489B57 /* MockNetworkManager.swift */; };
 		BC76B3A627F7981600489B57 /* MockBaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3A527F7981600489B57 /* MockBaseRepository.swift */; };
+		BC76B3B627F79CC500489B57 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3B527F79CC500489B57 /* Router.swift */; };
+		BC76B3B827F79D5100489B57 /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3B727F79D5100489B57 /* Display.swift */; };
+		BC76B3BC27F79EAE00489B57 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3BB27F79EAE00489B57 /* UIApplication.swift */; };
+		BC76B3C427F7A3CC00489B57 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3C327F7A3CC00489B57 /* BaseViewController.swift */; };
+		BC76B3C827F7A48B00489B57 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3C627F7A48B00489B57 /* LoaderViewController.swift */; };
+		BC76B3C927F7A48B00489B57 /* LoaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC76B3C727F7A48B00489B57 /* LoaderViewController.xib */; };
+		BC76B3CB27F7A87100489B57 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3CA27F7A87100489B57 /* BasePresenter.swift */; };
 		BCE0D97427F6D6AA00CDBB6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE0D97327F6D6AA00CDBB6C /* AppDelegate.swift */; };
-		BCE0D97627F6D6AA00CDBB6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE0D97527F6D6AA00CDBB6C /* SceneDelegate.swift */; };
-		BCE0D97827F6D6AA00CDBB6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE0D97727F6D6AA00CDBB6C /* ViewController.swift */; };
-		BCE0D97B27F6D6AA00CDBB6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE0D97927F6D6AA00CDBB6C /* Main.storyboard */; };
 		BCE0D97D27F6D6AB00CDBB6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE0D97C27F6D6AB00CDBB6C /* Assets.xcassets */; };
 		BCE0D98027F6D6AB00CDBB6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE0D97E27F6D6AB00CDBB6C /* LaunchScreen.storyboard */; };
 		BCE0D98B27F6D6AC00CDBB6C /* RandomUser_Inc_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE0D98A27F6D6AC00CDBB6C /* RandomUser_Inc_Tests.swift */; };
@@ -73,11 +77,15 @@
 		BC76B39F27F795EF00489B57 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
 		BC76B3A227F796F900489B57 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
 		BC76B3A527F7981600489B57 /* MockBaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBaseRepository.swift; sourceTree = "<group>"; };
+		BC76B3B527F79CC500489B57 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		BC76B3B727F79D5100489B57 /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
+		BC76B3BB27F79EAE00489B57 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		BC76B3C327F7A3CC00489B57 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BC76B3C627F7A48B00489B57 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
+		BC76B3C727F7A48B00489B57 /* LoaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderViewController.xib; sourceTree = "<group>"; };
+		BC76B3CA27F7A87100489B57 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		BCE0D97027F6D6AA00CDBB6C /* RandomUser-Inc..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RandomUser-Inc..app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE0D97327F6D6AA00CDBB6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BCE0D97527F6D6AA00CDBB6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BCE0D97727F6D6AA00CDBB6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BCE0D97A27F6D6AA00CDBB6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BCE0D97C27F6D6AB00CDBB6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCE0D97F27F6D6AB00CDBB6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCE0D98127F6D6AB00CDBB6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -351,6 +359,76 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		BC76B3B327F79C8600489B57 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				BC76B3C227F7A37E00489B57 /* Presenter */,
+				BC76B3C127F7A32B00489B57 /* ViewController */,
+				BC76B3BD27F7A2C300489B57 /* CustomViews */,
+				BC76B3B427F79CB300489B57 /* Router */,
+				BCE0D97E27F6D6AB00CDBB6C /* LaunchScreen.storyboard */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		BC76B3B427F79CB300489B57 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BC76B3B527F79CC500489B57 /* Router.swift */,
+				BC76B3B727F79D5100489B57 /* Display.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		BC76B3B927F79E9B00489B57 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BC76B3BA27F79EA300489B57 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BC76B3BA27F79EA300489B57 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BC76B3BB27F79EAE00489B57 /* UIApplication.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BC76B3BD27F7A2C300489B57 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		BC76B3C127F7A32B00489B57 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BC76B3C527F7A45F00489B57 /* Loader */,
+				BC76B3C327F7A3CC00489B57 /* BaseViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BC76B3C227F7A37E00489B57 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BC76B3CA27F7A87100489B57 /* BasePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BC76B3C527F7A45F00489B57 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				BC76B3C627F7A48B00489B57 /* LoaderViewController.swift */,
+				BC76B3C727F7A48B00489B57 /* LoaderViewController.xib */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
 		BCE0D96727F6D6A900CDBB6C = {
 			isa = PBXGroup;
 			children = (
@@ -379,12 +457,10 @@
 				BC2FC53427F78E9600521784 /* Data */,
 				BC76B3AC27F79B4E00489B57 /* Domain */,
 				BC283F6E27F7068A0054FBC5 /* Configuration */,
+				BC76B3B327F79C8600489B57 /* Presentation */,
+				BC76B3B927F79E9B00489B57 /* Utils */,
 				BCE0D97327F6D6AA00CDBB6C /* AppDelegate.swift */,
-				BCE0D97527F6D6AA00CDBB6C /* SceneDelegate.swift */,
-				BCE0D97727F6D6AA00CDBB6C /* ViewController.swift */,
-				BCE0D97927F6D6AA00CDBB6C /* Main.storyboard */,
 				BCE0D97C27F6D6AB00CDBB6C /* Assets.xcassets */,
-				BCE0D97E27F6D6AB00CDBB6C /* LaunchScreen.storyboard */,
 				BCE0D98127F6D6AB00CDBB6C /* Info.plist */,
 			);
 			path = "RandomUser-Inc.";
@@ -521,8 +597,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCE0D98027F6D6AB00CDBB6C /* LaunchScreen.storyboard in Resources */,
+				BC76B3C927F7A48B00489B57 /* LoaderViewController.xib in Resources */,
 				BCE0D97D27F6D6AB00CDBB6C /* Assets.xcassets in Resources */,
-				BCE0D97B27F6D6AA00CDBB6C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,14 +761,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC76B3B827F79D5100489B57 /* Display.swift in Sources */,
+				BC76B3CB27F7A87100489B57 /* BasePresenter.swift in Sources */,
 				BC2FC53B27F78F2900521784 /* DatabaseRepository.swift in Sources */,
 				BC2FC53927F78ECC00521784 /* UserDefaultsRepository.swift in Sources */,
+				BC76B3BC27F79EAE00489B57 /* UIApplication.swift in Sources */,
 				BC2FC53727F78EAD00521784 /* LocalManager.swift in Sources */,
-				BCE0D97827F6D6AA00CDBB6C /* ViewController.swift in Sources */,
+				BC76B3C827F7A48B00489B57 /* LoaderViewController.swift in Sources */,
+				BC76B3C427F7A3CC00489B57 /* BaseViewController.swift in Sources */,
 				BC76B39B27F7936300489B57 /* NetworkManager.swift in Sources */,
+				BC76B3B627F79CC500489B57 /* Router.swift in Sources */,
 				BC2FC52B27F70CF100521784 /* Config.swift in Sources */,
 				BCE0D97427F6D6AA00CDBB6C /* AppDelegate.swift in Sources */,
-				BCE0D97627F6D6AA00CDBB6C /* SceneDelegate.swift in Sources */,
 				BC76B3A027F795EF00489B57 /* BaseRepository.swift in Sources */,
 				BC76B39D27F7942800489B57 /* BaseRequest.swift in Sources */,
 			);
@@ -736,14 +816,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BCE0D97927F6D6AA00CDBB6C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BCE0D97A27F6D6AA00CDBB6C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BCE0D97E27F6D6AB00CDBB6C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
