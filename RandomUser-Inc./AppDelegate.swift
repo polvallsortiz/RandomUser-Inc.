@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwinjectStoryboard
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if let configuration = Bundle.main.infoDictionary?["Configuration"] as? String {
+            print("CONFIGURATION \(configuration)")
+        }
+
+        if let router = SwinjectStoryboard.defaultContainer.resolve(Router.self) {
+            router.startApp()
+        }
+
         return true
     }
 
