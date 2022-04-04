@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension UIApplication {
-    
+
     var keyWindow: UIWindow? {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate
         else { return nil }
@@ -18,16 +18,16 @@ extension UIApplication {
         }
         return appDelegate.window
     }
-    
+
     class func topViewController(base: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
         if let nav = base as? UINavigationController {
             return topViewController(base: nav.visibleViewController)
         }
-        
+
         if let presented = base?.presentedViewController {
             return topViewController(base: presented)
         }
-        
+
         return base
     }
 }

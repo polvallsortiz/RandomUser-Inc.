@@ -14,19 +14,19 @@ protocol BaseRepository {
 }
 
 class BaseRepositoryImplementation: BaseRepository {
-    
+
     private let localManager: LocalManager
     private let networkManager: NetworkManager
-    
+
     init(localManager: LocalManager, networkManager: NetworkManager) {
         self.localManager = localManager
         self.networkManager = networkManager
     }
-    
+
     func getLocalManager() -> LocalManager {
         return self.localManager
     }
-    
+
     func getNetworkManager() -> NetworkManager {
         return self.networkManager
     }

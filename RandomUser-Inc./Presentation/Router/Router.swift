@@ -12,7 +12,7 @@ import SwinjectStoryboard
 protocol Router {
     func startApp()
     // Add views here
-    
+
     func popCurrentDisplay(animated: Bool, completion: (() -> Void)?)
     func popToViewContoller(vc: UIViewController.Type, animated: Bool)
     func dismissViewController(animated: Bool, completion: (() -> Void)?)
@@ -20,13 +20,13 @@ protocol Router {
 }
 
 final class RouterImplementation: Router {
-    
+
     func startApp() {
-        
+
     }
-    
+
     // MARK: Navigation methods
-    
+
     func popCurrentDisplay(animated: Bool, completion: (() -> Void)? = nil) {
         DispatchQueue.main.async {
             if let navigationController = UIApplication.topViewController()?.parent as? UINavigationController,
@@ -42,7 +42,7 @@ final class RouterImplementation: Router {
             }
         }
     }
-    
+
     func popToViewContoller(vc: UIViewController.Type, animated: Bool = true) {
         guard let nav = UIApplication.topViewController()?.parent as? UINavigationController else { return }
         for controller in nav.viewControllers {
@@ -52,18 +52,17 @@ final class RouterImplementation: Router {
             }
         }
     }
-    
+
     func dismissViewController(animated: Bool, completion: (() -> Void)?) {
         guard let vc = UIApplication.topViewController()
         else { return }
         vc.dismiss(animated: animated, completion: completion)
     }
-    
+
     func popToRoot(animated: Bool = true) {
         guard let nav  = UIApplication.topViewController()?.parent as? UINavigationController
         else { return }
         nav.popToRootViewController(animated: animated)
     }
-    
-    
+
 }

@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 
 final class Display {
-    
+
     private let viewController: UIViewController
     private let modal: Bool
     private let animated: Bool
-    
+
     init(viewController: UIViewController,
          modal: Bool,
          animated: Bool) {
@@ -21,11 +21,11 @@ final class Display {
         self.modal = modal
         self.animated = animated
     }
-    
+
     func get() -> UIViewController {
         return self.viewController
     }
-    
+
     func show(animated: Bool, from parent: UIViewController? = nil) {
         let animated = animated
         if modal {
@@ -34,7 +34,7 @@ final class Display {
             pushViewController(viewController: viewController, animated: animated, parent: parent)
         }
     }
-    
+
     private func presentViewController(viewController: UIViewController, animated: Bool, parent: UIViewController? = nil) {
         if let parent = parent {
             parent.present(viewController, animated: animated)
@@ -42,7 +42,7 @@ final class Display {
             UIApplication.topViewController()?.present(viewController, animated: animated)
         }
     }
-    
+
     private func pushViewController(viewController: UIViewController, animated: Bool, parent: UIViewController? = nil) {
         var viewController = viewController
         if let parent = parent {
@@ -54,8 +54,7 @@ final class Display {
                     viewController = lastViewNavigationController
                 }
                 navigationController.pushViewController(viewController, animated: animated)
-            }
-            else {
+            } else {
                 presentViewController(viewController: viewController, animated: animated)
             }
         }

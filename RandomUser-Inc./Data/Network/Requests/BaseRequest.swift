@@ -9,9 +9,9 @@ import Foundation
 
 /// BaseRequest - Creates a request base which all requests must inherit
 class BaseRequest {
-    
+
     init() { }
-    
+
     func getCommonHeaders() -> [String: String] {
         var headers: [String: String] = [:]
         headers["Accept"] = "application/json"

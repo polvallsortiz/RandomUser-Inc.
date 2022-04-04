@@ -16,17 +16,17 @@ protocol NetworkManager {
 }
 
 class NetworkManagerImplementation: NetworkManager {
-    
+
     private let provider: MoyaProvider<MultiTarget>
-    
+
     init(provider: MoyaProvider<MultiTarget>) {
         self.provider = provider
     }
-    
+
     func makeRequest(target: TargetType) -> Single<Response> {
         return self.provider.rx.request(MultiTarget(target))
     }
-    
+
     static func getBaseUrl() -> String {
         return Config.getBaseUrl()
     }

@@ -9,10 +9,10 @@ import Foundation
 
 /// DatabaseRepository - Functions to interact with Realm database provider in device
 protocol DatabaseRepository {
-    
+
 }
 
 // TODO: Add Realm implementation
 class DatabaseRepositoryImplementation: DatabaseRepository {
-    
+
 }

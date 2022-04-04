@@ -9,9 +9,9 @@ import Foundation
 
 /// UserDefaultsRepository - Functions to interact with UserDefaults in device
 protocol UserDefaultsRepository {
-    
+
 }
 
-class UserDefaultsRepositoryImplementation: UserDefaultsRepository  {
-    
+class UserDefaultsRepositoryImplementation: UserDefaultsRepository {
+
 }
