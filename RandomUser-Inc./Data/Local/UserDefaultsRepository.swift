@@ -9,9 +9,24 @@ import Foundation
 
 /// UserDefaultsRepository - Functions to interact with UserDefaults in device
 protocol UserDefaultsRepository {
-
+    func saveLastPage(_ page: Int)
+    func getNextPage() -> Int?
 }
 
 class UserDefaultsRepositoryImplementation: UserDefaultsRepository {
+    
+    private let defaults: UserDefaults = UserDefaults.standard
 
+    enum UserDefaultsRepositoryKeys: String {
+        case page = "random_users_page"
+    }
+
+    func saveLastPage(_ page: Int) {
+        defaults.set(page, forKey: UserDefaultsRepositoryKeys.page.rawValue)
+    }
+    
+    func getNextPage() -> Int? {
+        let value = defaults.integer(forKey: UserDefaultsRepositoryKeys.page.rawValue)
+        return value == 0 ? nil : value + 1
+    }
 }
