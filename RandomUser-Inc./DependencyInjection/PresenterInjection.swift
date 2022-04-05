@@ -15,9 +15,14 @@ protocol PresenterInjectionProtocol {
 class PresenterInjection: PresenterInjectionProtocol {
 
     func registerPresenters(container: Container) {
-        
+
         container.register(SplashPresenter.self) { resolver in
             SplashPresenter(router: resolver.resolve(Router.self)!)
+        }
+
+        container.register(UsersListPresenter.self) { resolver in
+            UsersListPresenter(router: resolver.resolve(Router.self)!,
+                               randomAPIInteractor: resolver.resolve(RandomAPIInteractor.self)!)
         }
 
     }

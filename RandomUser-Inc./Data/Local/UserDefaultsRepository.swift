@@ -14,7 +14,7 @@ protocol UserDefaultsRepository {
 }
 
 class UserDefaultsRepositoryImplementation: UserDefaultsRepository {
-    
+
     private let defaults: UserDefaults = UserDefaults.standard
 
     enum UserDefaultsRepositoryKeys: String {
@@ -24,7 +24,7 @@ class UserDefaultsRepositoryImplementation: UserDefaultsRepository {
     func saveLastPage(_ page: Int) {
         defaults.set(page, forKey: UserDefaultsRepositoryKeys.page.rawValue)
     }
-    
+
     func getNextPage() -> Int? {
         let value = defaults.integer(forKey: UserDefaultsRepositoryKeys.page.rawValue)
         return value == 0 ? nil : value + 1

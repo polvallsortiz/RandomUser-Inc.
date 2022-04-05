@@ -21,8 +21,7 @@ class RandomAPIInteractorImplementation: RandomAPIInteractor {
     }
 
     func getRandomUsers(usersToLoad: Int, seed: String? = nil, page: Int? = nil) -> Single<UserResponse> {
-        let response =  randomAPIRepository.getRandomUsers(usersToLoad: usersToLoad, seed: seed, page: page)
-        return response
+        return randomAPIRepository.getRandomUsers(usersToLoad: usersToLoad, seed: seed, page: page)
     }
 
 }

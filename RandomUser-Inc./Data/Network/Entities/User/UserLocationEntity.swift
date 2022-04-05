@@ -9,10 +9,10 @@ import Foundation
 import CoreLocation
 
 struct LocationStreetEntity: Codable {
-    
+
     var number: Int
     var name: String
-    
+
     enum CodingKeys: String, CodingKey {
         case number, name
     }
@@ -20,7 +20,7 @@ struct LocationStreetEntity: Codable {
 }
 
 struct LocationCoordinatesEntity: Codable {
-    
+
     var latitude: String
     var longitude: String
 
@@ -34,7 +34,7 @@ struct LocationTimezoneEntity: Codable {
 
     var offset: String
     var description: String
-    
+
     enum CodingKeys: String, CodingKey {
         case offset, description
     }
@@ -47,13 +47,17 @@ struct UserLocationEntity: Codable {
     var city: String
     var state: String
     var country: String
-    var postcode: Int
+    var postcodeaux: RelaxedString
+    var postcode: String {
+        get { postcodeaux.value }
+        set { postcodeaux = RelaxedString(newValue) }
+    }
     var coordinates: LocationCoordinatesEntity
     var timezone: LocationTimezoneEntity
-    
 
     enum CodingKeys: String, CodingKey {
-        case street, city, state, country, postcode, coordinates, timezone
+        case street, city, state, country, coordinates, timezone
+        case postcodeaux = "postcode"
     }
 
 }
@@ -75,14 +79,15 @@ extension LocationTimezoneEntity {
 }
 
 extension UserLocationEntity {
-    
+
     func parseToModel() -> UserLocation {
         return UserLocation(street: self.street.parseToModel(),
                             city: self.city,
                             state: self.state,
                             country: self.country,
                             postcode: self.postcode,
-                            coordinates: CLLocationCoordinate2D(latitude: Double(self.coordinates.latitude)!, longitude: Double(self.coordinates.longitude)!),
+                            coordinates: CLLocationCoordinate2D(latitude: Double(self.coordinates.latitude)!,
+                                                                longitude: Double(self.coordinates.longitude)!),
                             timezone: self.timezone.parseToModel())
     }
 }

@@ -10,10 +10,11 @@ import Foundation
 enum ConfigKeys: String {
     case baseUrl = "BASE_URL"
     case appName = "APP_NAME"
+    case usersGroup = "USERS_GROUP"
 }
 
 enum Config {
-    
+
     static func configurationName() -> String {
         guard let configuration = Bundle.main.infoDictionary?["Configuration"] as? String else {
             fatalError("CONFIGURATION NOT DEFINED")
@@ -31,5 +32,12 @@ enum Config {
         guard let value = Bundle.main.object(forInfoDictionaryKey: ConfigKeys.appName.rawValue) as? String
         else { fatalError("APP_NAME NOT DEFINED") }
         return value
+    }
+
+    static func getPageLength() -> Int {
+        guard let value = Bundle.main.object(forInfoDictionaryKey: ConfigKeys.usersGroup.rawValue) as? String else {
+            fatalError("USERS_GROUP NOT DEFINED")
+        }
+        return Int(value)!
     }
 }

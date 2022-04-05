@@ -9,11 +9,9 @@ import Foundation
 
 struct UserID {
 
-    var name: String
-    var value: String
-    var uuid: String {
-        return name + "-" + value
-    }
+    var name: String?
+    var value: String?
+    var uuid: String
 
 }
 
