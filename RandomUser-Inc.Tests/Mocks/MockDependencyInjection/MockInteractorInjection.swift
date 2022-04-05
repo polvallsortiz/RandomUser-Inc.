@@ -12,6 +12,10 @@ import Swinject
 class MockInteractorInjection: InteractorInjection {
 
     override func registerInteractors(container: Container) {
+        
+        container.register(RandomAPIInteractor.self) { resolver in
+            MockRandomAPIInteractorImplementation(mockRandomAPIRepository: resolver.resolve(RandomAPIRepository.self)!)
+        }
 
     }
 

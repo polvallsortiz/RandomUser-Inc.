@@ -19,7 +19,8 @@ class MockManagerInjection: ManagerInjectionProtocol {
         }
 
         container.register(NetworkManager.self) { _ in
-            let provider = MoyaProvider<MultiTarget>(callbackQueue: DispatchQueue.main,
+            let provider = MoyaProvider<MultiTarget>(stubClosure: MoyaProvider.immediatelyStub,
+                                                     callbackQueue: DispatchQueue.main,
                                                      plugins: [NetworkLoggerPlugin()])
             return MockNetworkManagerImplementation(provider: provider)
         }

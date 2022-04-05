@@ -10,7 +10,7 @@ import Swinject
 import SwinjectStoryboard
 
 protocol Router {
-    func startApp()
+    func start()
     // Add views here
 
     func popCurrentDisplay(animated: Bool, completion: (() -> Void)?)
@@ -21,8 +21,13 @@ protocol Router {
 
 final class RouterImplementation: Router {
 
-    func startApp() {
-
+    func start() {
+        guard let viewController = SwinjectStoryboard.defaultContainer.resolve(SplashViewController.self) else {
+            fatalError("COULD NOT INSTANTIATE SPLASHVIEWCONTROLLER")
+        }
+        let navController = UINavigationController(rootViewController: viewController)
+        navController.setNavigationBarHidden(true, animated: false)
+        UIApplication.shared.keyWindow?.replaceRootViewControllerWith(navController, animated: true, completion: nil)
     }
 
     // MARK: Navigation methods
@@ -63,6 +68,19 @@ final class RouterImplementation: Router {
         guard let nav  = UIApplication.topViewController()?.parent as? UINavigationController
         else { return }
         nav.popToRootViewController(animated: animated)
+    }
+
+    internal static func getWindow() -> UIWindow {
+
+        // swiftlint:disable:next force_cast
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
+        if appDelegate.window == nil {
+            appDelegate.window = UIWindow(frame: UIScreen.main.bounds)
+        }
+
+        return appDelegate.window!
+
     }
 
 }

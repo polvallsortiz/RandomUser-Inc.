@@ -9,5 +9,16 @@
 import Foundation
 
 class MockUserDefaultsRepositoryImplementation: UserDefaultsRepository {
-    
+
+    var saveLastPageCalled: Bool = false
+    func saveLastPage(_ page: Int) {
+        saveLastPageCalled = true
+    }
+
+    var getNextPageCalled: Bool = false
+    func getNextPage() -> Int? {
+        getNextPageCalled = true
+        return 2
+    }
+
 }

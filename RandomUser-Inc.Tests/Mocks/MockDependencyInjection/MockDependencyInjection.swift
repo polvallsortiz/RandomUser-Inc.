@@ -12,6 +12,7 @@ import SwinjectStoryboard
 
 class MockDependencyInjection {
     
+    public static var defaultContainer = SwinjectStoryboard.defaultContainer
     public static var mockContainer = Container()
     
     static func mockDependencies() {

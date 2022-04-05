@@ -23,8 +23,10 @@ class ManagerInjection: ManagerInjectionProtocol {
         }
 
         container.register(NetworkManager.self) { _ in
-            let provider = MoyaProvider<MultiTarget>(callbackQueue: DispatchQueue.main,
-                                        plugins: [NetworkLoggerPlugin()])
+            // swiftlint:disable:next line_length
+            let provider = MoyaProvider<MultiTarget>(stubClosure: (NSClassFromString("XCTestCase") != nil) ? MoyaProvider.immediatelyStub : MoyaProvider.neverStub,
+                                                     callbackQueue: DispatchQueue.main,
+                                                     plugins: [NetworkLoggerPlugin()])
             return NetworkManagerImplementation(provider: provider)
         }
     }

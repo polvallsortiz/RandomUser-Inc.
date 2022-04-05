@@ -16,5 +16,12 @@ class ViewInjection: ViewInjectionProtocol {
 
     func registerViews(container: Container) {
 
+        container.register(SplashViewController.self) { resolver in
+            let view = SplashViewController()
+            view.presenter = resolver.resolve(SplashPresenter.self)!
+            return view
+        }
+
     }
+
 }
