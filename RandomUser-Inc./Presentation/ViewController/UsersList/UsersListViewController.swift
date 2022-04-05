@@ -9,16 +9,13 @@ import Foundation
 import UIKit
 
 protocol UsersListView: BaseView {
-    func setUsers(users: [User])
+    func refreshUsers()
 }
 
 class UsersListViewController: BaseViewController<UsersListPresenter> {
 
     // MARK: Outlets
     @IBOutlet weak var usersTableView: UITableView!
-
-    // MARK: Private variables
-    private var users: [User]?
 
     // MARK: UIViewController
 
@@ -45,26 +42,21 @@ class UsersListViewController: BaseViewController<UsersListPresenter> {
 
 extension UsersListViewController: UsersListView, UITableViewDelegate, UITableViewDataSource {
 
-    func setUsers(users: [User]) {
-        self.users = users
+    func refreshUsers() {
         usersTableView.reloadData()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let users = users {
-            return users.count
-        } else {
-            return 0
-        }
+        return presenter.totalCount
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // swiftlint:disable:next line_length
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: UsersListTableViewCell.self), for: indexPath) as? UsersListTableViewCell,
-              let user = users?[indexPath.row] else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: UsersListTableViewCell.self), for: indexPath) as? UsersListTableViewCell else {
             return UITableViewCell()
         }
-        cell.setup(model: UsersListTableViewCellViewModel(user: user))
+        cell.setup(model: UsersListTableViewCellViewModel(user: presenter.user(at: indexPath.row)))
+
         return cell
     }
 
@@ -72,4 +64,17 @@ extension UsersListViewController: UsersListView, UITableViewDelegate, UITableVi
         return 60
     }
 
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        var visibleRect = CGRect()
+
+        visibleRect.origin = usersTableView.contentOffset
+        visibleRect.size = usersTableView.bounds.size
+
+        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
+
+        guard let indexPath = usersTableView.indexPathForRow(at: visiblePoint) else { return }
+        if indexPath.row > (presenter.currentCount - 10) {
+            presenter.fetchNewPage()
+        }
+    }
 }

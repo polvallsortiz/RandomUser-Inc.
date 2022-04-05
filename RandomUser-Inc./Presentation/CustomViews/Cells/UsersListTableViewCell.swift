@@ -68,6 +68,13 @@ class UsersListTableViewCell: UITableViewCell {
         self.model = model
         self.setupContent()
     }
+    
+    override func prepareForReuse() {
+        self.avatarImageView.image = nil
+        self.nameLabel.text = nil
+        self.emailLabel.text = nil
+        self.phoneLabel.text = nil
+    }
 
     // MARK: Private methods
 
@@ -78,6 +85,7 @@ class UsersListTableViewCell: UITableViewCell {
     private func setupContent() {
         if let model = model {
             avatarImageView.sd_setImage(with: URL(string: model.avatarUrl))
+            avatarImageView.rounded()
             nameLabel.text = model.displayName
             emailLabel.text = model.email
             phoneLabel.text = model.phone
