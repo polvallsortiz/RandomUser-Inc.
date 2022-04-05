@@ -40,6 +40,7 @@ extension LocationStreet {
         let locationStreetLocal = LocationStreetLocal()
         locationStreetLocal.number = self.number
         locationStreetLocal.name = self.name
+        return locationStreetLocal
     }
 
 }

@@ -25,6 +25,12 @@ extension User {
         let user = UserLocal()
         user.uuid = self.id.uuid
         user.gender = self.gender
-        
+        user.name = self.name.parseToLocal()
+        user.location = self.location.parseToLocal()
+        user.registered = self.registered.parseToLocal()
+        user.phone = self.phone
+        user.id = self.id.parseToLocal()
+        user.picture = self.picture.parseToLocal()
+        return user
     }
 }

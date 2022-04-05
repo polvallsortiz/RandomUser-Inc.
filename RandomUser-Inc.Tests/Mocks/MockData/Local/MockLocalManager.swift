@@ -9,5 +9,22 @@
 import Foundation
 
 class MockLocalManagerImplementation: LocalManager {
-    
+
+    var saveRandomUserResponseCalled: Bool = false
+    func saveRandomUsersResponse(_ response: UserResponse) {
+        saveRandomUserResponseCalled = true
+    }
+
+    var getRandomUsersResponseCalled: Bool = false
+    func getRandomUsersResponse(page: Int?) -> UserResponse? {
+        getRandomUsersResponseCalled = true
+        return page != 0 ? MockUserResponse.getMockUserResponse() : nil
+    }
+
+    var getNextRandomUsersPageCalled: Bool = false
+    func getNextRandomUsersPage() -> Int? {
+        getNextRandomUsersPageCalled = true
+        return 2
+    }
+
 }

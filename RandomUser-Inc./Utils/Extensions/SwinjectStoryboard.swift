@@ -10,7 +10,7 @@ import SwinjectStoryboard
 
 extension SwinjectStoryboard {
 
-    @objc class public func setup() {
+    @objc class func setup() {
         ManagerInjection().registerManagers(container: defaultContainer)
         RepositoryInjection().registerRepositories(container: defaultContainer)
         InteractorInjection().registerInteractors(container: defaultContainer)

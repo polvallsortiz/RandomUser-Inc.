@@ -16,3 +16,15 @@ struct UserID {
     }
 
 }
+
+extension UserID {
+
+    func parseToLocal() -> UserIDLocal {
+        let userIDLocal = UserIDLocal()
+        userIDLocal.uuid = self.uuid
+        userIDLocal.name = self.name
+        userIDLocal.value = self.value
+        return userIDLocal
+    }
+
+}

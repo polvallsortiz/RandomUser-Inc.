@@ -5,31 +5,42 @@
 //  Created by Pol Valls Ortiz on 5/4/22.
 //
 
+@testable import RandomUser_Inc_
 import XCTest
+import Moya
 
 class RandomAPITargetTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var randomAPITarget: RandomAPITarget!
+    var randomAPITarget2: RandomAPITarget!
+
+    override func setUp() {
+        MockDependencyInjection.mockDependencies()
+        randomAPITarget = RandomAPITarget.randomUsers(request: MockRandomUsersRequest.getMockRandomUsersRequestComplete())
+        randomAPITarget2 = RandomAPITarget.randomUsers(request: MockRandomUsersRequest.getMockRandomUsersRequestIncomplete())
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testBaseURL() {
+        let url1 = randomAPITarget.baseURL
+        let url2 = randomAPITarget2.baseURL
+        XCTAssertEqual(url1.absoluteString, "https://randomuser.me/API")
+        XCTAssertEqual(url2.absoluteString, "https://randomuser.me/API")
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testPath() {
+        let path = randomAPITarget.path
+        XCTAssertEqual(path, "/")
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testMethod() {
+        let method = randomAPITarget.method
+        XCTAssertEqual(method.rawValue, "GET")
+    }
+
+    func testHeaders() {
+        let headers = randomAPITarget.headers
+        XCTAssertEqual(headers?["Accept"], "application/json")
+        XCTAssertEqual(headers?["Content-Type"], "application/json")
     }
 
 }

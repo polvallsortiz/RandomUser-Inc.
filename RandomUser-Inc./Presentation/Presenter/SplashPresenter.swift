@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+class SplashPresenter: BasePresenter {
+
+    internal var view: SplashView? {
+        return baseView as? SplashView
+    }
+
+}

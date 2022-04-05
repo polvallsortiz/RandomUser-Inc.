@@ -21,7 +21,7 @@ struct UserRegisteredEntity: Codable {
 extension UserRegisteredEntity {
 
     func parseToModel() -> UserRegistered {
-        return UserRegistered(date: ISO8601DateFormatter().date(from: self.date)!, age: self.age)
+        return UserRegistered(date: ISO8601DateFormatter().defaultFormatter().date(from: self.date)!, age: self.age)
     }
 
 }

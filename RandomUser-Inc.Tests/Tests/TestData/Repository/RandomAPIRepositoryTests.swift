@@ -5,31 +5,37 @@
 //  Created by Pol Valls Ortiz on 5/4/22.
 //
 
+@testable import RandomUser_Inc_
 import XCTest
+import RxSwift
 
 class RandomAPIRepositoryTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var randomAPIRepository: RandomAPIRepository!
+    
+    override func setUp() {
+        MockDependencyInjection.mockDependencies()
+        randomAPIRepository = MockDependencyInjection.defaultContainer.resolve(RandomAPIRepository.self)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+    override func tearDown() {
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
     }
+    
+    func testGetRandomUsers() {
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+        let _ = randomAPIRepository.getRandomUsers(usersToLoad: 5, seed: "4710c75101ed0231", page: 4)
+            .subscribe(onSuccess: { response in
+                XCTAssertNotNil(response)
+                XCTAssertEqual(response.info.page, 4)
+                XCTAssertEqual(response.users[0].gender, "female")
+                XCTAssertEqual(response.users[1].location.street.name, "Nordenskiöldinkatu")
+                XCTAssertEqual(response.users[2].location.timezone.description, "Atlantic Time (Canada), Caracas, La Paz")
+                XCTAssertEqual(response.users[3].picture.large, "https://randomuser.me/api/portraits/women/84.jpg")
+            }, onFailure: { error in
+                XCTAssertNil(error)
+            })
+
     }
 
 }

@@ -19,7 +19,7 @@ class UserResponseInfoLocal: Object {
 
 class UserResponseLocal: Object {
 
-    @Persisted var users: List<UserLocal?>
+    @Persisted var users: List<UserLocal>
     @Persisted var info: UserResponseInfoLocal?
 
 }
@@ -39,7 +39,7 @@ extension UserResponseLocal {
 
     func parseToModel() -> UserResponse {
         var userResponse = UserResponse(users: [], info: (self.info?.parseToModel())!)
-        userResponse.users = self.users.compactMap { $0?.parseToModel() }
+        userResponse.users = self.users.compactMap { $0.parseToModel() }
         return userResponse
     }
 

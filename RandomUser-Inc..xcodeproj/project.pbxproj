@@ -13,6 +13,15 @@
 		BC2FC53727F78EAD00521784 /* LocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FC53627F78EAD00521784 /* LocalManager.swift */; };
 		BC2FC53927F78ECC00521784 /* UserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FC53827F78ECC00521784 /* UserDefaultsRepository.swift */; };
 		BC2FC53B27F78F2900521784 /* DatabaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FC53A27F78F2900521784 /* DatabaseRepository.swift */; };
+		BC444C3C27FC20C600CD25F6 /* DatabaseRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C3B27FC20C600CD25F6 /* DatabaseRepositoryTest.swift */; };
+		BC444C3E27FC2AEC00CD25F6 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C3D27FC2AEC00CD25F6 /* Realm.swift */; };
+		BC444C4127FC373900CD25F6 /* RandomUsersRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C4027FC373900CD25F6 /* RandomUsersRequestTests.swift */; };
+		BC444C4427FC3E6F00CD25F6 /* RandomAPITargetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C4327FC3E6F00CD25F6 /* RandomAPITargetTests.swift */; };
+		BC444C4727FC3F1200CD25F6 /* MockRandomUsersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C4627FC3F1200CD25F6 /* MockRandomUsersRequest.swift */; };
+		BC444C4927FC837300CD25F6 /* RandomAPIRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C4827FC837300CD25F6 /* RandomAPIRepositoryTests.swift */; };
+		BC444C5027FC8D3900CD25F6 /* MockRandomAPIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C4F27FC8D3900CD25F6 /* MockRandomAPIRepository.swift */; };
+		BC444C5327FC8FAE00CD25F6 /* MockRandomAPIInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C5227FC8FAE00CD25F6 /* MockRandomAPIInteractor.swift */; };
+		BC444C5527FC931B00CD25F6 /* RandomAPIInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C5427FC931B00CD25F6 /* RandomAPIInteractorTests.swift */; };
 		BC71803927FAE428002A6A72 /* SwinjectStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71803827FAE428002A6A72 /* SwinjectStoryboard.swift */; };
 		BC71803B27FAE7AE002A6A72 /* ManagerInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71803A27FAE7AE002A6A72 /* ManagerInjection.swift */; };
 		BC71803D27FAE816002A6A72 /* RepositoryInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71803C27FAE816002A6A72 /* RepositoryInjection.swift */; };
@@ -53,6 +62,14 @@
 		BC71808E27FB584D002A6A72 /* UserIDEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71808D27FB584D002A6A72 /* UserIDEntity.swift */; };
 		BC71809027FB5897002A6A72 /* UserID.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71808F27FB5897002A6A72 /* UserID.swift */; };
 		BC71809227FB594C002A6A72 /* UserIDLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71809127FB594C002A6A72 /* UserIDLocal.swift */; };
+		BC71809427FB8FAD002A6A72 /* LocalManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71809327FB8FAD002A6A72 /* LocalManagerTest.swift */; };
+		BC71809727FB9460002A6A72 /* MockUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71809627FB9460002A6A72 /* MockUserResponse.swift */; };
+		BC71809B27FB9E79002A6A72 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71809927FB9E79002A6A72 /* SplashViewController.swift */; };
+		BC71809E27FB9EEB002A6A72 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71809D27FB9EEB002A6A72 /* SplashPresenter.swift */; };
+		BC7180A027FBA512002A6A72 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71809F27FBA512002A6A72 /* UIViewController.swift */; };
+		BC7180A227FBAD98002A6A72 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7180A127FBAD98002A6A72 /* UIWindow.swift */; };
+		BC7180A427FBB45D002A6A72 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC7180A327FBB45D002A6A72 /* SplashViewController.xib */; };
+		BC7180A627FBB656002A6A72 /* ISO8601DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7180A527FBB656002A6A72 /* ISO8601DateFormatter.swift */; };
 		BC76B39127F7908B00489B57 /* MockLocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B39027F7908B00489B57 /* MockLocalManager.swift */; };
 		BC76B39327F7929700489B57 /* MockUserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B39227F7929700489B57 /* MockUserDefaultsRepository.swift */; };
 		BC76B39527F792C500489B57 /* MockDatabaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B39427F792C500489B57 /* MockDatabaseRepository.swift */; };
@@ -109,6 +126,15 @@
 		BC2FC53627F78EAD00521784 /* LocalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalManager.swift; sourceTree = "<group>"; };
 		BC2FC53827F78ECC00521784 /* UserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepository.swift; sourceTree = "<group>"; };
 		BC2FC53A27F78F2900521784 /* DatabaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRepository.swift; sourceTree = "<group>"; };
+		BC444C3B27FC20C600CD25F6 /* DatabaseRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRepositoryTest.swift; sourceTree = "<group>"; };
+		BC444C3D27FC2AEC00CD25F6 /* Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
+		BC444C4027FC373900CD25F6 /* RandomUsersRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUsersRequestTests.swift; sourceTree = "<group>"; };
+		BC444C4327FC3E6F00CD25F6 /* RandomAPITargetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAPITargetTests.swift; sourceTree = "<group>"; };
+		BC444C4627FC3F1200CD25F6 /* MockRandomUsersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRandomUsersRequest.swift; sourceTree = "<group>"; };
+		BC444C4827FC837300CD25F6 /* RandomAPIRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAPIRepositoryTests.swift; sourceTree = "<group>"; };
+		BC444C4F27FC8D3900CD25F6 /* MockRandomAPIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRandomAPIRepository.swift; sourceTree = "<group>"; };
+		BC444C5227FC8FAE00CD25F6 /* MockRandomAPIInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRandomAPIInteractor.swift; sourceTree = "<group>"; };
+		BC444C5427FC931B00CD25F6 /* RandomAPIInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAPIInteractorTests.swift; sourceTree = "<group>"; };
 		BC71803827FAE428002A6A72 /* SwinjectStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectStoryboard.swift; sourceTree = "<group>"; };
 		BC71803A27FAE7AE002A6A72 /* ManagerInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerInjection.swift; sourceTree = "<group>"; };
 		BC71803C27FAE816002A6A72 /* RepositoryInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInjection.swift; sourceTree = "<group>"; };
@@ -149,6 +175,14 @@
 		BC71808D27FB584D002A6A72 /* UserIDEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIDEntity.swift; sourceTree = "<group>"; };
 		BC71808F27FB5897002A6A72 /* UserID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserID.swift; sourceTree = "<group>"; };
 		BC71809127FB594C002A6A72 /* UserIDLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIDLocal.swift; sourceTree = "<group>"; };
+		BC71809327FB8FAD002A6A72 /* LocalManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalManagerTest.swift; sourceTree = "<group>"; };
+		BC71809627FB9460002A6A72 /* MockUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserResponse.swift; sourceTree = "<group>"; };
+		BC71809927FB9E79002A6A72 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		BC71809D27FB9EEB002A6A72 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		BC71809F27FBA512002A6A72 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		BC7180A127FBAD98002A6A72 /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
+		BC7180A327FBB45D002A6A72 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		BC7180A527FBB656002A6A72 /* ISO8601DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601DateFormatter.swift; sourceTree = "<group>"; };
 		BC76B39027F7908B00489B57 /* MockLocalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocalManager.swift; sourceTree = "<group>"; };
 		BC76B39227F7929700489B57 /* MockUserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaultsRepository.swift; sourceTree = "<group>"; };
 		BC76B39427F792C500489B57 /* MockDatabaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDatabaseRepository.swift; sourceTree = "<group>"; };
@@ -272,6 +306,38 @@
 			path = Local;
 			sourceTree = "<group>";
 		};
+		BC444C3F27FC372300CD25F6 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				BC444C4027FC373900CD25F6 /* RandomUsersRequestTests.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		BC444C4227FC3E5A00CD25F6 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				BC444C4327FC3E6F00CD25F6 /* RandomAPITargetTests.swift */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		BC444C4527FC3EF700CD25F6 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				BC444C4627FC3F1200CD25F6 /* MockRandomUsersRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		BC444C5127FC8F9600CD25F6 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				BC444C5227FC8FAE00CD25F6 /* MockRandomAPIInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		BC71803727FAE3E9002A6A72 /* DependencyInjection */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,6 +431,23 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		BC71809527FB944E002A6A72 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC71809627FB9460002A6A72 /* MockUserResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC71809827FB9E68002A6A72 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				BC71809927FB9E79002A6A72 /* SplashViewController.swift */,
+				BC7180A327FBB45D002A6A72 /* SplashViewController.xib */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		BC76B38E27F7905B00489B57 /* MockData */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,6 +516,7 @@
 		BC76B3A127F796BC00489B57 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				BC444C4527FC3EF700CD25F6 /* Requests */,
 				BC76B3A227F796F900489B57 /* MockNetworkManager.swift */,
 			);
 			path = Network;
@@ -442,6 +526,7 @@
 			isa = PBXGroup;
 			children = (
 				BC76B3A527F7981600489B57 /* MockBaseRepository.swift */,
+				BC444C4F27FC8D3900CD25F6 /* MockRandomAPIRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -468,6 +553,8 @@
 		BC76B3A927F7998600489B57 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				BC444C4227FC3E5A00CD25F6 /* Targets */,
+				BC444C3F27FC372300CD25F6 /* Requests */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -475,6 +562,8 @@
 		BC76B3AA27F7999A00489B57 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				BC444C3B27FC20C600CD25F6 /* DatabaseRepositoryTest.swift */,
+				BC444C4827FC837300CD25F6 /* RandomAPIRepositoryTests.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -482,6 +571,7 @@
 		BC76B3AB27F799A400489B57 /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				BC71809327FB8FAD002A6A72 /* LocalManagerTest.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -498,6 +588,8 @@
 		BC76B3AD27F79B5600489B57 /* MockDomain */ = {
 			isa = PBXGroup;
 			children = (
+				BC444C5127FC8F9600CD25F6 /* Interactor */,
+				BC71809527FB944E002A6A72 /* Model */,
 			);
 			path = MockDomain;
 			sourceTree = "<group>";
@@ -537,6 +629,7 @@
 		BC76B3B227F79C0000489B57 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				BC444C5427FC931B00CD25F6 /* RandomAPIInteractorTests.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -575,6 +668,10 @@
 			children = (
 				BC76B3BB27F79EAE00489B57 /* UIApplication.swift */,
 				BC71803827FAE428002A6A72 /* SwinjectStoryboard.swift */,
+				BC71809F27FBA512002A6A72 /* UIViewController.swift */,
+				BC7180A127FBAD98002A6A72 /* UIWindow.swift */,
+				BC7180A527FBB656002A6A72 /* ISO8601DateFormatter.swift */,
+				BC444C3D27FC2AEC00CD25F6 /* Realm.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -589,6 +686,7 @@
 		BC76B3C127F7A32B00489B57 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				BC71809827FB9E68002A6A72 /* Splash */,
 				BC76B3C527F7A45F00489B57 /* Loader */,
 				BC76B3C327F7A3CC00489B57 /* BaseViewController.swift */,
 			);
@@ -599,6 +697,7 @@
 			isa = PBXGroup;
 			children = (
 				BC76B3CA27F7A87100489B57 /* BasePresenter.swift */,
+				BC71809D27FB9EEB002A6A72 /* SplashPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -783,6 +882,7 @@
 				BCE0D98027F6D6AB00CDBB6C /* LaunchScreen.storyboard in Resources */,
 				BC76B3C927F7A48B00489B57 /* LoaderViewController.xib in Resources */,
 				BCE0D97D27F6D6AB00CDBB6C /* Assets.xcassets in Resources */,
+				BC7180A427FBB45D002A6A72 /* SplashViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -962,17 +1062,21 @@
 				BC76B3BC27F79EAE00489B57 /* UIApplication.swift in Sources */,
 				BC71807427FB3BBE002A6A72 /* UserPicture.swift in Sources */,
 				BC71806C27FB39C5002A6A72 /* User.swift in Sources */,
+				BC7180A227FBAD98002A6A72 /* UIWindow.swift in Sources */,
 				BC71804527FAF198002A6A72 /* ViewInjection.swift in Sources */,
+				BC444C3E27FC2AEC00CD25F6 /* Realm.swift in Sources */,
 				BC2FC53727F78EAD00521784 /* LocalManager.swift in Sources */,
 				BC71809027FB5897002A6A72 /* UserID.swift in Sources */,
 				BC71807E27FB4A60002A6A72 /* UserResponse.swift in Sources */,
 				BC76B3C827F7A48B00489B57 /* LoaderViewController.swift in Sources */,
 				BC76B3C427F7A3CC00489B57 /* BaseViewController.swift in Sources */,
+				BC7180A627FBB656002A6A72 /* ISO8601DateFormatter.swift in Sources */,
 				BC71803927FAE428002A6A72 /* SwinjectStoryboard.swift in Sources */,
 				BC76B39B27F7936300489B57 /* NetworkManager.swift in Sources */,
 				BC71805A27FB3027002A6A72 /* RandomAPITarget.swift in Sources */,
 				BC71806727FB38D0002A6A72 /* UserRegisteredEntity.swift in Sources */,
 				BC71806927FB3921002A6A72 /* UserPictureEntity.swift in Sources */,
+				BC7180A027FBA512002A6A72 /* UIViewController.swift in Sources */,
 				BC76B3B627F79CC500489B57 /* Router.swift in Sources */,
 				BC2FC52B27F70CF100521784 /* Config.swift in Sources */,
 				BCE0D97427F6D6AA00CDBB6C /* AppDelegate.swift in Sources */,
@@ -980,12 +1084,14 @@
 				BC71803F27FAEDE2002A6A72 /* InteractorInjection.swift in Sources */,
 				BC76B3A027F795EF00489B57 /* BaseRepository.swift in Sources */,
 				BC71807A27FB41AE002A6A72 /* RandomAPIRepository.swift in Sources */,
+				BC71809E27FB9EEB002A6A72 /* SplashPresenter.swift in Sources */,
 				BC71806427FB374D002A6A72 /* UserLocationEntity.swift in Sources */,
 				BC71807C27FB4746002A6A72 /* UserResponseEntity.swift in Sources */,
 				BC71808627FB53F1002A6A72 /* UserNameLocal.swift in Sources */,
 				BC71804127FAEE45002A6A72 /* RouterInjection.swift in Sources */,
 				BC71808E27FB584D002A6A72 /* UserIDEntity.swift in Sources */,
 				BC71806227FB372E002A6A72 /* UserNameEntity.swift in Sources */,
+				BC71809B27FB9E79002A6A72 /* SplashViewController.swift in Sources */,
 				BC76B39D27F7942800489B57 /* BaseRequest.swift in Sources */,
 				BC71806027FB358C002A6A72 /* UserEntity.swift in Sources */,
 				BC71809227FB594C002A6A72 /* UserIDLocal.swift in Sources */,
@@ -998,20 +1104,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC444C3C27FC20C600CD25F6 /* DatabaseRepositoryTest.swift in Sources */,
+				BC444C5027FC8D3900CD25F6 /* MockRandomAPIRepository.swift in Sources */,
+				BC444C5527FC931B00CD25F6 /* RandomAPIInteractorTests.swift in Sources */,
 				BCE0D98B27F6D6AC00CDBB6C /* RandomUser_Inc_Tests.swift in Sources */,
 				BC71805027FB0152002A6A72 /* MockRouterInjection.swift in Sources */,
 				BC71804827FAF830002A6A72 /* MockDependencyInjection.swift in Sources */,
 				BC76B39127F7908B00489B57 /* MockLocalManager.swift in Sources */,
+				BC444C5327FC8FAE00CD25F6 /* MockRandomAPIInteractor.swift in Sources */,
 				BC76B3A627F7981600489B57 /* MockBaseRepository.swift in Sources */,
 				BC71804E27FB00CC002A6A72 /* MockInteractorInjection.swift in Sources */,
 				BC71805827FB02CD002A6A72 /* MockViewInjection.swift in Sources */,
 				BC71805427FB01D6002A6A72 /* MockRouter.swift in Sources */,
+				BC444C4727FC3F1200CD25F6 /* MockRandomUsersRequest.swift in Sources */,
+				BC444C4927FC837300CD25F6 /* RandomAPIRepositoryTests.swift in Sources */,
+				BC71809427FB8FAD002A6A72 /* LocalManagerTest.swift in Sources */,
+				BC444C4427FC3E6F00CD25F6 /* RandomAPITargetTests.swift in Sources */,
+				BC71809727FB9460002A6A72 /* MockUserResponse.swift in Sources */,
 				BC76B39527F792C500489B57 /* MockDatabaseRepository.swift in Sources */,
 				BC71805627FB0291002A6A72 /* MockPresenterInjection.swift in Sources */,
 				BC71804A27FAF899002A6A72 /* MockManagerInjection.swift in Sources */,
 				BC76B39327F7929700489B57 /* MockUserDefaultsRepository.swift in Sources */,
 				BC71804C27FAFF10002A6A72 /* MockRepositoryInjection.swift in Sources */,
 				BC76B3A327F796F900489B57 /* MockNetworkManager.swift in Sources */,
+				BC444C4127FC373900CD25F6 /* RandomUsersRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1178,10 +1294,9 @@
 				DEVELOPMENT_TEAM = 99U94D6VXV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "RandomUser-Inc./Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = "RandomUser-Inc. Debug";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1208,10 +1323,9 @@
 				DEVELOPMENT_TEAM = 99U94D6VXV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "RandomUser-Inc./Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = "RandomUser-Inc. Debug";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

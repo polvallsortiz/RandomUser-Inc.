@@ -29,11 +29,11 @@ class LocalManagerImplementation: LocalManager {
         self.userDefaultsRepository.saveLastPage(response.info.page)
         self.databaseRepository.saveRandomUsersResponse(response)
     }
-    
+
     func getRandomUsersResponse(page: Int?) -> UserResponse? {
         return self.databaseRepository.getRandomUsersResponse(page: page)
     }
-    
+
     func getNextRandomUsersPage() -> Int? {
         return self.userDefaultsRepository.getNextPage()
     }

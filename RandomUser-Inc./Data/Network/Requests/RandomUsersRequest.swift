@@ -24,7 +24,7 @@ class RandomUsersRequest: BaseRequest {
     func getParameters() -> [String: Any] {
         var parameters: [String: Any] = [:]
         parameters["results"] = usersToLoad
-        parameters["inc"] = "name,gender,location,email,phone,registered,picture"
+        parameters["inc"] = "name,gender,location,email,phone,registered,picture,id"
         if let seed = seed {
             parameters["seed"] = seed
         }

@@ -14,3 +14,14 @@ struct UserPicture {
     var thumbnail: String
 
 }
+
+extension UserPicture {
+
+    func parseToLocal() -> UserPictureLocal {
+        let userPictureLocal = UserPictureLocal()
+        userPictureLocal.large = self.large
+        userPictureLocal.medium = self.medium
+        userPictureLocal.thumbnail = self.thumbnail
+        return userPictureLocal
+    }
+}

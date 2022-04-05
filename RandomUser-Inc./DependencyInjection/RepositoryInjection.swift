@@ -28,5 +28,11 @@ class RepositoryInjection: RepositoryInjectionProtocol {
             BaseRepositoryImplementation(localManager: resolver.resolve(LocalManager.self)!,
                                          networkManager: resolver.resolve(NetworkManager.self)!)
         }
+
+        container.register(RandomAPIRepository.self) { resolver in
+            RandomAPIRepositoryImplementation(localManager: resolver.resolve(LocalManager.self)!,
+                                              networkManager: resolver.resolve(NetworkManager.self)!)
+        }
+
     }
 }

@@ -7,23 +7,31 @@
 
 import UIKit
 
-class SplashViewController: UIViewController {
+protocol SplashView: BaseView {
+
+}
+
+class SplashViewController: BaseViewController<SplashPresenter> {
+
+    // MARK: Outlets
+    @IBOutlet weak var titleLabel: UILabel!
+
+    override func loadView() {
+        super.loadView()
+        self.loadNibFor(viewControllerClass: SplashViewController.self)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        titleLabel.text = "Edited"
     }
-    */
+
+}
+
+extension SplashViewController: SplashView {
 
 }

@@ -13,3 +13,13 @@ struct UserRegistered {
     var age: Int
 
 }
+
+extension UserRegistered {
+
+    func parseToLocal() -> UserRegisteredLocal {
+        let userRegisteredLocal = UserRegisteredLocal()
+        userRegisteredLocal.date = self.date
+        userRegisteredLocal.age = self.age
+        return userRegisteredLocal
+    }
+}

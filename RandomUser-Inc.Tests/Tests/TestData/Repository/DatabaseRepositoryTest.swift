@@ -5,31 +5,65 @@
 //  Created by Pol Valls Ortiz on 5/4/22.
 //
 
+@testable import RandomUser_Inc_
 import XCTest
 
 class DatabaseRepositoryTest: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var databaseRepository: DatabaseRepository!
+
+    override func setUp() {
+        MockDependencyInjection.mockDependencies()
+        databaseRepository = MockDependencyInjection.defaultContainer.resolve(DatabaseRepository.self)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    override func tearDown() {
+        databaseRepository.deleteAllRandomUserResponses()
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func testSaveRandomUsersResponse() {
+        let mockData = MockUserResponse.getMockUserResponse()
+        databaseRepository.saveRandomUsersResponse(mockData)
+        let okResponse1 = databaseRepository.getRandomUsersResponse(page: mockData.info.page)
+        XCTAssertEqual(mockData.users[0].id.uuid, okResponse1?.users[0].id.uuid)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testGetRandomUserResponse() {
+        databaseRepository.deleteAllRandomUserResponses()
+        let mockData = MockUserResponse.getMockUserResponse()
+        let mockData2 = MockUserResponse.getMockUserResponse2()
+        databaseRepository.saveRandomUsersResponse(mockData)
+        let okResponse1 = databaseRepository.getRandomUsersResponse(page: mockData.info.page)
+        XCTAssertEqual(mockData.users[0].id.uuid, okResponse1?.users[0].id.uuid)
+        let koResponse1 = databaseRepository.getRandomUsersResponse(page: mockData2.info.page)
+        XCTAssertNil(koResponse1)
+        databaseRepository.saveRandomUsersResponse(mockData2)
+        let okResponse2 = databaseRepository.getRandomUsersResponse(page: mockData2.info.page)
+        XCTAssertEqual(mockData2.users[0].id.uuid, okResponse2?.users[0].id.uuid)
+    }
+    
+    func testDeleteRandomUserResponse() {
+        let mockData = MockUserResponse.getMockUserResponse()
+        let mockData2 = MockUserResponse.getMockUserResponse2()
+        databaseRepository.saveRandomUsersResponse(mockData)
+        databaseRepository.saveRandomUsersResponse(mockData2)
+        databaseRepository.deleteRandomUserReponse(page: mockData.info.page)
+        let koResponse = databaseRepository.getRandomUsersResponse(page: mockData.info.page)
+        XCTAssertNil(koResponse)
+        let okResponse = databaseRepository.getRandomUsersResponse(page: mockData2.info.page)
+        XCTAssertEqual(mockData2.users[0].id.uuid, okResponse?.users[0].id.uuid)
+    }
+    
+    func testDeleteAllRandomUserResponse() {
+        let mockData = MockUserResponse.getMockUserResponse()
+        let mockData2 = MockUserResponse.getMockUserResponse2()
+        databaseRepository.saveRandomUsersResponse(mockData)
+        databaseRepository.saveRandomUsersResponse(mockData2)
+        databaseRepository.deleteAllRandomUserResponses()
+        let koResponse1 = databaseRepository.getRandomUsersResponse(page: mockData.info.page)
+        let koResponse2 = databaseRepository.getRandomUsersResponse(page: mockData2.info.page)
+        XCTAssertNil(koResponse1)
+        XCTAssertNil(koResponse2)
     }
 
 }

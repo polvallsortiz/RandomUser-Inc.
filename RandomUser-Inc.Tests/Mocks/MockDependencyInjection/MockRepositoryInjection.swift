@@ -12,10 +12,25 @@ import Swinject
 class MockRepositoryInjection: RepositoryInjectionProtocol {
 
     func registerRepositories(container: Container) {
+
+        container.register(UserDefaultsRepository.self) { _ in
+            MockUserDefaultsRepositoryImplementation()
+        }
+
+        container.register(DatabaseRepository.self) { _ in
+            MockDatabaseRepositoryImplementation()
+        }
+
         container.register(BaseRepository.self) { resolver in
             MockBaseRepositoryImplementation(mockNetworkManager: resolver.resolve(NetworkManager.self)!,
                                              mockLocalManager: resolver.resolve(LocalManager.self)!)
         }
+        
+        container.register(RandomAPIRepository.self) { resolver in
+            MockRandomAPIRepositoryImplementation(localManager: resolver.resolve(LocalManager.self)!,
+                                                  networkManager: resolver.resolve(NetworkManager.self)!)
+        }
+
     }
 
 }

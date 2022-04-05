@@ -12,7 +12,7 @@ import UIKit
 class MockRouter: Router {
 
     var startCalled: Bool = false
-    func startApp() {
+    func start() {
         self.startCalled = true
     }
     
