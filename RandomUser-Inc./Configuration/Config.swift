@@ -13,6 +13,13 @@ enum ConfigKeys: String {
 }
 
 enum Config {
+    
+    static func configurationName() -> String {
+        guard let configuration = Bundle.main.infoDictionary?["Configuration"] as? String else {
+            fatalError("CONFIGURATION NOT DEFINED")
+        }
+        return configuration
+    }
 
     static func getBaseUrl() -> String {
         guard let value = Bundle.main.object(forInfoDictionaryKey: ConfigKeys.baseUrl.rawValue) as? String
