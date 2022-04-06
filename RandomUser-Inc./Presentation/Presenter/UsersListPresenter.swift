@@ -43,11 +43,12 @@ class UsersListPresenter: BasePresenter {
     }
 
     func deleteUser(at index: Int) {
-        self.total -= 1
-        var user = users[index]
+        var user = filteredUsers[index]
         user.deleted = true
         if let updatedUser = randomAPIInteractor.updateUser(user: user) {
-            users[index] = updatedUser
+            if let usersIndex = users.firstIndex(where: { $0.id.uuid == updatedUser.id.uuid }) {
+                users[usersIndex] = updatedUser
+            }
         }
     }
 
@@ -81,7 +82,6 @@ class UsersListPresenter: BasePresenter {
                 self.fetching = false
                 print(error)
             }).disposed(by: self.disposeBag)
-
     }
 
 }
