@@ -19,12 +19,13 @@ class MockUserResponse {
                                                 city: "London",
                                                 state: "London City",
                                                 country: "United Kingdom",
-                                                postcode: 33245,
+                                                postcode: "33245",
                                                 coordinates: CLLocationCoordinate2D(latitude: 77.2, longitude: -72.4),
                                                 timezone: LocationTimezone(offset: "+01:00", description: "London")),
+                         email: "awalter@gmail.com",
                          registered: UserRegistered(date: ISO8601DateFormatter().defaultFormatter().date(from: "2002-08-01T14:30:52.705Z")!, age: 23),
                          phone: "49-123-289-234",
-                         id: UserID(name: "PASS", value: "PEN189273"),
+                         id: UserID(name: "PASS", value: "PEN189273", uuid: "PASS-PEN189273"),
                          picture: UserPicture(large: "imageurl1", medium: "imageurl2", thumbnail: "imageurl3"))
 
         let user2 = User(gender: "male",
@@ -33,12 +34,13 @@ class MockUserResponse {
                                                 city: "Bilbao",
                                                 state: "Basque Country",
                                                 country: "Spain",
-                                                postcode: 234567,
+                                                postcode: "234567",
                                                 coordinates: CLLocationCoordinate2D(latitude: 42.4, longitude: 2.17),
                                                 timezone: LocationTimezone(offset: "+02:00", description: "Madrid")),
+                         email: "jjoseba@gmail.com",
                          registered: UserRegistered(date: ISO8601DateFormatter().defaultFormatter().date(from: "2022-01-10T14:23:52.705Z")!, age: 56),
                          phone: "34-678902123",
-                         id: UserID(name: "DNI", value: "123456789E"),
+                         id: UserID(name: "DNI", value: "123456789E", uuid: "DNI-12345689E"),
                          picture: UserPicture(large: "imageurl1", medium: "imageurl2", thumbnail: "imageurl3"))
         
         let userResponse = UserResponse(users: [user1, user2],
@@ -58,12 +60,13 @@ class MockUserResponse {
                                                 city: "London",
                                                 state: "London City",
                                                 country: "United Kingdom",
-                                                postcode: 33245,
+                                                postcode: "33245",
                                                 coordinates: CLLocationCoordinate2D(latitude: 77.2, longitude: -72.4),
                                                 timezone: LocationTimezone(offset: "+01:00", description: "London")),
+                         email: "awalter@gmail.com",
                          registered: UserRegistered(date: ISO8601DateFormatter().defaultFormatter().date(from: "2002-08-01T14:30:52.705Z")!, age: 23),
                          phone: "49-123-289-234",
-                         id: UserID(name: "PASS", value: "PEN189275"),
+                         id: UserID(name: "PASS", value: "PEN189275", uuid: "PASS-PEN189275"),
                          picture: UserPicture(large: "imageurl1", medium: "imageurl2", thumbnail: "imageurl3"))
 
         let user2 = User(gender: "male",
@@ -72,12 +75,13 @@ class MockUserResponse {
                                                 city: "Bilbao",
                                                 state: "Basque Country",
                                                 country: "Spain",
-                                                postcode: 234567,
+                                                postcode: "234567",
                                                 coordinates: CLLocationCoordinate2D(latitude: 42.4, longitude: 2.17),
                                                 timezone: LocationTimezone(offset: "+02:00", description: "Madrid")),
+                         email: "jjoseba@gmail.com",
                          registered: UserRegistered(date: ISO8601DateFormatter().defaultFormatter().date(from: "2022-01-10T14:23:52.705Z")!, age: 56),
                          phone: "34-678902123",
-                         id: UserID(name: "DNI", value: "123456780E"),
+                         id: UserID(name: "DNI", value: "123456780E", uuid: "DNI-123456780E"),
                          picture: UserPicture(large: "imageurl1", medium: "imageurl2", thumbnail: "imageurl3"))
         
         let userResponse = UserResponse(users: [user1, user2],

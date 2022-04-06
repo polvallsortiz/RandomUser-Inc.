@@ -28,7 +28,7 @@ struct UserLocation {
     var city: String
     var state: String
     var country: String
-    var postcode: Int
+    var postcode: String
     var coordinates: CLLocationCoordinate2D
     var timezone: LocationTimezone
 

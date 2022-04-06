@@ -18,11 +18,16 @@ protocol RandomAPIRepository: BaseRepository {
 class RandomAPIRepositoryImplementation: BaseRepositoryImplementation, RandomAPIRepository {
 
     func getRandomUsers(usersToLoad: Int, seed: String? = nil, page: Int? = nil) -> Single<UserResponse> {
+        if let localUserResponse = self.getLocalManager().getRandomUsersResponse(page: page, seed: seed) {
+            return Single.just(localUserResponse)
+        }
         // swiftlint:disable:next line_length
         return getNetworkManager().makeRequest(target: RandomAPITarget.randomUsers(request: RandomUsersRequest(usersToLoad: usersToLoad, seed: seed, page: page)))
             .map(UserResponseEntity.self)
             .flatMap({ (response) -> Single<UserResponse> in
-                return Single.just(response.parseToModel())
+                let model = response.parseToModel()
+                self.getLocalManager().saveRandomUsersResponse(model)
+                return Single.just(model)
             })
 
     }

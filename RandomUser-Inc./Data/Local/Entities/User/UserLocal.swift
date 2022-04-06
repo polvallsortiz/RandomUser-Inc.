@@ -14,6 +14,7 @@ class UserLocal: Object {
     @Persisted var gender: String
     @Persisted var name: UserNameLocal?
     @Persisted var location: UserLocationLocal?
+    @Persisted var email: String
     @Persisted var registered: UserRegisteredLocal?
     @Persisted var phone: String
     @Persisted var id: UserIDLocal?
@@ -31,6 +32,7 @@ extension UserLocal {
         return User(gender: self.gender,
                     name: (self.name?.parseToModel())!,
                     location: (self.location?.parseToModel())!,
+                    email: self.email,
                     registered: (self.registered?.parseToModel())!,
                     phone: self.phone,
                     id: (self.id?.parseToModel())!,

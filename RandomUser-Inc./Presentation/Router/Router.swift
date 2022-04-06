@@ -12,7 +12,7 @@ import SwinjectStoryboard
 protocol Router {
     func start()
     // Add views here
-
+    func usersList() -> Display
     func popCurrentDisplay(animated: Bool, completion: (() -> Void)?)
     func popToViewContoller(vc: UIViewController.Type, animated: Bool)
     func dismissViewController(animated: Bool, completion: (() -> Void)?)
@@ -28,6 +28,15 @@ final class RouterImplementation: Router {
         let navController = UINavigationController(rootViewController: viewController)
         navController.setNavigationBarHidden(true, animated: false)
         UIApplication.shared.keyWindow?.replaceRootViewControllerWith(navController, animated: true, completion: nil)
+    }
+
+    // MARK: View methods
+
+    func usersList() -> Display {
+        guard let view = SwinjectStoryboard.defaultContainer.resolve(UsersListViewController.self) else {
+            fatalError("COULD NOT INSTANTIATE USERSLISTVIEWCONTROLLER")
+        }
+        return Display(viewController: view, modal: false, animated: true)
     }
 
     // MARK: Navigation methods

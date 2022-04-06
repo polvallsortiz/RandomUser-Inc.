@@ -9,3 +9,4 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 BASE_URL = https:/$()/randomuser.me/API
+USERS_GROUP = 20

@@ -28,7 +28,7 @@ class LocalManagerTest: XCTestCase {
     func testSaveRandomUserResponse() {
         let mockData = MockUserResponse.getMockUserResponse()
         localManager.saveRandomUsersResponse(mockData)
-        let savedData = localManager.getRandomUsersResponse(page: mockData.info.page)
+        let savedData = localManager.getRandomUsersResponse(page: mockData.info.page, seed: mockData.info.seed)
         let nextPage = localManager.getNextRandomUsersPage()
         XCTAssertEqual(mockData.users[0].id.uuid, savedData!.users[0].id.uuid)
         XCTAssertEqual(nextPage, mockData.info.page + 1)
@@ -37,11 +37,13 @@ class LocalManagerTest: XCTestCase {
     func testGetRandomUserResponse() {
         let mockData = MockUserResponse.getMockUserResponse()
         localManager.saveRandomUsersResponse(mockData)
-        let savedData = localManager.getRandomUsersResponse(page: mockData.info.page)
+        let savedData = localManager.getRandomUsersResponse(page: mockData.info.page, seed: mockData.info.seed)
         XCTAssertNotNil(savedData)
         XCTAssertEqual(mockData.users[1].id.uuid, savedData!.users[1].id.uuid)
-        let koResponse = localManager.getRandomUsersResponse(page: 0)
+        let koResponse = localManager.getRandomUsersResponse(page: 0, seed: mockData.info.seed)
         XCTAssertNil(koResponse)
+        let koResponse2 = localManager.getRandomUsersResponse(page: mockData.info.page, seed: "badseed")
+        XCTAssertNil(koResponse2)
     }
 
     func testNextRandomUsersPage() {

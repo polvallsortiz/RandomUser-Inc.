@@ -22,6 +22,17 @@
 		BC444C5027FC8D3900CD25F6 /* MockRandomAPIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C4F27FC8D3900CD25F6 /* MockRandomAPIRepository.swift */; };
 		BC444C5327FC8FAE00CD25F6 /* MockRandomAPIInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C5227FC8FAE00CD25F6 /* MockRandomAPIInteractor.swift */; };
 		BC444C5527FC931B00CD25F6 /* RandomAPIInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C5427FC931B00CD25F6 /* RandomAPIInteractorTests.swift */; };
+		BC444C5827FC98CE00CD25F6 /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C5727FC98CE00CD25F6 /* UsersListViewController.swift */; };
+		BC444C5A27FC98E400CD25F6 /* UsersListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC444C5927FC98E400CD25F6 /* UsersListViewController.xib */; };
+		BC444C5C27FC992C00CD25F6 /* UsersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C5B27FC992C00CD25F6 /* UsersListPresenter.swift */; };
+		BC444C6327FCA12E00CD25F6 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C6227FCA12E00CD25F6 /* UIView.swift */; };
+		BC444C6627FCE69000CD25F6 /* RelaxedInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C6527FCE68F00CD25F6 /* RelaxedInt.swift */; };
+		BC444C6927FCED0300CD25F6 /* UsersListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C6727FCED0300CD25F6 /* UsersListTableViewCell.swift */; };
+		BC444C6A27FCED0300CD25F6 /* UsersListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC444C6827FCED0300CD25F6 /* UsersListTableViewCell.xib */; };
+		BC444C6C27FCEF1800CD25F6 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C6B27FCEF1800CD25F6 /* UIImageView.swift */; };
+		BC444C6F27FD766A00CD25F6 /* UsersListFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C6E27FD766A00CD25F6 /* UsersListFooterView.swift */; };
+		BC444C7127FD77C800CD25F6 /* UsersListFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC444C7027FD77C800CD25F6 /* UsersListFooterView.xib */; };
+		BC444C7427FD87F100CD25F6 /* LoaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC444C7327FD87F100CD25F6 /* LoaderViewController.xib */; };
 		BC71803927FAE428002A6A72 /* SwinjectStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71803827FAE428002A6A72 /* SwinjectStoryboard.swift */; };
 		BC71803B27FAE7AE002A6A72 /* ManagerInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71803A27FAE7AE002A6A72 /* ManagerInjection.swift */; };
 		BC71803D27FAE816002A6A72 /* RepositoryInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71803C27FAE816002A6A72 /* RepositoryInjection.swift */; };
@@ -83,7 +94,6 @@
 		BC76B3BC27F79EAE00489B57 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3BB27F79EAE00489B57 /* UIApplication.swift */; };
 		BC76B3C427F7A3CC00489B57 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3C327F7A3CC00489B57 /* BaseViewController.swift */; };
 		BC76B3C827F7A48B00489B57 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3C627F7A48B00489B57 /* LoaderViewController.swift */; };
-		BC76B3C927F7A48B00489B57 /* LoaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC76B3C727F7A48B00489B57 /* LoaderViewController.xib */; };
 		BC76B3CB27F7A87100489B57 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3CA27F7A87100489B57 /* BasePresenter.swift */; };
 		BCE0D97427F6D6AA00CDBB6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE0D97327F6D6AA00CDBB6C /* AppDelegate.swift */; };
 		BCE0D97D27F6D6AB00CDBB6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE0D97C27F6D6AB00CDBB6C /* Assets.xcassets */; };
@@ -135,6 +145,17 @@
 		BC444C4F27FC8D3900CD25F6 /* MockRandomAPIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRandomAPIRepository.swift; sourceTree = "<group>"; };
 		BC444C5227FC8FAE00CD25F6 /* MockRandomAPIInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRandomAPIInteractor.swift; sourceTree = "<group>"; };
 		BC444C5427FC931B00CD25F6 /* RandomAPIInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAPIInteractorTests.swift; sourceTree = "<group>"; };
+		BC444C5727FC98CE00CD25F6 /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
+		BC444C5927FC98E400CD25F6 /* UsersListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersListViewController.xib; sourceTree = "<group>"; };
+		BC444C5B27FC992C00CD25F6 /* UsersListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListPresenter.swift; sourceTree = "<group>"; };
+		BC444C6227FCA12E00CD25F6 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		BC444C6527FCE68F00CD25F6 /* RelaxedInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxedInt.swift; sourceTree = "<group>"; };
+		BC444C6727FCED0300CD25F6 /* UsersListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListTableViewCell.swift; sourceTree = "<group>"; };
+		BC444C6827FCED0300CD25F6 /* UsersListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersListTableViewCell.xib; sourceTree = "<group>"; };
+		BC444C6B27FCEF1800CD25F6 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		BC444C6E27FD766A00CD25F6 /* UsersListFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListFooterView.swift; sourceTree = "<group>"; };
+		BC444C7027FD77C800CD25F6 /* UsersListFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersListFooterView.xib; sourceTree = "<group>"; };
+		BC444C7327FD87F100CD25F6 /* LoaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderViewController.xib; sourceTree = "<group>"; };
 		BC71803827FAE428002A6A72 /* SwinjectStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectStoryboard.swift; sourceTree = "<group>"; };
 		BC71803A27FAE7AE002A6A72 /* ManagerInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerInjection.swift; sourceTree = "<group>"; };
 		BC71803C27FAE816002A6A72 /* RepositoryInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInjection.swift; sourceTree = "<group>"; };
@@ -196,7 +217,6 @@
 		BC76B3BB27F79EAE00489B57 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		BC76B3C327F7A3CC00489B57 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BC76B3C627F7A48B00489B57 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
-		BC76B3C727F7A48B00489B57 /* LoaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderViewController.xib; sourceTree = "<group>"; };
 		BC76B3CA27F7A87100489B57 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		BCE0D97027F6D6AA00CDBB6C /* RandomUser-Inc..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RandomUser-Inc..app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE0D97327F6D6AA00CDBB6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -336,6 +356,48 @@
 				BC444C5227FC8FAE00CD25F6 /* MockRandomAPIInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		BC444C5627FC98B000CD25F6 /* UsersList */ = {
+			isa = PBXGroup;
+			children = (
+				BC444C5727FC98CE00CD25F6 /* UsersListViewController.swift */,
+				BC444C5927FC98E400CD25F6 /* UsersListViewController.xib */,
+			);
+			path = UsersList;
+			sourceTree = "<group>";
+		};
+		BC444C5D27FC9D7F00CD25F6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BC444C6727FCED0300CD25F6 /* UsersListTableViewCell.swift */,
+				BC444C6827FCED0300CD25F6 /* UsersListTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BC444C6427FCE67F00CD25F6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BC444C6527FCE68F00CD25F6 /* RelaxedInt.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BC444C6D27FD764400CD25F6 /* UsersListFooterView */ = {
+			isa = PBXGroup;
+			children = (
+				BC444C6E27FD766A00CD25F6 /* UsersListFooterView.swift */,
+				BC444C7027FD77C800CD25F6 /* UsersListFooterView.xib */,
+			);
+			path = UsersListFooterView;
+			sourceTree = "<group>";
+		};
+		BC444C7227FD7F1400CD25F6 /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserDetail;
 			sourceTree = "<group>";
 		};
 		BC71803727FAE3E9002A6A72 /* DependencyInjection */ = {
@@ -658,6 +720,7 @@
 		BC76B3B927F79E9B00489B57 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				BC444C6427FCE67F00CD25F6 /* Utils */,
 				BC76B3BA27F79EA300489B57 /* Extensions */,
 			);
 			path = Utils;
@@ -672,6 +735,8 @@
 				BC7180A127FBAD98002A6A72 /* UIWindow.swift */,
 				BC7180A527FBB656002A6A72 /* ISO8601DateFormatter.swift */,
 				BC444C3D27FC2AEC00CD25F6 /* Realm.swift */,
+				BC444C6227FCA12E00CD25F6 /* UIView.swift */,
+				BC444C6B27FCEF1800CD25F6 /* UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -679,6 +744,8 @@
 		BC76B3BD27F7A2C300489B57 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				BC444C6D27FD764400CD25F6 /* UsersListFooterView */,
+				BC444C5D27FC9D7F00CD25F6 /* Cells */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -686,6 +753,8 @@
 		BC76B3C127F7A32B00489B57 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				BC444C7227FD7F1400CD25F6 /* UserDetail */,
+				BC444C5627FC98B000CD25F6 /* UsersList */,
 				BC71809827FB9E68002A6A72 /* Splash */,
 				BC76B3C527F7A45F00489B57 /* Loader */,
 				BC76B3C327F7A3CC00489B57 /* BaseViewController.swift */,
@@ -698,6 +767,7 @@
 			children = (
 				BC76B3CA27F7A87100489B57 /* BasePresenter.swift */,
 				BC71809D27FB9EEB002A6A72 /* SplashPresenter.swift */,
+				BC444C5B27FC992C00CD25F6 /* UsersListPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -706,7 +776,7 @@
 			isa = PBXGroup;
 			children = (
 				BC76B3C627F7A48B00489B57 /* LoaderViewController.swift */,
-				BC76B3C727F7A48B00489B57 /* LoaderViewController.xib */,
+				BC444C7327FD87F100CD25F6 /* LoaderViewController.xib */,
 			);
 			path = Loader;
 			sourceTree = "<group>";
@@ -880,9 +950,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCE0D98027F6D6AB00CDBB6C /* LaunchScreen.storyboard in Resources */,
-				BC76B3C927F7A48B00489B57 /* LoaderViewController.xib in Resources */,
+				BC444C5A27FC98E400CD25F6 /* UsersListViewController.xib in Resources */,
 				BCE0D97D27F6D6AB00CDBB6C /* Assets.xcassets in Resources */,
 				BC7180A427FBB45D002A6A72 /* SplashViewController.xib in Resources */,
+				BC444C7127FD77C800CD25F6 /* UsersListFooterView.xib in Resources */,
+				BC444C6A27FCED0300CD25F6 /* UsersListTableViewCell.xib in Resources */,
+				BC444C7427FD87F100CD25F6 /* LoaderViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1047,8 +1120,10 @@
 			files = (
 				BC76B3B827F79D5100489B57 /* Display.swift in Sources */,
 				BC71806E27FB3A98002A6A72 /* UserName.swift in Sources */,
+				BC444C6F27FD766A00CD25F6 /* UsersListFooterView.swift in Sources */,
 				BC71803D27FAE816002A6A72 /* RepositoryInjection.swift in Sources */,
 				BC71804327FAF011002A6A72 /* PresenterInjection.swift in Sources */,
+				BC444C5827FC98CE00CD25F6 /* UsersListViewController.swift in Sources */,
 				BC76B3CB27F7A87100489B57 /* BasePresenter.swift in Sources */,
 				BC71808C27FB576B002A6A72 /* UserPictureLocal.swift in Sources */,
 				BC71807227FB3B8E002A6A72 /* UserRegistered.swift in Sources */,
@@ -1059,13 +1134,16 @@
 				BC71808A27FB572A002A6A72 /* UserRegisteredLocal.swift in Sources */,
 				BC71808427FB53E1002A6A72 /* UserLocal.swift in Sources */,
 				BC71805C27FB327E002A6A72 /* RandomUsersRequest.swift in Sources */,
+				BC444C5C27FC992C00CD25F6 /* UsersListPresenter.swift in Sources */,
 				BC76B3BC27F79EAE00489B57 /* UIApplication.swift in Sources */,
 				BC71807427FB3BBE002A6A72 /* UserPicture.swift in Sources */,
 				BC71806C27FB39C5002A6A72 /* User.swift in Sources */,
 				BC7180A227FBAD98002A6A72 /* UIWindow.swift in Sources */,
 				BC71804527FAF198002A6A72 /* ViewInjection.swift in Sources */,
+				BC444C6927FCED0300CD25F6 /* UsersListTableViewCell.swift in Sources */,
 				BC444C3E27FC2AEC00CD25F6 /* Realm.swift in Sources */,
 				BC2FC53727F78EAD00521784 /* LocalManager.swift in Sources */,
+				BC444C6327FCA12E00CD25F6 /* UIView.swift in Sources */,
 				BC71809027FB5897002A6A72 /* UserID.swift in Sources */,
 				BC71807E27FB4A60002A6A72 /* UserResponse.swift in Sources */,
 				BC76B3C827F7A48B00489B57 /* LoaderViewController.swift in Sources */,
@@ -1073,6 +1151,7 @@
 				BC7180A627FBB656002A6A72 /* ISO8601DateFormatter.swift in Sources */,
 				BC71803927FAE428002A6A72 /* SwinjectStoryboard.swift in Sources */,
 				BC76B39B27F7936300489B57 /* NetworkManager.swift in Sources */,
+				BC444C6C27FCEF1800CD25F6 /* UIImageView.swift in Sources */,
 				BC71805A27FB3027002A6A72 /* RandomAPITarget.swift in Sources */,
 				BC71806727FB38D0002A6A72 /* UserRegisteredEntity.swift in Sources */,
 				BC71806927FB3921002A6A72 /* UserPictureEntity.swift in Sources */,
@@ -1082,6 +1161,7 @@
 				BCE0D97427F6D6AA00CDBB6C /* AppDelegate.swift in Sources */,
 				BC71805E27FB3536002A6A72 /* RandomAPIInteractor.swift in Sources */,
 				BC71803F27FAEDE2002A6A72 /* InteractorInjection.swift in Sources */,
+				BC444C6627FCE69000CD25F6 /* RelaxedInt.swift in Sources */,
 				BC76B3A027F795EF00489B57 /* BaseRepository.swift in Sources */,
 				BC71807A27FB41AE002A6A72 /* RandomAPIRepository.swift in Sources */,
 				BC71809E27FB9EEB002A6A72 /* SplashPresenter.swift in Sources */,

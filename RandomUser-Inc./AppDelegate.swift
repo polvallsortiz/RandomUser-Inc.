@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         return true
     }
-    
+
     private func startNavigationIfNotTesting() {
         guard NSClassFromString("XCTestCase") != nil else {
             guard let router = SwinjectStoryboard.defaultContainer.resolve(Router.self) else { return }

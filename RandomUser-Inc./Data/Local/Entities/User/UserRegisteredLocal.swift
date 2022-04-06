@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 
 class UserRegisteredLocal: Object {
-    
+
     @Persisted var date: Date
     @Persisted var age: Int
 

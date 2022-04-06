@@ -16,7 +16,7 @@ class MockDatabaseRepositoryImplementation: DatabaseRepository {
     }
 
     var getRandomUsersResponseCalled: Bool = false
-    func getRandomUsersResponse(page: Int?) -> UserResponse? {
+    func getRandomUsersResponse(page: Int?, seed: String?) -> UserResponse? {
         getRandomUsersResponseCalled = true
         return page != 0 ? MockUserResponse.getMockUserResponse() : nil
     }

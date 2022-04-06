@@ -9,23 +9,22 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoaderViewController" customModule="RandomUser_Inc_" customModuleProvider="target">
             <connections>
-                <outlet property="activityIndicator" destination="FAl-cb-iNZ" id="gxs-6A-MzS"/>
-                <outlet property="titleLabel" destination="vZb-8q-TJf" id="Eph-iV-w9U"/>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="activityIndicator" destination="VRh-n9-89O" id="biv-IY-xAm"/>
+                <outlet property="titleLabel" destination="9hV-Hs-EWQ" id="dJR-L4-BKD"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VPU-yf-n4s">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XBh-Hx-nSi">
                     <rect key="frame" x="8" y="353" width="398" height="200"/>
                     <subviews>
-                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="FAl-cb-iNZ">
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="VRh-n9-89O">
                             <rect key="frame" x="189" y="0.0" width="20" height="96"/>
                         </activityIndicatorView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZb-8q-TJf">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hV-Hs-EWQ">
                             <rect key="frame" x="178.5" y="104" width="41.5" height="96"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
@@ -33,17 +32,19 @@
                         </label>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" constant="200" id="ksF-hf-xNy"/>
+                        <constraint firstAttribute="height" constant="200" id="PxY-qf-Fjz"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="idJ-Yq-VWQ"/>
                     </constraints>
                 </stackView>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="VPU-yf-n4s" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="5W8-6T-0nf"/>
-                <constraint firstItem="VPU-yf-n4s" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="Jx2-lx-eVz"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VPU-yf-n4s" secondAttribute="trailing" constant="8" id="Uda-rS-I1n"/>
+                <constraint firstItem="XBh-Hx-nSi" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="MQC-fJ-Izl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="XBh-Hx-nSi" secondAttribute="trailing" constant="8" id="iH2-1T-dzQ"/>
+                <constraint firstItem="XBh-Hx-nSi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="pVJ-XY-UW8"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="110"/>
+            <point key="canvasLocation" x="-184" y="60"/>
         </view>
     </objects>
 </document>

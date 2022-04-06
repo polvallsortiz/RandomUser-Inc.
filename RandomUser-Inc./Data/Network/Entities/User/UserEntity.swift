@@ -30,9 +30,10 @@ extension UserEntity {
         return User(gender: self.gender,
                     name: self.name.parseToModel(),
                     location: self.location.parseToModel(),
+                    email: self.email,
                     registered: self.registered.parseToModel(),
                     phone: self.phone,
-                    id: self.id.parseToModel(),
+                    id: self.id.parseToModel(supportEmail: self.email),
                     picture: self.picture.parseToModel())
     }
 

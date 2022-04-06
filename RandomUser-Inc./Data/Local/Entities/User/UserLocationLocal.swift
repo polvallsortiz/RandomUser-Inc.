@@ -28,7 +28,7 @@ class UserLocationLocal: Object {
     @Persisted var street: LocationStreetLocal?
     @Persisted var city: String
     @Persisted var state: String
-    @Persisted var postcode: Int
+    @Persisted var postcode: String
     @Persisted var country: String
     @Persisted var latitude: Double
     @Persisted var longitude: Double

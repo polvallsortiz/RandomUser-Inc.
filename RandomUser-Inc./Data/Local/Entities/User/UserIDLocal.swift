@@ -10,8 +10,8 @@ import RealmSwift
 
 class UserIDLocal: Object {
 
-    @Persisted var name: String
-    @Persisted var value: String
+    @Persisted var name: String?
+    @Persisted var value: String?
     @Persisted var uuid: String
 
 }
@@ -19,7 +19,7 @@ class UserIDLocal: Object {
 extension UserIDLocal {
 
     func parseToModel() -> UserID {
-        return UserID(name: self.name, value: self.value)
+        return UserID(name: self.name, value: self.value, uuid: self.uuid)
     }
 
 }
