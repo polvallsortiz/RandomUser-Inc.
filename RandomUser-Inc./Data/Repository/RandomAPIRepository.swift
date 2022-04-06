@@ -18,7 +18,7 @@ protocol RandomAPIRepository: BaseRepository {
 class RandomAPIRepositoryImplementation: BaseRepositoryImplementation, RandomAPIRepository {
 
     func getRandomUsers(usersToLoad: Int, seed: String? = nil, page: Int? = nil) -> Single<UserResponse> {
-        if let localUserResponse = self.getLocalManager().getRandomUsersResponse(page: page) {
+        if let localUserResponse = self.getLocalManager().getRandomUsersResponse(page: page, seed: seed) {
             return Single.just(localUserResponse)
         }
         // swiftlint:disable:next line_length

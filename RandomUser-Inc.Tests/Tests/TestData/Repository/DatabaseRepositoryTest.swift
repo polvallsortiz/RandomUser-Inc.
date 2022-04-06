@@ -7,63 +7,86 @@
 
 @testable import RandomUser_Inc_
 import XCTest
+import RealmSwift
 
 class DatabaseRepositoryTest: XCTestCase {
 
     var databaseRepository: DatabaseRepository!
+    var realm: Realm!
 
     override func setUp() {
         MockDependencyInjection.mockDependencies()
-        databaseRepository = MockDependencyInjection.defaultContainer.resolve(DatabaseRepository.self)
+        var realmConfig = Realm.Configuration()
+        realmConfig.fileURL = realmConfig.fileURL!.deletingLastPathComponent().appendingPathComponent("testing.realm")
+        realmConfig.inMemoryIdentifier = self.name
+        realm = try! Realm(configuration: realmConfig)
+        databaseRepository = DatabaseRepositoryImplementation(realm: realm)
     }
 
     override func tearDown() {
-        databaseRepository.deleteAllRandomUserResponses()
+        try! realm.write{
+            realm.deleteAll()
+        }
     }
     
     func testSaveRandomUsersResponse() {
         let mockData = MockUserResponse.getMockUserResponse()
         databaseRepository.saveRandomUsersResponse(mockData)
-        let okResponse1 = databaseRepository.getRandomUsersResponse(page: mockData.info.page)
-        XCTAssertEqual(mockData.users[0].id.uuid, okResponse1?.users[0].id.uuid)
+        let userResponse = realm.objects(UserResponseLocal.self)
+        XCTAssertNotNil(userResponse)
+        XCTAssertEqual(userResponse.count, 1)
+        XCTAssertEqual(userResponse.first?.users.count, 2)
     }
     
     func testGetRandomUserResponse() {
-        databaseRepository.deleteAllRandomUserResponses()
         let mockData = MockUserResponse.getMockUserResponse()
-        let mockData2 = MockUserResponse.getMockUserResponse2()
-        databaseRepository.saveRandomUsersResponse(mockData)
-        let okResponse1 = databaseRepository.getRandomUsersResponse(page: mockData.info.page)
-        XCTAssertEqual(mockData.users[0].id.uuid, okResponse1?.users[0].id.uuid)
-        let koResponse1 = databaseRepository.getRandomUsersResponse(page: mockData2.info.page)
-        XCTAssertNil(koResponse1)
-        databaseRepository.saveRandomUsersResponse(mockData2)
-        let okResponse2 = databaseRepository.getRandomUsersResponse(page: mockData2.info.page)
-        XCTAssertEqual(mockData2.users[0].id.uuid, okResponse2?.users[0].id.uuid)
+        try! realm.write {
+            let mockDataLocal = mockData.parseToLocal()
+            realm.add(mockDataLocal)
+        }
+        let okResponse = databaseRepository.getRandomUsersResponse(page: mockData.info.page, seed: mockData.info.seed)
+        XCTAssertNotNil(okResponse)
+        XCTAssertEqual(okResponse?.users.count, mockData.users.count)
+        XCTAssertEqual(mockData.users[0].id.uuid, okResponse?.users[0].id.uuid)
+        let koResponse = databaseRepository.getRandomUsersResponse(page: mockData.info.page, seed: "badseed")
+        XCTAssertNil(koResponse)
+        let koResponse2 = databaseRepository.getRandomUsersResponse(page: 0, seed: mockData.info.seed)
+        XCTAssertNil(koResponse2)
     }
     
     func testDeleteRandomUserResponse() {
         let mockData = MockUserResponse.getMockUserResponse()
         let mockData2 = MockUserResponse.getMockUserResponse2()
-        databaseRepository.saveRandomUsersResponse(mockData)
-        databaseRepository.saveRandomUsersResponse(mockData2)
+        try! realm.write {
+            let mockDataLocal = mockData.parseToLocal()
+            let mockDataLocal2 = mockData2.parseToLocal()
+            realm.add(mockDataLocal)
+            realm.add(mockDataLocal2)
+        }
         databaseRepository.deleteRandomUserReponse(page: mockData.info.page)
-        let koResponse = databaseRepository.getRandomUsersResponse(page: mockData.info.page)
-        XCTAssertNil(koResponse)
-        let okResponse = databaseRepository.getRandomUsersResponse(page: mockData2.info.page)
-        XCTAssertEqual(mockData2.users[0].id.uuid, okResponse?.users[0].id.uuid)
+        let koResponse = realm.objects(UserResponseLocal.self).where { $0.info.page == mockData.info.page }
+        XCTAssertEqual(koResponse.count, 0)
+        let okResponse = realm.objects(UserResponseLocal.self).where { $0.info.page == mockData2.info.page }
+        XCTAssertNotNil(okResponse)
+        XCTAssertEqual(okResponse.count, 1)
+        XCTAssertNotNil(okResponse.first)
+        XCTAssertEqual(mockData2.users[0].id.uuid, okResponse.first?.users[0].id?.uuid)
     }
     
     func testDeleteAllRandomUserResponse() {
         let mockData = MockUserResponse.getMockUserResponse()
         let mockData2 = MockUserResponse.getMockUserResponse2()
-        databaseRepository.saveRandomUsersResponse(mockData)
-        databaseRepository.saveRandomUsersResponse(mockData2)
+        try! realm.write {
+            let mockDataLocal = mockData.parseToLocal()
+            let mockDataLocal2 = mockData2.parseToLocal()
+            realm.add(mockDataLocal)
+            realm.add(mockDataLocal2)
+        }
         databaseRepository.deleteAllRandomUserResponses()
-        let koResponse1 = databaseRepository.getRandomUsersResponse(page: mockData.info.page)
-        let koResponse2 = databaseRepository.getRandomUsersResponse(page: mockData2.info.page)
-        XCTAssertNil(koResponse1)
-        XCTAssertNil(koResponse2)
+        let koResponse1 = realm.objects(UserResponseLocal.self).where { $0.info.page == mockData.info.page }
+        let koResponse2 = realm.objects(UserResponseLocal.self).where { $0.info.page == mockData2.info.page }
+        XCTAssertEqual(koResponse1.count, 0)
+        XCTAssertEqual(koResponse2.count, 0)
     }
 
 }

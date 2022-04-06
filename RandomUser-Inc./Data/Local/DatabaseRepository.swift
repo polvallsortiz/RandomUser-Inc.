@@ -12,7 +12,7 @@ import RealmSwift
 protocol DatabaseRepository {
 
     func saveRandomUsersResponse(_ response: UserResponse)
-    func getRandomUsersResponse(page: Int?) -> UserResponse?
+    func getRandomUsersResponse(page: Int?, seed: String?) -> UserResponse?
     func deleteRandomUserReponse(page: Int)
     func deleteAllRandomUserResponses()
 
@@ -26,9 +26,13 @@ class DatabaseRepositoryImplementation: DatabaseRepository {
         realm = try! Realm()
     }
 
+    init(realm: Realm) {
+        self.realm = realm
+    }
+
     func saveRandomUsersResponse(_ response: UserResponse) {
 
-        if getRandomUsersFor(page: response.info.page) == nil {
+        if getRandomUsersFor(page: response.info.page, seed: response.info.seed) == nil {
             try! realm.write { () -> Void in
                 let userResponseLocal = response.parseToLocal()
                 realm.add(userResponseLocal)
@@ -37,8 +41,8 @@ class DatabaseRepositoryImplementation: DatabaseRepository {
 
     }
 
-    func getRandomUsersResponse(page: Int?) -> UserResponse? {
-        return getRandomUsersFor(page: page ?? 1)
+    func getRandomUsersResponse(page: Int?, seed: String?) -> UserResponse? {
+        return getRandomUsersFor(page: page ?? 1, seed: seed)
     }
 
     func deleteRandomUserReponse(page: Int) {
@@ -55,9 +59,12 @@ class DatabaseRepositoryImplementation: DatabaseRepository {
         }
     }
 
-    private func getRandomUsersFor(page: Int = 1) -> UserResponse? {
+    private func getRandomUsersFor(page: Int = 1, seed: String?) -> UserResponse? {
         let responses = realm.objects(UserResponseLocal.self)
-        let responsesQuery = responses.where { $0.info.page == page }
+        var responsesQuery = responses.where { $0.info.page == page }
+        if let seed = seed {
+            responsesQuery = responsesQuery.where { $0.info.seed == seed }
+        }
         if let first = responsesQuery.first {
             return first.parseToModel()
         } else { return nil }

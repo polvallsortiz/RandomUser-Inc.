@@ -11,7 +11,7 @@ import Foundation
 protocol LocalManager {
 
     func saveRandomUsersResponse(_ response: UserResponse)
-    func getRandomUsersResponse(page: Int?) -> UserResponse?
+    func getRandomUsersResponse(page: Int?, seed: String?) -> UserResponse?
     func getNextRandomUsersPage() -> Int?
 
 }
@@ -30,8 +30,8 @@ class LocalManagerImplementation: LocalManager {
         self.databaseRepository.saveRandomUsersResponse(response)
     }
 
-    func getRandomUsersResponse(page: Int?) -> UserResponse? {
-        return self.databaseRepository.getRandomUsersResponse(page: page)
+    func getRandomUsersResponse(page: Int?, seed: String?) -> UserResponse? {
+        return self.databaseRepository.getRandomUsersResponse(page: page, seed: seed)
     }
 
     func getNextRandomUsersPage() -> Int? {
