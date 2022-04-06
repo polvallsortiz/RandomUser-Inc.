@@ -28,4 +28,10 @@ class MockRandomAPIInteractorImplementation: RandomAPIInteractor {
         }
     }
 
+    var updateUserCalled: Bool = false
+    func updateUser(user: User) -> User? {
+        updateUserCalled = true
+        return user.id.uuid == "mockuserfail" ? nil : user
+    }
+
 }

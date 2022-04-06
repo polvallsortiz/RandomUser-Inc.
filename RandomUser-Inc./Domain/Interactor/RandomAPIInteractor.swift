@@ -10,6 +10,7 @@ import RxSwift
 
 protocol RandomAPIInteractor {
     func getRandomUsers(usersToLoad: Int, seed: String?, page: Int?) -> Single<UserResponse>
+    func updateUser(user: User) -> User?
 }
 
 class RandomAPIInteractorImplementation: RandomAPIInteractor {
@@ -24,4 +25,7 @@ class RandomAPIInteractorImplementation: RandomAPIInteractor {
         return randomAPIRepository.getRandomUsers(usersToLoad: usersToLoad, seed: seed, page: page)
     }
 
+    func updateUser(user: User) -> User? {
+        return randomAPIRepository.updateUser(user: user)
+    }
 }

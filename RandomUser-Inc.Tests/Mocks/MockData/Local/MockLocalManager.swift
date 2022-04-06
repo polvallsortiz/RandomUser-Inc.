@@ -26,5 +26,11 @@ class MockLocalManagerImplementation: LocalManager {
         getNextRandomUsersPageCalled = true
         return 2
     }
+    
+    var updateUserCalled: Bool = false
+    func updateUser(user: User) -> User? {
+        updateUserCalled = true
+        return user.id.uuid == "mockuserfail" ? nil : user
+    }
 
 }

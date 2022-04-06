@@ -36,6 +36,12 @@ class DatabaseRepositoryTest: XCTestCase {
         XCTAssertNotNil(userResponse)
         XCTAssertEqual(userResponse.count, 1)
         XCTAssertEqual(userResponse.first?.users.count, 2)
+        var mockData2 = MockUserResponse.getMockUserResponse()
+        mockData2.info.page = mockData.info.page + 1
+        databaseRepository.saveRandomUsersResponse(mockData2)
+        let users = realm.objects(UserLocal.self)
+        XCTAssertNotNil(users)
+        XCTAssertEqual(users.count, 2)
     }
     
     func testGetRandomUserResponse() {
@@ -87,6 +93,24 @@ class DatabaseRepositoryTest: XCTestCase {
         let koResponse2 = realm.objects(UserResponseLocal.self).where { $0.info.page == mockData2.info.page }
         XCTAssertEqual(koResponse1.count, 0)
         XCTAssertEqual(koResponse2.count, 0)
+    }
+    
+    func testUpdateUser() {
+        let mockUser = MockUser.getMockUser()
+        try! realm.write {
+            realm.add(mockUser.parseToLocal())
+        }
+        let savedUser = realm.object(ofType: UserLocal.self, forPrimaryKey: mockUser.id.uuid)
+        XCTAssertEqual(savedUser?.uuid, mockUser.id.uuid)
+        XCTAssertEqual(savedUser?.deleted, false)
+        var mockUser2 = mockUser
+        mockUser2.deleted = true
+        let updatedUser = databaseRepository.updateUser(user: mockUser2)
+        let savedUser2 = realm.object(ofType: UserLocal.self, forPrimaryKey: mockUser2.id.uuid)
+        XCTAssertNotNil(updatedUser)
+        XCTAssertNotNil(savedUser2)
+        XCTAssertEqual(updatedUser?.id.uuid, savedUser2?.uuid)
+        XCTAssertEqual(updatedUser?.deleted, true)
     }
 
 }

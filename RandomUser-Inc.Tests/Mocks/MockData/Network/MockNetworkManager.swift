@@ -13,7 +13,7 @@ import Moya
 class MockNetworkManagerImplementation: NetworkManager {
     
     private let provider: MoyaProvider<MultiTarget>
-    
+        
     init(provider: MoyaProvider<MultiTarget>) {
         self.provider = provider
     }
@@ -21,7 +21,7 @@ class MockNetworkManagerImplementation: NetworkManager {
     var makeRequestCalled: Bool = false
     func makeRequest(target: TargetType) -> Single<Response> {
         self.makeRequestCalled = true
-        return Single.error(NSError(domain: "", code: 0))
+        return provider.rx.request(MultiTarget(target))
     }
 
     static var mockBaseUrl = "mockBaseUrl"

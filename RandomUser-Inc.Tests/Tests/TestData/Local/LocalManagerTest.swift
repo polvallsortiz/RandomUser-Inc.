@@ -16,42 +16,56 @@ class LocalManagerTest: XCTestCase {
 
     override func setUp() {
         MockDependencyInjection.mockDependencies()
-        localManager = MockDependencyInjection.defaultContainer.resolve(LocalManager.self)
         mockUserDefaultsRepository = MockDependencyInjection.mockContainer.resolve(UserDefaultsRepository.self) as? MockUserDefaultsRepositoryImplementation
         mockDatabaseRepository = MockDependencyInjection.mockContainer.resolve(DatabaseRepository.self) as? MockDatabaseRepositoryImplementation
+        localManager = LocalManagerImplementation(userDefaultsRepository: mockUserDefaultsRepository, databaseRepository: mockDatabaseRepository)
     }
     
     override func tearDown() {
-        
+        localManager = nil
+        mockUserDefaultsRepository = nil
+        mockDatabaseRepository = nil
     }
 
     func testSaveRandomUserResponse() {
         let mockData = MockUserResponse.getMockUserResponse()
         localManager.saveRandomUsersResponse(mockData)
-        let savedData = localManager.getRandomUsersResponse(page: mockData.info.page, seed: mockData.info.seed)
-        let nextPage = localManager.getNextRandomUsersPage()
-        XCTAssertEqual(mockData.users[0].id.uuid, savedData!.users[0].id.uuid)
-        XCTAssertEqual(nextPage, mockData.info.page + 1)
+        XCTAssertEqual(mockUserDefaultsRepository.saveLastPageCalled, true)
+        XCTAssertEqual(mockDatabaseRepository.saveRandomUserResponseCalled, true)
     }
 
     func testGetRandomUserResponse() {
         let mockData = MockUserResponse.getMockUserResponse()
-        localManager.saveRandomUsersResponse(mockData)
-        let savedData = localManager.getRandomUsersResponse(page: mockData.info.page, seed: mockData.info.seed)
-        XCTAssertNotNil(savedData)
-        XCTAssertEqual(mockData.users[1].id.uuid, savedData!.users[1].id.uuid)
+        let response = localManager.getRandomUsersResponse(page: mockData.info.page,
+                                                           seed: mockData.info.seed)
+        
+        XCTAssertEqual(mockDatabaseRepository.getRandomUsersResponseCalled, true)
+        XCTAssertNotNil(response)
+        XCTAssertEqual(mockData.users[0].id.uuid, response?.users[0].id.uuid)
         let koResponse = localManager.getRandomUsersResponse(page: 0, seed: mockData.info.seed)
         XCTAssertNil(koResponse)
-        let koResponse2 = localManager.getRandomUsersResponse(page: mockData.info.page, seed: "badseed")
-        XCTAssertNil(koResponse2)
     }
 
     func testNextRandomUsersPage() {
-        let mockData = MockUserResponse.getMockUserResponse()
-        localManager.saveRandomUsersResponse(mockData)
-        let nextPage = localManager.getNextRandomUsersPage()
-        XCTAssertNotNil(nextPage)
-        XCTAssertEqual(nextPage, mockData.info.page + 1)
+        let response = localManager.getNextRandomUsersPage()
+        XCTAssertEqual(mockUserDefaultsRepository.getNextPageCalled, true)
+        XCTAssertNotNil(response)
+        XCTAssertEqual(response, 2)
+    }
+
+    func testUpdateUser() {
+        var mockUpdate = MockUser.getMockUser()
+        let updatedUser = localManager.updateUser(user: mockUpdate)
+        XCTAssertEqual(mockDatabaseRepository.updateUserCalled, true)
+        XCTAssertNotNil(updatedUser)
+        XCTAssertEqual(updatedUser?.id.uuid, mockUpdate.id.uuid)
+        mockUpdate.email += "testemail"
+        let updatedUser2 = localManager.updateUser(user: mockUpdate)
+        XCTAssertNotNil(updatedUser2)
+        XCTAssertEqual(updatedUser2?.email, updatedUser!.email + "testemail")
+        mockUpdate.id.uuid = "mockuserfail"
+        let koUpdatedUser = localManager.updateUser(user: mockUpdate)
+        XCTAssertNil(koUpdatedUser)
     }
 
 }

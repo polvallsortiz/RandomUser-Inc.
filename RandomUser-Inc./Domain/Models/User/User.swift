@@ -17,6 +17,7 @@ struct User {
     var phone: String
     var id: UserID
     var picture: UserPicture
+    var deleted: Bool = false
 
 }
 
@@ -33,6 +34,7 @@ extension User {
         user.phone = self.phone
         user.id = self.id.parseToLocal()
         user.picture = self.picture.parseToLocal()
+        user.deleted = self.deleted
         return user
     }
 }
