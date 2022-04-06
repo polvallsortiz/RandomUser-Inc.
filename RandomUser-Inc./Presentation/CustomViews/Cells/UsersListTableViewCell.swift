@@ -80,11 +80,12 @@ class UsersListTableViewCell: UITableViewCell {
 
     private func setupCell() {
         avatarImageView.rounded()
+        self.layoutIfNeeded()
     }
 
     private func setupContent() {
         if let model = model {
-            avatarImageView.sd_setImage(with: URL(string: model.avatarUrl))
+            avatarImageView.sd_setImage(with: URL(string: model.avatarUrl), placeholderImage: UIImage(named: "avatar-placeholder"))
             avatarImageView.rounded()
             nameLabel.text = model.displayName
             emailLabel.text = model.email

@@ -12,9 +12,9 @@ extension UIImageView {
 
     func rounded() {
         self.contentMode = .scaleAspectFit
-        self.layoutIfNeeded()
         self.layer.cornerRadius = self.frame.height / 2
         self.clipsToBounds = true
+        self.layoutIfNeeded()
     }
 
 }

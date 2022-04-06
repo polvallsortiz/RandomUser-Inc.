@@ -31,9 +31,9 @@ class LoaderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.text = model?.title
-        titleLabel.textColor = .white
+        titleLabel.textColor = .black
         titleLabel.font = UIFont.systemFont(ofSize: 14)
-        activityIndicator.color = .white
+        activityIndicator.color = .black
         activityIndicator.startAnimating()
     }
 
@@ -44,7 +44,7 @@ class LoaderViewController: UIViewController {
 
     override func loadView() {
         super.loadView()
-        super.nibBundle?.loadNibNamed(String(describing: LoaderViewController.self), owner: nil)
+        self.loadNibFor(viewControllerClass: LoaderViewController.self)
     }
 
     // MARK: Public methods

@@ -32,6 +32,7 @@
 		BC444C6C27FCEF1800CD25F6 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C6B27FCEF1800CD25F6 /* UIImageView.swift */; };
 		BC444C6F27FD766A00CD25F6 /* UsersListFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C6E27FD766A00CD25F6 /* UsersListFooterView.swift */; };
 		BC444C7127FD77C800CD25F6 /* UsersListFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC444C7027FD77C800CD25F6 /* UsersListFooterView.xib */; };
+		BC444C7427FD87F100CD25F6 /* LoaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC444C7327FD87F100CD25F6 /* LoaderViewController.xib */; };
 		BC71803927FAE428002A6A72 /* SwinjectStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71803827FAE428002A6A72 /* SwinjectStoryboard.swift */; };
 		BC71803B27FAE7AE002A6A72 /* ManagerInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71803A27FAE7AE002A6A72 /* ManagerInjection.swift */; };
 		BC71803D27FAE816002A6A72 /* RepositoryInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71803C27FAE816002A6A72 /* RepositoryInjection.swift */; };
@@ -93,7 +94,6 @@
 		BC76B3BC27F79EAE00489B57 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3BB27F79EAE00489B57 /* UIApplication.swift */; };
 		BC76B3C427F7A3CC00489B57 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3C327F7A3CC00489B57 /* BaseViewController.swift */; };
 		BC76B3C827F7A48B00489B57 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3C627F7A48B00489B57 /* LoaderViewController.swift */; };
-		BC76B3C927F7A48B00489B57 /* LoaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC76B3C727F7A48B00489B57 /* LoaderViewController.xib */; };
 		BC76B3CB27F7A87100489B57 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3CA27F7A87100489B57 /* BasePresenter.swift */; };
 		BCE0D97427F6D6AA00CDBB6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE0D97327F6D6AA00CDBB6C /* AppDelegate.swift */; };
 		BCE0D97D27F6D6AB00CDBB6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE0D97C27F6D6AB00CDBB6C /* Assets.xcassets */; };
@@ -155,6 +155,7 @@
 		BC444C6B27FCEF1800CD25F6 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		BC444C6E27FD766A00CD25F6 /* UsersListFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListFooterView.swift; sourceTree = "<group>"; };
 		BC444C7027FD77C800CD25F6 /* UsersListFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersListFooterView.xib; sourceTree = "<group>"; };
+		BC444C7327FD87F100CD25F6 /* LoaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderViewController.xib; sourceTree = "<group>"; };
 		BC71803827FAE428002A6A72 /* SwinjectStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectStoryboard.swift; sourceTree = "<group>"; };
 		BC71803A27FAE7AE002A6A72 /* ManagerInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerInjection.swift; sourceTree = "<group>"; };
 		BC71803C27FAE816002A6A72 /* RepositoryInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInjection.swift; sourceTree = "<group>"; };
@@ -216,7 +217,6 @@
 		BC76B3BB27F79EAE00489B57 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		BC76B3C327F7A3CC00489B57 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BC76B3C627F7A48B00489B57 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
-		BC76B3C727F7A48B00489B57 /* LoaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderViewController.xib; sourceTree = "<group>"; };
 		BC76B3CA27F7A87100489B57 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		BCE0D97027F6D6AA00CDBB6C /* RandomUser-Inc..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RandomUser-Inc..app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE0D97327F6D6AA00CDBB6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -391,6 +391,13 @@
 				BC444C7027FD77C800CD25F6 /* UsersListFooterView.xib */,
 			);
 			path = UsersListFooterView;
+			sourceTree = "<group>";
+		};
+		BC444C7227FD7F1400CD25F6 /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserDetail;
 			sourceTree = "<group>";
 		};
 		BC71803727FAE3E9002A6A72 /* DependencyInjection */ = {
@@ -746,6 +753,7 @@
 		BC76B3C127F7A32B00489B57 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				BC444C7227FD7F1400CD25F6 /* UserDetail */,
 				BC444C5627FC98B000CD25F6 /* UsersList */,
 				BC71809827FB9E68002A6A72 /* Splash */,
 				BC76B3C527F7A45F00489B57 /* Loader */,
@@ -768,7 +776,7 @@
 			isa = PBXGroup;
 			children = (
 				BC76B3C627F7A48B00489B57 /* LoaderViewController.swift */,
-				BC76B3C727F7A48B00489B57 /* LoaderViewController.xib */,
+				BC444C7327FD87F100CD25F6 /* LoaderViewController.xib */,
 			);
 			path = Loader;
 			sourceTree = "<group>";
@@ -943,11 +951,11 @@
 			files = (
 				BCE0D98027F6D6AB00CDBB6C /* LaunchScreen.storyboard in Resources */,
 				BC444C5A27FC98E400CD25F6 /* UsersListViewController.xib in Resources */,
-				BC76B3C927F7A48B00489B57 /* LoaderViewController.xib in Resources */,
 				BCE0D97D27F6D6AB00CDBB6C /* Assets.xcassets in Resources */,
 				BC7180A427FBB45D002A6A72 /* SplashViewController.xib in Resources */,
 				BC444C7127FD77C800CD25F6 /* UsersListFooterView.xib in Resources */,
 				BC444C6A27FCED0300CD25F6 /* UsersListTableViewCell.xib in Resources */,
+				BC444C7427FD87F100CD25F6 /* LoaderViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

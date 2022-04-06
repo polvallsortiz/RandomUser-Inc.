@@ -51,6 +51,7 @@ class UsersListViewController: BaseViewController<UsersListPresenter> {
 extension UsersListViewController: UsersListView, UITableViewDelegate, UITableViewDataSource {
 
     func refreshUsers() {
+        self.hideLoader()
         usersTableView.tableFooterView = nil
         usersTableView.reloadData()
     }

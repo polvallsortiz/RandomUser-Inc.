@@ -16,6 +16,7 @@ class UsersListPresenter: BasePresenter {
 
     private let randomAPIInteractor: RandomAPIInteractor
     private var users: [User] = []
+    private var currentPageInfo: UserResponseInfo?
     private var currentPage = 1
     private var total = 0
     private var fetching: Bool = false
@@ -43,7 +44,8 @@ class UsersListPresenter: BasePresenter {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getUsers(page: currentPage)
+        self.view?.showLoader(model: Loader(title: "Getting latest users"))
+        self.getUsers(page: self.currentPage)
     }
 
     func fetchNewPage() {
@@ -52,11 +54,12 @@ class UsersListPresenter: BasePresenter {
 
     private func getUsers(page: Int) {
         self.fetching = true
-        randomAPIInteractor.getRandomUsers(usersToLoad: Config.getPageLength(), seed: nil, page: page)
+        randomAPIInteractor.getRandomUsers(usersToLoad: Config.getPageLength(), seed: currentPageInfo?.seed, page: page)
             .subscribe(on: ConcurrentDispatchQueueScheduler(qos: .background))
             .observe(on: MainScheduler.asyncInstance)
             .subscribe(onSuccess: { response in
                 self.currentPage += 1
+                self.currentPageInfo = response.info
                 self.users.append(contentsOf: response.users)
                 self.total += response.users.count
                 self.fetching = false
