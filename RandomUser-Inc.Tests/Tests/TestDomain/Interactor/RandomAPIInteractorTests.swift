@@ -56,5 +56,19 @@ class RandomAPIInteractorTests: XCTestCase {
         let koUpdated = randomAPIInteractor.updateUser(user: mockUser)
         XCTAssertNil(koUpdated)
     }
+    
+    func testSearchUsers() {
+        let _ = randomAPIInteractor.searchUsers(filter: "ok").subscribe(onSuccess: { response in
+            XCTAssertNotNil(response)
+            XCTAssertTrue(self.mockRandomAPIRepository.searchUsersCalled)
+            XCTAssertEqual(response.count, 3)
+        })
+        
+        let _ = randomAPIInteractor.searchUsers(filter: "mockfilterfail").subscribe(onSuccess: { koResponse in
+            XCTAssertNotNil(koResponse)
+            XCTAssertTrue(self.mockRandomAPIRepository.searchUsersCalled)
+            XCTAssertEqual(koResponse.count, 0)
+        })
+    }
 
 }

@@ -15,6 +15,8 @@ protocol UsersListView: BaseView {
 class UsersListViewController: BaseViewController<UsersListPresenter> {
 
     // MARK: Outlets
+
+    @IBOutlet weak var usersListHeaderView: UsersListHeaderView!
     @IBOutlet weak var usersTableView: UITableView!
 
     // MARK: UIViewController
@@ -37,6 +39,7 @@ class UsersListViewController: BaseViewController<UsersListPresenter> {
         usersTableView.delegate = self
         usersTableView.dataSource = self
         usersTableView.showsVerticalScrollIndicator = false
+        usersListHeaderView.delegate = self
         self.addFooterView()
     }
 
@@ -57,7 +60,7 @@ extension UsersListViewController: UsersListView, UITableViewDelegate, UITableVi
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.totalCount
+        return presenter.currentCount
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -105,4 +108,11 @@ extension UsersListViewController: UsersListView, UITableViewDelegate, UITableVi
         }
     }
 
+}
+
+extension UsersListViewController: UsersListHeaderViewDelegate {
+
+    func searchUsers(filter: String) {
+        presenter.searchUsers(filter: filter)
+    }
 }

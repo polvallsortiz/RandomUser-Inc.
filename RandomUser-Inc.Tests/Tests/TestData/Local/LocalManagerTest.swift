@@ -67,5 +67,19 @@ class LocalManagerTest: XCTestCase {
         let koUpdatedUser = localManager.updateUser(user: mockUpdate)
         XCTAssertNil(koUpdatedUser)
     }
+    
+    func testGetUsersByFilter() {
+        let _ = localManager.getUsersByFilter(filter: "ok").subscribe(onSuccess: { response in
+            XCTAssertNotNil(response)
+            XCTAssertTrue(self.mockDatabaseRepository.getUsersByFilterCalled)
+            XCTAssertEqual(response.count, 3)
+        })
+        
+        let _ = localManager.getUsersByFilter(filter: "mockfilterfail").subscribe(onSuccess: { koResponse in
+            XCTAssertNotNil(koResponse)
+            XCTAssertTrue(self.mockDatabaseRepository.getUsersByFilterCalled)
+            XCTAssertEqual(koResponse.count, 0)
+        })
+    }
 
 }

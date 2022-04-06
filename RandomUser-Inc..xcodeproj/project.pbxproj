@@ -95,12 +95,13 @@
 		BC76B3C427F7A3CC00489B57 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3C327F7A3CC00489B57 /* BaseViewController.swift */; };
 		BC76B3C827F7A48B00489B57 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3C627F7A48B00489B57 /* LoaderViewController.swift */; };
 		BC76B3CB27F7A87100489B57 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3CA27F7A87100489B57 /* BasePresenter.swift */; };
+		BCCEF32E27FE254B00D83B11 /* UsersListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCEF32D27FE254B00D83B11 /* UsersListHeaderView.xib */; };
 		BCDCA76527FDDC4F00BCB8B2 /* MockUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDCA76427FDDC4F00BCB8B2 /* MockUser.swift */; };
 		BCDCA76727FDEF4C00BCB8B2 /* UserDefaultsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDCA76627FDEF4C00BCB8B2 /* UserDefaultsRepositoryTests.swift */; };
+		BCDCA76A27FE044700BCB8B2 /* UsersListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDCA76927FE044700BCB8B2 /* UsersListHeaderView.swift */; };
 		BCE0D97427F6D6AA00CDBB6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE0D97327F6D6AA00CDBB6C /* AppDelegate.swift */; };
 		BCE0D97D27F6D6AB00CDBB6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE0D97C27F6D6AB00CDBB6C /* Assets.xcassets */; };
 		BCE0D98027F6D6AB00CDBB6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE0D97E27F6D6AB00CDBB6C /* LaunchScreen.storyboard */; };
-		BCE0D98B27F6D6AC00CDBB6C /* RandomUser_Inc_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE0D98A27F6D6AC00CDBB6C /* RandomUser_Inc_Tests.swift */; };
 		BCE0D99527F6D6AC00CDBB6C /* RandomUser_Inc_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE0D99427F6D6AC00CDBB6C /* RandomUser_Inc_UITests.swift */; };
 		BCE0D99727F6D6AC00CDBB6C /* RandomUser_Inc_UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE0D99627F6D6AC00CDBB6C /* RandomUser_Inc_UITestsLaunchTests.swift */; };
 		D1F652BB9EE2B80A6760E82A /* Pods_RandomUser_Inc_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485E2BB3B05412EC63193873 /* Pods_RandomUser_Inc_Tests.framework */; };
@@ -220,15 +221,16 @@
 		BC76B3C327F7A3CC00489B57 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BC76B3C627F7A48B00489B57 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
 		BC76B3CA27F7A87100489B57 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		BCCEF32D27FE254B00D83B11 /* UsersListHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersListHeaderView.xib; sourceTree = "<group>"; };
 		BCDCA76427FDDC4F00BCB8B2 /* MockUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUser.swift; sourceTree = "<group>"; };
 		BCDCA76627FDEF4C00BCB8B2 /* UserDefaultsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepositoryTests.swift; sourceTree = "<group>"; };
+		BCDCA76927FE044700BCB8B2 /* UsersListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListHeaderView.swift; sourceTree = "<group>"; };
 		BCE0D97027F6D6AA00CDBB6C /* RandomUser-Inc..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RandomUser-Inc..app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE0D97327F6D6AA00CDBB6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE0D97C27F6D6AB00CDBB6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCE0D97F27F6D6AB00CDBB6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCE0D98127F6D6AB00CDBB6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCE0D98627F6D6AC00CDBB6C /* RandomUser-Inc.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RandomUser-Inc.Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCE0D98A27F6D6AC00CDBB6C /* RandomUser_Inc_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUser_Inc_Tests.swift; sourceTree = "<group>"; };
 		BCE0D99027F6D6AC00CDBB6C /* RandomUser-Inc.UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RandomUser-Inc.UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE0D99427F6D6AC00CDBB6C /* RandomUser_Inc_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUser_Inc_UITests.swift; sourceTree = "<group>"; };
 		BCE0D99627F6D6AC00CDBB6C /* RandomUser_Inc_UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUser_Inc_UITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -750,6 +752,7 @@
 		BC76B3BD27F7A2C300489B57 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				BCDCA76827FE043400BCB8B2 /* UsersListHeaderView */,
 				BC444C6D27FD764400CD25F6 /* UsersListFooterView */,
 				BC444C5D27FC9D7F00CD25F6 /* Cells */,
 			);
@@ -785,6 +788,15 @@
 				BC444C7327FD87F100CD25F6 /* LoaderViewController.xib */,
 			);
 			path = Loader;
+			sourceTree = "<group>";
+		};
+		BCDCA76827FE043400BCB8B2 /* UsersListHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				BCDCA76927FE044700BCB8B2 /* UsersListHeaderView.swift */,
+				BCCEF32D27FE254B00D83B11 /* UsersListHeaderView.xib */,
+			);
+			path = UsersListHeaderView;
 			sourceTree = "<group>";
 		};
 		BCE0D96727F6D6A900CDBB6C = {
@@ -830,7 +842,6 @@
 			children = (
 				BC2FC53227F78E6500521784 /* Mocks */,
 				BC76B3A727F7996600489B57 /* Tests */,
-				BCE0D98A27F6D6AC00CDBB6C /* RandomUser_Inc_Tests.swift */,
 			);
 			path = "RandomUser-Inc.Tests";
 			sourceTree = "<group>";
@@ -957,6 +968,7 @@
 			files = (
 				BCE0D98027F6D6AB00CDBB6C /* LaunchScreen.storyboard in Resources */,
 				BC444C5A27FC98E400CD25F6 /* UsersListViewController.xib in Resources */,
+				BCCEF32E27FE254B00D83B11 /* UsersListHeaderView.xib in Resources */,
 				BCE0D97D27F6D6AB00CDBB6C /* Assets.xcassets in Resources */,
 				BC7180A427FBB45D002A6A72 /* SplashViewController.xib in Resources */,
 				BC444C7127FD77C800CD25F6 /* UsersListFooterView.xib in Resources */,
@@ -1162,6 +1174,7 @@
 				BC71806727FB38D0002A6A72 /* UserRegisteredEntity.swift in Sources */,
 				BC71806927FB3921002A6A72 /* UserPictureEntity.swift in Sources */,
 				BC7180A027FBA512002A6A72 /* UIViewController.swift in Sources */,
+				BCDCA76A27FE044700BCB8B2 /* UsersListHeaderView.swift in Sources */,
 				BC76B3B627F79CC500489B57 /* Router.swift in Sources */,
 				BC2FC52B27F70CF100521784 /* Config.swift in Sources */,
 				BCE0D97427F6D6AA00CDBB6C /* AppDelegate.swift in Sources */,
@@ -1194,7 +1207,6 @@
 				BC444C3C27FC20C600CD25F6 /* DatabaseRepositoryTest.swift in Sources */,
 				BC444C5027FC8D3900CD25F6 /* MockRandomAPIRepository.swift in Sources */,
 				BC444C5527FC931B00CD25F6 /* RandomAPIInteractorTests.swift in Sources */,
-				BCE0D98B27F6D6AC00CDBB6C /* RandomUser_Inc_Tests.swift in Sources */,
 				BC71805027FB0152002A6A72 /* MockRouterInjection.swift in Sources */,
 				BC71804827FAF830002A6A72 /* MockDependencyInjection.swift in Sources */,
 				BC76B39127F7908B00489B57 /* MockLocalManager.swift in Sources */,

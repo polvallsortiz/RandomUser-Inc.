@@ -112,5 +112,33 @@ class DatabaseRepositoryTest: XCTestCase {
         XCTAssertEqual(updatedUser?.id.uuid, savedUser2?.uuid)
         XCTAssertEqual(updatedUser?.deleted, true)
     }
+    
+    func testGetUsersByFilter() {
+        let mockUser1 = MockUser.getMockUser()
+        let mockUser2 = MockUser.getMockUser2()
+        let mockUser3 = MockUser.getMockUser3()
+        try! realm.write {
+            realm.add(mockUser1.parseToLocal())
+            realm.add(mockUser2.parseToLocal())
+            realm.add(mockUser3.parseToLocal())
+        }
+        
+        let _ = databaseRepository.getUsersByFilter(filter: "").subscribe(onSuccess: { response in
+            XCTAssertNotNil(response)
+            XCTAssertEqual(response.count, 3)
+        })
+        
+        let _ = databaseRepository.getUsersByFilter(filter: "Wal").subscribe(onSuccess: { response in
+            XCTAssertNotNil(response)
+            XCTAssertEqual(response.count, 1)
+            XCTAssertEqual(response[0].id.uuid, mockUser1.id.uuid)
+        })
+        
+        let _ = databaseRepository.getUsersByFilter(filter: "yahoo").subscribe(onSuccess: { response in
+            XCTAssertNotNil(response)
+            XCTAssertEqual(response.count, 2)
+            XCTAssertNotEqual(response[0].id.uuid, mockUser1.id.uuid)
+        })
+    }
 
 }

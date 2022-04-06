@@ -28,5 +28,9 @@ class MockRandomAPIRepositoryImplementation: BaseRepositoryImplementation, Rando
         return user.id.uuid == "mockuserfail" ? nil : user
     }
 
+    var searchUsersCalled: Bool = false
+    func searchUsers(filter: String) -> Single<[User]> {
+        searchUsersCalled = true
+        return filter == "mockfilterfail" ? Single.just([]) : Single.just(MockUser.getMockUserArray())
+    }
 }
-

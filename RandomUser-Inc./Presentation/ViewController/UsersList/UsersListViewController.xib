@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UsersListViewController" customModule="RandomUser_Inc_" customModuleProvider="target">
             <connections>
+                <outlet property="usersListHeaderView" destination="bfF-ok-pYG" id="Gks-4o-hDS"/>
                 <outlet property="usersTableView" destination="oLr-xi-TMd" id="tUN-6k-QRH"/>
             </connections>
         </placeholder>
@@ -18,8 +19,15 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-ok-pYG" customClass="UsersListHeaderView" customModule="RandomUser_Inc_" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="W6v-ac-fi8"/>
+                    </constraints>
+                </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oLr-xi-TMd">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="104" width="414" height="758"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
@@ -29,9 +37,12 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oLr-xi-TMd" secondAttribute="trailing" id="CGD-7Z-UPS"/>
                 <constraint firstItem="oLr-xi-TMd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Ita-Gp-ma6"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="oLr-xi-TMd" secondAttribute="bottom" id="N6i-wm-CP1"/>
-                <constraint firstItem="oLr-xi-TMd" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="W6w-gd-8aJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bfF-ok-pYG" secondAttribute="trailing" id="Whh-70-D1c"/>
+                <constraint firstItem="bfF-ok-pYG" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="YpQ-Pe-VNh"/>
+                <constraint firstItem="oLr-xi-TMd" firstAttribute="top" secondItem="bfF-ok-pYG" secondAttribute="bottom" id="vVS-9u-Q4I"/>
+                <constraint firstItem="bfF-ok-pYG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="wg0-CQ-Kd5"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="90"/>
+            <point key="canvasLocation" x="131.8840579710145" y="89.732142857142847"/>
         </view>
     </objects>
     <resources>
