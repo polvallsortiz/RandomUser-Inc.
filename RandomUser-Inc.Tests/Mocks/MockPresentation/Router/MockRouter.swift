@@ -22,6 +22,12 @@ class MockRouter: Router {
         return Display(viewController: UIViewController() , modal: false, animated: false)
     }
     
+    var userDetailCalled: Bool = false
+    func userDetail(user: User) -> Display {
+        userDetailCalled = true
+        return Display(viewController: UIViewController(), modal: false, animated: false)
+    }
+
     var popCurrentDisplayCalled: Bool = false
     func popCurrentDisplay(animated: Bool, completion: (() -> Void)?) {
         self.popCurrentDisplayCalled = true

@@ -28,6 +28,12 @@ class ViewInjection: ViewInjectionProtocol {
             return view
         }
 
+        container.register(UserDetailViewController.self) { resolver in
+            let view = UserDetailViewController()
+            view.presenter = resolver.resolve(UserDetailPresenter.self)!
+            return view
+        }
+
     }
 
 }

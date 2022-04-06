@@ -25,6 +25,10 @@ class PresenterInjection: PresenterInjectionProtocol {
                                randomAPIInteractor: resolver.resolve(RandomAPIInteractor.self)!)
         }
 
+        container.register(UserDetailPresenter.self) { resolver in
+            UserDetailPresenter(router: resolver.resolve(Router.self)!)
+        }
+
     }
 
 }

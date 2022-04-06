@@ -108,6 +108,10 @@ extension UsersListViewController: UsersListView, UITableViewDelegate, UITableVi
         }
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.router.userDetail(user: presenter.user(at: indexPath.row)).show(animated: true, from: self)
+    }
+
 }
 
 extension UsersListViewController: UsersListHeaderViewDelegate {

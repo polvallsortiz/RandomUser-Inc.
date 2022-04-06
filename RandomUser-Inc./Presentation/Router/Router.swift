@@ -13,6 +13,7 @@ protocol Router {
     func start()
     // Add views here
     func usersList() -> Display
+    func userDetail(user: User) -> Display
     func popCurrentDisplay(animated: Bool, completion: (() -> Void)?)
     func popToViewContoller(vc: UIViewController.Type, animated: Bool)
     func dismissViewController(animated: Bool, completion: (() -> Void)?)
@@ -37,6 +38,15 @@ final class RouterImplementation: Router {
             fatalError("COULD NOT INSTANTIATE USERSLISTVIEWCONTROLLER")
         }
         return Display(viewController: view, modal: false, animated: true)
+    }
+
+    func userDetail(user: User) -> Display {
+        guard let viewController = SwinjectStoryboard.defaultContainer.resolve(UserDetailViewController.self) else {
+            fatalError("COULD NOT INSTANTIATE USERLISTVIEWCONTROLLER")
+        }
+        viewController.loadView()
+        viewController.setup(user: user)
+        return Display(viewController: viewController, modal: true, animated: true)
     }
 
     // MARK: Navigation methods

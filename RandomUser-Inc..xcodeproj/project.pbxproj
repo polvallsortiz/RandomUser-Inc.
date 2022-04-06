@@ -96,6 +96,9 @@
 		BC76B3C827F7A48B00489B57 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3C627F7A48B00489B57 /* LoaderViewController.swift */; };
 		BC76B3CB27F7A87100489B57 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3CA27F7A87100489B57 /* BasePresenter.swift */; };
 		BCCEF32E27FE254B00D83B11 /* UsersListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCEF32D27FE254B00D83B11 /* UsersListHeaderView.xib */; };
+		BCCEF33027FE496500D83B11 /* UserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCEF32F27FE496500D83B11 /* UserDetailViewController.xib */; };
+		BCCEF33227FE497000D83B11 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEF33127FE497000D83B11 /* UserDetailViewController.swift */; };
+		BCCEF33427FE498800D83B11 /* UserDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEF33327FE498800D83B11 /* UserDetailPresenter.swift */; };
 		BCDCA76527FDDC4F00BCB8B2 /* MockUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDCA76427FDDC4F00BCB8B2 /* MockUser.swift */; };
 		BCDCA76727FDEF4C00BCB8B2 /* UserDefaultsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDCA76627FDEF4C00BCB8B2 /* UserDefaultsRepositoryTests.swift */; };
 		BCDCA76A27FE044700BCB8B2 /* UsersListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDCA76927FE044700BCB8B2 /* UsersListHeaderView.swift */; };
@@ -222,6 +225,9 @@
 		BC76B3C627F7A48B00489B57 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
 		BC76B3CA27F7A87100489B57 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		BCCEF32D27FE254B00D83B11 /* UsersListHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersListHeaderView.xib; sourceTree = "<group>"; };
+		BCCEF32F27FE496500D83B11 /* UserDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailViewController.xib; sourceTree = "<group>"; };
+		BCCEF33127FE497000D83B11 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		BCCEF33327FE498800D83B11 /* UserDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailPresenter.swift; sourceTree = "<group>"; };
 		BCDCA76427FDDC4F00BCB8B2 /* MockUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUser.swift; sourceTree = "<group>"; };
 		BCDCA76627FDEF4C00BCB8B2 /* UserDefaultsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepositoryTests.swift; sourceTree = "<group>"; };
 		BCDCA76927FE044700BCB8B2 /* UsersListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListHeaderView.swift; sourceTree = "<group>"; };
@@ -402,6 +408,8 @@
 		BC444C7227FD7F1400CD25F6 /* UserDetail */ = {
 			isa = PBXGroup;
 			children = (
+				BCCEF32F27FE496500D83B11 /* UserDetailViewController.xib */,
+				BCCEF33127FE497000D83B11 /* UserDetailViewController.swift */,
 			);
 			path = UserDetail;
 			sourceTree = "<group>";
@@ -777,6 +785,7 @@
 				BC76B3CA27F7A87100489B57 /* BasePresenter.swift */,
 				BC71809D27FB9EEB002A6A72 /* SplashPresenter.swift */,
 				BC444C5B27FC992C00CD25F6 /* UsersListPresenter.swift */,
+				BCCEF33327FE498800D83B11 /* UserDetailPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -968,6 +977,7 @@
 			files = (
 				BCE0D98027F6D6AB00CDBB6C /* LaunchScreen.storyboard in Resources */,
 				BC444C5A27FC98E400CD25F6 /* UsersListViewController.xib in Resources */,
+				BCCEF33027FE496500D83B11 /* UserDetailViewController.xib in Resources */,
 				BCCEF32E27FE254B00D83B11 /* UsersListHeaderView.xib in Resources */,
 				BCE0D97D27F6D6AB00CDBB6C /* Assets.xcassets in Resources */,
 				BC7180A427FBB45D002A6A72 /* SplashViewController.xib in Resources */,
@@ -1139,6 +1149,8 @@
 				BC76B3B827F79D5100489B57 /* Display.swift in Sources */,
 				BC71806E27FB3A98002A6A72 /* UserName.swift in Sources */,
 				BC444C6F27FD766A00CD25F6 /* UsersListFooterView.swift in Sources */,
+				BCCEF33227FE497000D83B11 /* UserDetailViewController.swift in Sources */,
+				BCCEF33427FE498800D83B11 /* UserDetailPresenter.swift in Sources */,
 				BC71803D27FAE816002A6A72 /* RepositoryInjection.swift in Sources */,
 				BC71804327FAF011002A6A72 /* PresenterInjection.swift in Sources */,
 				BC444C5827FC98CE00CD25F6 /* UsersListViewController.swift in Sources */,
