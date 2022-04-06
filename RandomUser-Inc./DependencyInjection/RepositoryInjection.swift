@@ -17,7 +17,7 @@ class RepositoryInjection: RepositoryInjectionProtocol {
     func registerRepositories(container: Container) {
 
         container.register(UserDefaultsRepository.self) { _ in
-            UserDefaultsRepositoryImplementation()
+            UserDefaultsRepositoryImplementation(defaults: .standard)
         }
 
         container.register(DatabaseRepository.self) { _ in

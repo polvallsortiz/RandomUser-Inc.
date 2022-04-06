@@ -19,6 +19,7 @@ class UserLocal: Object {
     @Persisted var phone: String
     @Persisted var id: UserIDLocal?
     @Persisted var picture: UserPictureLocal?
+    @Persisted var deleted: Bool
 
     override static func primaryKey() -> String? {
         return "uuid"
@@ -36,7 +37,8 @@ extension UserLocal {
                     registered: (self.registered?.parseToModel())!,
                     phone: self.phone,
                     id: (self.id?.parseToModel())!,
-                    picture: (self.picture?.parseToModel())!)
+                    picture: (self.picture?.parseToModel())!,
+                    deleted: self.deleted)
     }
 
 }

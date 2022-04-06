@@ -15,7 +15,11 @@ protocol UserDefaultsRepository {
 
 class UserDefaultsRepositoryImplementation: UserDefaultsRepository {
 
-    private let defaults: UserDefaults = UserDefaults.standard
+    private let defaults: UserDefaults
+
+    init(defaults: UserDefaults) {
+        self.defaults = defaults
+    }
 
     enum UserDefaultsRepositoryKeys: String {
         case page = "random_users_page"

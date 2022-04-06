@@ -37,6 +37,7 @@ class UsersListViewController: BaseViewController<UsersListPresenter> {
         usersTableView.delegate = self
         usersTableView.dataSource = self
         usersTableView.showsVerticalScrollIndicator = false
+        self.addFooterView()
     }
 
     private func addFooterView() {
@@ -51,7 +52,6 @@ class UsersListViewController: BaseViewController<UsersListPresenter> {
 extension UsersListViewController: UsersListView, UITableViewDelegate, UITableViewDataSource {
 
     func refreshUsers() {
-        self.hideLoader()
         usersTableView.tableFooterView = nil
         usersTableView.reloadData()
     }
@@ -71,7 +71,7 @@ extension UsersListViewController: UsersListView, UITableViewDelegate, UITableVi
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 80
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -88,6 +88,20 @@ extension UsersListViewController: UsersListView, UITableViewDelegate, UITableVi
                 presenter.fetchNewPage()
                 self.addFooterView()
             }
+        }
+    }
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            usersTableView.beginUpdates()
+            presenter.deleteUser(at: indexPath.row)
+            usersTableView.deleteRows(at: [indexPath], with: .automatic)
+            usersTableView.endUpdates()
+            usersTableView.reloadData()
         }
     }
 

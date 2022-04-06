@@ -10,9 +10,8 @@ import RxSwift
 import Moya
 
 protocol RandomAPIRepository: BaseRepository {
-
     func getRandomUsers(usersToLoad: Int, seed: String?, page: Int?) -> Single<UserResponse>
-
+    func updateUser(user: User) -> User?
 }
 
 class RandomAPIRepositoryImplementation: BaseRepositoryImplementation, RandomAPIRepository {
@@ -30,5 +29,9 @@ class RandomAPIRepositoryImplementation: BaseRepositoryImplementation, RandomAPI
                 return Single.just(model)
             })
 
+    }
+
+    func updateUser(user: User) -> User? {
+        return self.getLocalManager().updateUser(user: user)
     }
 }

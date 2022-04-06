@@ -15,7 +15,12 @@ class UsersListPresenter: BasePresenter {
     }
 
     private let randomAPIInteractor: RandomAPIInteractor
-    private var users: [User] = []
+    private var filteredUsers: [User] = []
+    private var users: [User] = [] {
+        didSet {
+            filteredUsers = users.filter({ !$0.deleted })
+        }
+    }
     private var currentPageInfo: UserResponseInfo?
     private var currentPage = 1
     private var total = 0
@@ -26,7 +31,7 @@ class UsersListPresenter: BasePresenter {
     }
 
     var currentCount: Int {
-        return users.count
+        return filteredUsers.count
     }
 
     var isFetching: Bool {
@@ -34,7 +39,16 @@ class UsersListPresenter: BasePresenter {
     }
 
     func user(at index: Int) -> User {
-        return users[index]
+        return filteredUsers[index]
+    }
+
+    func deleteUser(at index: Int) {
+        self.total -= 1
+        var user = users[index]
+        user.deleted = true
+        if let updatedUser = randomAPIInteractor.updateUser(user: user) {
+            users[index] = updatedUser
+        }
     }
 
     init(router: Router, randomAPIInteractor: RandomAPIInteractor) {
@@ -44,7 +58,6 @@ class UsersListPresenter: BasePresenter {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view?.showLoader(model: Loader(title: "Getting latest users"))
         self.getUsers(page: self.currentPage)
     }
 

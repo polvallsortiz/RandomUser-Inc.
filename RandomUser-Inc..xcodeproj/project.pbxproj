@@ -95,6 +95,8 @@
 		BC76B3C427F7A3CC00489B57 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3C327F7A3CC00489B57 /* BaseViewController.swift */; };
 		BC76B3C827F7A48B00489B57 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3C627F7A48B00489B57 /* LoaderViewController.swift */; };
 		BC76B3CB27F7A87100489B57 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76B3CA27F7A87100489B57 /* BasePresenter.swift */; };
+		BCDCA76527FDDC4F00BCB8B2 /* MockUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDCA76427FDDC4F00BCB8B2 /* MockUser.swift */; };
+		BCDCA76727FDEF4C00BCB8B2 /* UserDefaultsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDCA76627FDEF4C00BCB8B2 /* UserDefaultsRepositoryTests.swift */; };
 		BCE0D97427F6D6AA00CDBB6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE0D97327F6D6AA00CDBB6C /* AppDelegate.swift */; };
 		BCE0D97D27F6D6AB00CDBB6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE0D97C27F6D6AB00CDBB6C /* Assets.xcassets */; };
 		BCE0D98027F6D6AB00CDBB6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE0D97E27F6D6AB00CDBB6C /* LaunchScreen.storyboard */; };
@@ -218,6 +220,8 @@
 		BC76B3C327F7A3CC00489B57 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BC76B3C627F7A48B00489B57 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
 		BC76B3CA27F7A87100489B57 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		BCDCA76427FDDC4F00BCB8B2 /* MockUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUser.swift; sourceTree = "<group>"; };
+		BCDCA76627FDEF4C00BCB8B2 /* UserDefaultsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepositoryTests.swift; sourceTree = "<group>"; };
 		BCE0D97027F6D6AA00CDBB6C /* RandomUser-Inc..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RandomUser-Inc..app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE0D97327F6D6AA00CDBB6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE0D97C27F6D6AB00CDBB6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -497,6 +501,7 @@
 			isa = PBXGroup;
 			children = (
 				BC71809627FB9460002A6A72 /* MockUserResponse.swift */,
+				BCDCA76427FDDC4F00BCB8B2 /* MockUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -624,7 +629,6 @@
 		BC76B3AA27F7999A00489B57 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				BC444C3B27FC20C600CD25F6 /* DatabaseRepositoryTest.swift */,
 				BC444C4827FC837300CD25F6 /* RandomAPIRepositoryTests.swift */,
 			);
 			path = Repository;
@@ -633,7 +637,9 @@
 		BC76B3AB27F799A400489B57 /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				BC444C3B27FC20C600CD25F6 /* DatabaseRepositoryTest.swift */,
 				BC71809327FB8FAD002A6A72 /* LocalManagerTest.swift */,
+				BCDCA76627FDEF4C00BCB8B2 /* UserDefaultsRepositoryTests.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -1184,6 +1190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCDCA76527FDDC4F00BCB8B2 /* MockUser.swift in Sources */,
 				BC444C3C27FC20C600CD25F6 /* DatabaseRepositoryTest.swift in Sources */,
 				BC444C5027FC8D3900CD25F6 /* MockRandomAPIRepository.swift in Sources */,
 				BC444C5527FC931B00CD25F6 /* RandomAPIInteractorTests.swift in Sources */,
@@ -1199,6 +1206,7 @@
 				BC444C4727FC3F1200CD25F6 /* MockRandomUsersRequest.swift in Sources */,
 				BC444C4927FC837300CD25F6 /* RandomAPIRepositoryTests.swift in Sources */,
 				BC71809427FB8FAD002A6A72 /* LocalManagerTest.swift in Sources */,
+				BCDCA76727FDEF4C00BCB8B2 /* UserDefaultsRepositoryTests.swift in Sources */,
 				BC444C4427FC3E6F00CD25F6 /* RandomAPITargetTests.swift in Sources */,
 				BC71809727FB9460002A6A72 /* MockUserResponse.swift in Sources */,
 				BC76B39527F792C500489B57 /* MockDatabaseRepository.swift in Sources */,

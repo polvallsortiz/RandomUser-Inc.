@@ -9,11 +9,10 @@ import Foundation
 
 /// LocalManager - Base functions to handle local data in device
 protocol LocalManager {
-
     func saveRandomUsersResponse(_ response: UserResponse)
     func getRandomUsersResponse(page: Int?, seed: String?) -> UserResponse?
     func getNextRandomUsersPage() -> Int?
-
+    func updateUser(user: User) -> User?
 }
 
 class LocalManagerImplementation: LocalManager {
@@ -36,6 +35,10 @@ class LocalManagerImplementation: LocalManager {
 
     func getNextRandomUsersPage() -> Int? {
         return self.userDefaultsRepository.getNextPage()
+    }
+
+    func updateUser(user: User) -> User? {
+        return self.databaseRepository.updateUser(user: user)
     }
 
 }
