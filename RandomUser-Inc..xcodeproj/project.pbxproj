@@ -30,6 +30,8 @@
 		BC444C6927FCED0300CD25F6 /* UsersListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C6727FCED0300CD25F6 /* UsersListTableViewCell.swift */; };
 		BC444C6A27FCED0300CD25F6 /* UsersListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC444C6827FCED0300CD25F6 /* UsersListTableViewCell.xib */; };
 		BC444C6C27FCEF1800CD25F6 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C6B27FCEF1800CD25F6 /* UIImageView.swift */; };
+		BC444C6F27FD766A00CD25F6 /* UsersListFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C6E27FD766A00CD25F6 /* UsersListFooterView.swift */; };
+		BC444C7127FD77C800CD25F6 /* UsersListFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC444C7027FD77C800CD25F6 /* UsersListFooterView.xib */; };
 		BC71803927FAE428002A6A72 /* SwinjectStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71803827FAE428002A6A72 /* SwinjectStoryboard.swift */; };
 		BC71803B27FAE7AE002A6A72 /* ManagerInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71803A27FAE7AE002A6A72 /* ManagerInjection.swift */; };
 		BC71803D27FAE816002A6A72 /* RepositoryInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71803C27FAE816002A6A72 /* RepositoryInjection.swift */; };
@@ -151,6 +153,8 @@
 		BC444C6727FCED0300CD25F6 /* UsersListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListTableViewCell.swift; sourceTree = "<group>"; };
 		BC444C6827FCED0300CD25F6 /* UsersListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersListTableViewCell.xib; sourceTree = "<group>"; };
 		BC444C6B27FCEF1800CD25F6 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		BC444C6E27FD766A00CD25F6 /* UsersListFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListFooterView.swift; sourceTree = "<group>"; };
+		BC444C7027FD77C800CD25F6 /* UsersListFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersListFooterView.xib; sourceTree = "<group>"; };
 		BC71803827FAE428002A6A72 /* SwinjectStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectStoryboard.swift; sourceTree = "<group>"; };
 		BC71803A27FAE7AE002A6A72 /* ManagerInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerInjection.swift; sourceTree = "<group>"; };
 		BC71803C27FAE816002A6A72 /* RepositoryInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInjection.swift; sourceTree = "<group>"; };
@@ -378,6 +382,15 @@
 				BC444C6527FCE68F00CD25F6 /* RelaxedInt.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		BC444C6D27FD764400CD25F6 /* UsersListFooterView */ = {
+			isa = PBXGroup;
+			children = (
+				BC444C6E27FD766A00CD25F6 /* UsersListFooterView.swift */,
+				BC444C7027FD77C800CD25F6 /* UsersListFooterView.xib */,
+			);
+			path = UsersListFooterView;
 			sourceTree = "<group>";
 		};
 		BC71803727FAE3E9002A6A72 /* DependencyInjection */ = {
@@ -724,6 +737,7 @@
 		BC76B3BD27F7A2C300489B57 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				BC444C6D27FD764400CD25F6 /* UsersListFooterView */,
 				BC444C5D27FC9D7F00CD25F6 /* Cells */,
 			);
 			path = CustomViews;
@@ -932,6 +946,7 @@
 				BC76B3C927F7A48B00489B57 /* LoaderViewController.xib in Resources */,
 				BCE0D97D27F6D6AB00CDBB6C /* Assets.xcassets in Resources */,
 				BC7180A427FBB45D002A6A72 /* SplashViewController.xib in Resources */,
+				BC444C7127FD77C800CD25F6 /* UsersListFooterView.xib in Resources */,
 				BC444C6A27FCED0300CD25F6 /* UsersListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1097,6 +1112,7 @@
 			files = (
 				BC76B3B827F79D5100489B57 /* Display.swift in Sources */,
 				BC71806E27FB3A98002A6A72 /* UserName.swift in Sources */,
+				BC444C6F27FD766A00CD25F6 /* UsersListFooterView.swift in Sources */,
 				BC71803D27FAE816002A6A72 /* RepositoryInjection.swift in Sources */,
 				BC71804327FAF011002A6A72 /* PresenterInjection.swift in Sources */,
 				BC444C5827FC98CE00CD25F6 /* UsersListViewController.swift in Sources */,

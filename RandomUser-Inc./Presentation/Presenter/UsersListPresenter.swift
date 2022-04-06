@@ -18,6 +18,7 @@ class UsersListPresenter: BasePresenter {
     private var users: [User] = []
     private var currentPage = 1
     private var total = 0
+    private var fetching: Bool = false
 
     var totalCount: Int {
         return total
@@ -25,6 +26,10 @@ class UsersListPresenter: BasePresenter {
 
     var currentCount: Int {
         return users.count
+    }
+
+    var isFetching: Bool {
+        return fetching
     }
 
     func user(at index: Int) -> User {
@@ -46,7 +51,7 @@ class UsersListPresenter: BasePresenter {
     }
 
     private func getUsers(page: Int) {
-
+        self.fetching = true
         randomAPIInteractor.getRandomUsers(usersToLoad: Config.getPageLength(), seed: nil, page: page)
             .subscribe(on: ConcurrentDispatchQueueScheduler(qos: .background))
             .observe(on: MainScheduler.asyncInstance)
@@ -54,17 +59,13 @@ class UsersListPresenter: BasePresenter {
                 self.currentPage += 1
                 self.users.append(contentsOf: response.users)
                 self.total += response.users.count
-                self.view?.usersReady()
+                self.fetching = false
+                self.view?.refreshUsers()
             }, onFailure: { error in
+                self.fetching = false
                 print(error)
             }).disposed(by: self.disposeBag)
 
-    }
-
-    private func calculateIndexPathsToReaload(newUsers: [User]) -> [IndexPath] {
-        let startIndex = users.count - newUsers.count
-        let endIndex = startIndex + newUsers.count
-        return (startIndex..<endIndex).map { IndexPath(row: $0, section: 0) }
     }
 
 }

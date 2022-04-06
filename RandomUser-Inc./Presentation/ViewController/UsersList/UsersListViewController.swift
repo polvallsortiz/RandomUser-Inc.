@@ -36,6 +36,14 @@ class UsersListViewController: BaseViewController<UsersListPresenter> {
                                 forCellReuseIdentifier: String(describing: UsersListTableViewCell.self))
         usersTableView.delegate = self
         usersTableView.dataSource = self
+        usersTableView.showsVerticalScrollIndicator = false
+    }
+
+    private func addFooterView() {
+        if usersTableView.tableFooterView == nil {
+            let footer = UsersListFooterView(frame: CGRect(x: 0, y: 0, width: usersTableView.bounds.size.width, height: 100))
+            usersTableView.tableFooterView = footer
+        }
     }
 
 }
@@ -43,6 +51,7 @@ class UsersListViewController: BaseViewController<UsersListPresenter> {
 extension UsersListViewController: UsersListView, UITableViewDelegate, UITableViewDataSource {
 
     func refreshUsers() {
+        usersTableView.tableFooterView = nil
         usersTableView.reloadData()
     }
 
@@ -64,7 +73,7 @@ extension UsersListViewController: UsersListView, UITableViewDelegate, UITableVi
         return 60
     }
 
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         var visibleRect = CGRect()
 
         visibleRect.origin = usersTableView.contentOffset
@@ -73,8 +82,12 @@ extension UsersListViewController: UsersListView, UITableViewDelegate, UITableVi
         let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
 
         guard let indexPath = usersTableView.indexPathForRow(at: visiblePoint) else { return }
-        if indexPath.row > (presenter.currentCount - 10) {
-            presenter.fetchNewPage()
+        if indexPath.row > (presenter.currentCount - (Config.getPageLength() / 2)) {
+            if !presenter.isFetching {
+                presenter.fetchNewPage()
+                self.addFooterView()
+            }
         }
     }
+
 }

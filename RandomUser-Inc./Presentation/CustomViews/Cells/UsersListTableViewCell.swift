@@ -68,7 +68,7 @@ class UsersListTableViewCell: UITableViewCell {
         self.model = model
         self.setupContent()
     }
-    
+
     override func prepareForReuse() {
         self.avatarImageView.image = nil
         self.nameLabel.text = nil
