@@ -26,7 +26,7 @@
 		BC444C5A27FC98E400CD25F6 /* UsersListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC444C5927FC98E400CD25F6 /* UsersListViewController.xib */; };
 		BC444C5C27FC992C00CD25F6 /* UsersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C5B27FC992C00CD25F6 /* UsersListPresenter.swift */; };
 		BC444C6327FCA12E00CD25F6 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C6227FCA12E00CD25F6 /* UIView.swift */; };
-		BC444C6627FCE69000CD25F6 /* RelaxedInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C6527FCE68F00CD25F6 /* RelaxedInt.swift */; };
+		BC444C6627FCE69000CD25F6 /* RelaxedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C6527FCE68F00CD25F6 /* RelaxedString.swift */; };
 		BC444C6927FCED0300CD25F6 /* UsersListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C6727FCED0300CD25F6 /* UsersListTableViewCell.swift */; };
 		BC444C6A27FCED0300CD25F6 /* UsersListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC444C6827FCED0300CD25F6 /* UsersListTableViewCell.xib */; };
 		BC444C6C27FCEF1800CD25F6 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC444C6B27FCEF1800CD25F6 /* UIImageView.swift */; };
@@ -99,6 +99,7 @@
 		BCCEF33027FE496500D83B11 /* UserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCEF32F27FE496500D83B11 /* UserDetailViewController.xib */; };
 		BCCEF33227FE497000D83B11 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEF33127FE497000D83B11 /* UserDetailViewController.swift */; };
 		BCCEF33427FE498800D83B11 /* UserDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEF33327FE498800D83B11 /* UserDetailPresenter.swift */; };
+		BCCEF33627FE5ACE00D83B11 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEF33527FE5ACE00D83B11 /* Style.swift */; };
 		BCDCA76527FDDC4F00BCB8B2 /* MockUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDCA76427FDDC4F00BCB8B2 /* MockUser.swift */; };
 		BCDCA76727FDEF4C00BCB8B2 /* UserDefaultsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDCA76627FDEF4C00BCB8B2 /* UserDefaultsRepositoryTests.swift */; };
 		BCDCA76A27FE044700BCB8B2 /* UsersListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDCA76927FE044700BCB8B2 /* UsersListHeaderView.swift */; };
@@ -155,7 +156,7 @@
 		BC444C5927FC98E400CD25F6 /* UsersListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersListViewController.xib; sourceTree = "<group>"; };
 		BC444C5B27FC992C00CD25F6 /* UsersListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListPresenter.swift; sourceTree = "<group>"; };
 		BC444C6227FCA12E00CD25F6 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		BC444C6527FCE68F00CD25F6 /* RelaxedInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxedInt.swift; sourceTree = "<group>"; };
+		BC444C6527FCE68F00CD25F6 /* RelaxedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxedString.swift; sourceTree = "<group>"; };
 		BC444C6727FCED0300CD25F6 /* UsersListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListTableViewCell.swift; sourceTree = "<group>"; };
 		BC444C6827FCED0300CD25F6 /* UsersListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersListTableViewCell.xib; sourceTree = "<group>"; };
 		BC444C6B27FCEF1800CD25F6 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
@@ -228,6 +229,7 @@
 		BCCEF32F27FE496500D83B11 /* UserDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailViewController.xib; sourceTree = "<group>"; };
 		BCCEF33127FE497000D83B11 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		BCCEF33327FE498800D83B11 /* UserDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailPresenter.swift; sourceTree = "<group>"; };
+		BCCEF33527FE5ACE00D83B11 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		BCDCA76427FDDC4F00BCB8B2 /* MockUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUser.swift; sourceTree = "<group>"; };
 		BCDCA76627FDEF4C00BCB8B2 /* UserDefaultsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepositoryTests.swift; sourceTree = "<group>"; };
 		BCDCA76927FE044700BCB8B2 /* UsersListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListHeaderView.swift; sourceTree = "<group>"; };
@@ -391,7 +393,8 @@
 		BC444C6427FCE67F00CD25F6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				BC444C6527FCE68F00CD25F6 /* RelaxedInt.swift */,
+				BC444C6527FCE68F00CD25F6 /* RelaxedString.swift */,
+				BCCEF33527FE5ACE00D83B11 /* Style.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1192,7 +1195,7 @@
 				BCE0D97427F6D6AA00CDBB6C /* AppDelegate.swift in Sources */,
 				BC71805E27FB3536002A6A72 /* RandomAPIInteractor.swift in Sources */,
 				BC71803F27FAEDE2002A6A72 /* InteractorInjection.swift in Sources */,
-				BC444C6627FCE69000CD25F6 /* RelaxedInt.swift in Sources */,
+				BC444C6627FCE69000CD25F6 /* RelaxedString.swift in Sources */,
 				BC76B3A027F795EF00489B57 /* BaseRepository.swift in Sources */,
 				BC71807A27FB41AE002A6A72 /* RandomAPIRepository.swift in Sources */,
 				BC71809E27FB9EEB002A6A72 /* SplashPresenter.swift in Sources */,
@@ -1207,6 +1210,7 @@
 				BC71806027FB358C002A6A72 /* UserEntity.swift in Sources */,
 				BC71809227FB594C002A6A72 /* UserIDLocal.swift in Sources */,
 				BC71803B27FAE7AE002A6A72 /* ManagerInjection.swift in Sources */,
+				BCCEF33627FE5ACE00D83B11 /* Style.swift in Sources */,
 				BC71808227FB5392002A6A72 /* UserResponseLocal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
