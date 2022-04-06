@@ -46,7 +46,7 @@ final class RouterImplementation: Router {
         }
         viewController.loadView()
         viewController.setup(user: user)
-        return Display(viewController: viewController, modal: false, animated: true)
+        return Display(viewController: viewController, modal: true, animated: true)
     }
 
     // MARK: Navigation methods
