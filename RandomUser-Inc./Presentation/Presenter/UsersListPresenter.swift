@@ -10,9 +10,23 @@ import RxSwift
 
 class UsersListPresenter: BasePresenter {
 
+    // MARK: BasePresenter
+
     internal var view: UsersListView? {
         return baseView as? UsersListView
     }
+
+    init(router: Router, randomAPIInteractor: RandomAPIInteractor) {
+        self.randomAPIInteractor = randomAPIInteractor
+        super.init(router: router)
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.getUsers(page: self.currentPage)
+    }
+
+    // MARK: Private variables
 
     private let randomAPIInteractor: RandomAPIInteractor
     private var filteredUsers: [User] = []
@@ -26,6 +40,8 @@ class UsersListPresenter: BasePresenter {
     private var total = 0
     private var fetching: Bool = false
 
+    // MARK: Public variables
+
     var totalCount: Int {
         return total
     }
@@ -37,6 +53,8 @@ class UsersListPresenter: BasePresenter {
     var isFetching: Bool {
         return fetching
     }
+
+    // MARK: Public methods
 
     func user(at index: Int) -> User {
         return filteredUsers[index]
@@ -52,19 +70,21 @@ class UsersListPresenter: BasePresenter {
         }
     }
 
-    init(router: Router, randomAPIInteractor: RandomAPIInteractor) {
-        self.randomAPIInteractor = randomAPIInteractor
-        super.init(router: router)
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.getUsers(page: self.currentPage)
-    }
-
     func fetchNewPage() {
         getUsers(page: currentPage + 1)
     }
+
+    func searchUsers(filter: String) {
+        randomAPIInteractor.searchUsers(filter: filter)
+            .subscribe(on: ConcurrentDispatchQueueScheduler(qos: .background))
+            .observe(on: MainScheduler.asyncInstance)
+            .subscribe(onSuccess: { response in
+                self.users = response
+                self.view?.refreshUsers()
+            }).disposed(by: self.disposeBag)
+    }
+
+    // MARK: Private methods
 
     private func getUsers(page: Int) {
         self.fetching = true

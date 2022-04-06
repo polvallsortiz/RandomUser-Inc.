@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RxSwift
 
 /// LocalManager - Base functions to handle local data in device
 protocol LocalManager {
@@ -13,6 +14,7 @@ protocol LocalManager {
     func getRandomUsersResponse(page: Int?, seed: String?) -> UserResponse?
     func getNextRandomUsersPage() -> Int?
     func updateUser(user: User) -> User?
+    func getUsersByFilter(filter: String) -> Single<[User]>
 }
 
 class LocalManagerImplementation: LocalManager {
@@ -39,6 +41,10 @@ class LocalManagerImplementation: LocalManager {
 
     func updateUser(user: User) -> User? {
         return self.databaseRepository.updateUser(user: user)
+    }
+
+    func getUsersByFilter(filter: String) -> Single<[User]> {
+        return self.databaseRepository.getUsersByFilter(filter: filter)
     }
 
 }

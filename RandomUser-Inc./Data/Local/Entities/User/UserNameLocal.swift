@@ -11,15 +11,15 @@ import RealmSwift
 class UserNameLocal: Object {
 
     @Persisted var title: String
-    @Persisted var first: String
-    @Persisted var last: String
+    @Persisted var firstName: String
+    @Persisted var lastName: String
 
 }
 
 extension UserNameLocal {
 
     func parseToModel() -> UserName {
-        return UserName(title: self.title, first: self.first, last: self.last)
+        return UserName(title: self.title, first: self.firstName, last: self.lastName)
     }
 
 }

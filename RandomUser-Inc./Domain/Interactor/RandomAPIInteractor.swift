@@ -11,6 +11,7 @@ import RxSwift
 protocol RandomAPIInteractor {
     func getRandomUsers(usersToLoad: Int, seed: String?, page: Int?) -> Single<UserResponse>
     func updateUser(user: User) -> User?
+    func searchUsers(filter: String) -> Single<[User]>
 }
 
 class RandomAPIInteractorImplementation: RandomAPIInteractor {
@@ -28,4 +29,9 @@ class RandomAPIInteractorImplementation: RandomAPIInteractor {
     func updateUser(user: User) -> User? {
         return randomAPIRepository.updateUser(user: user)
     }
+
+    func searchUsers(filter: String) -> Single<[User]> {
+        return randomAPIRepository.searchUsers(filter: filter)
+    }
+
 }

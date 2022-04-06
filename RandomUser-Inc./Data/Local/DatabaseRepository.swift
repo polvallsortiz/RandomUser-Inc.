@@ -7,6 +7,7 @@
 
 import Foundation
 import RealmSwift
+import RxSwift
 
 /// DatabaseRepository - Functions to interact with Realm database provider in device
 protocol DatabaseRepository {
@@ -15,6 +16,7 @@ protocol DatabaseRepository {
     func deleteRandomUserReponse(page: Int)
     func deleteAllRandomUserResponses()
     func updateUser(user: User) -> User?
+    func getUsersByFilter(filter: String) -> Single<[User]>
 }
 
 class DatabaseRepositoryImplementation: DatabaseRepository {
@@ -22,6 +24,7 @@ class DatabaseRepositoryImplementation: DatabaseRepository {
     private let realm: Realm!
 
     init() {
+        DatabaseRepositoryImplementation.manageSchemaChanges()
         realm = try! Realm()
     }
 
@@ -72,6 +75,19 @@ class DatabaseRepositoryImplementation: DatabaseRepository {
         return realm.object(ofType: UserLocal.self, forPrimaryKey: user.id.uuid)?.parseToModel()
     }
 
+    func getUsersByFilter(filter: String) -> Single<[User]> {
+        var users = realm.objects(UserLocal.self)
+        if !filter.isEmpty {
+            users = users.where({
+                $0.name.firstName.contains(filter, options: .caseInsensitive) ||
+                $0.name.lastName.contains(filter, options: .caseInsensitive) ||
+                $0.email.contains(filter, options: .caseInsensitive)
+            })
+        }
+
+        return Single.just(users.map({ $0.parseToModel() }))
+    }
+
     private func getRandomUsersFor(page: Int = 1, seed: String?) -> UserResponse? {
         let responses = realm.objects(UserResponseLocal.self)
         var responsesQuery = responses.where { $0.info.page == page }
@@ -81,6 +97,22 @@ class DatabaseRepositoryImplementation: DatabaseRepository {
         if let first = responsesQuery.first {
             return first.parseToModel()
         } else { return nil }
+    }
+
+    // MARK: Realm Schema Change Function
+
+    static func manageSchemaChanges() {
+        let versionNumber: UInt64 = 2
+        let config = Realm.Configuration(schemaVersion: versionNumber,
+                                         migrationBlock: { migration, oldSchemaVersionNumber in
+            if oldSchemaVersionNumber < 2 {
+                migration.enumerateObjects(ofType: UserNameLocal.className(), { (oldObject, newObject) in
+                    newObject!["firstName"] = oldObject!["first"]
+                    newObject!["lastName"] = oldObject!["last"]
+                })
+            }
+        })
+        Realm.Configuration.defaultConfiguration = config
     }
 
 }

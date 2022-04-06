@@ -68,5 +68,19 @@ class RandomAPIRepositoryTests: XCTestCase {
         let koUpdatedUser = randomAPIRepository.updateUser(user: mockUser)
         XCTAssertNil(koUpdatedUser)
     }
+    
+    func testSearchUsers() {
+        let _ = randomAPIRepository.getLocalManager().getUsersByFilter(filter: "ok").subscribe(onSuccess: { response in
+            XCTAssertNotNil(response)
+            XCTAssertTrue(self.mockLocalManager.getUsersByFilterCalled)
+            XCTAssertEqual(response.count, 3)
+        })
+        
+        let _ = randomAPIRepository.getLocalManager().getUsersByFilter(filter: "mockfilterfail").subscribe(onSuccess: { koResponse in
+            XCTAssertNotNil(koResponse)
+            XCTAssertTrue(self.mockLocalManager.getUsersByFilterCalled)
+            XCTAssertEqual(koResponse.count, 0)
+        })
+    }
 
 }

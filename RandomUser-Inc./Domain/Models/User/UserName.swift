@@ -20,8 +20,8 @@ extension UserName {
     func parseToLocal() -> UserNameLocal {
        let userNameLocal = UserNameLocal()
         userNameLocal.title = self.title
-        userNameLocal.first = self.first
-        userNameLocal.last = self.last
+        userNameLocal.firstName = self.first
+        userNameLocal.lastName = self.last
         return userNameLocal
     }
 

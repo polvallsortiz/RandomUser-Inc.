@@ -7,6 +7,7 @@
 
 @testable import RandomUser_Inc_
 import Foundation
+import RxSwift
 
 class MockDatabaseRepositoryImplementation: DatabaseRepository {
 
@@ -40,6 +41,12 @@ class MockDatabaseRepositoryImplementation: DatabaseRepository {
     func updateUser(user: User) -> User? {
         updateUserCalled = true
         return user.id.uuid == "mockuserfail" ? nil : user
+    }
+    
+    var getUsersByFilterCalled: Bool = false
+    func getUsersByFilter(filter: String) -> Single<[User]> {
+        getUsersByFilterCalled = true
+        return filter == "mockfilterfail" ? Single.just([]) : Single.just(MockUser.getMockUserArray())
     }
 
 }
