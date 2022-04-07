@@ -32,16 +32,38 @@ extension UIColor {
                   blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
                   alpha: CGFloat(1.0))
     }
+    
+    static var appBlack: UIColor {
+        return UIColor { (UITraitCollection: UITraitCollection) -> UIColor in
+            if UITraitCollection.userInterfaceStyle == .dark {
+                return UIColor.white
+            } else {
+                return UIColor.black
+            }
+        }
+    }
 
     static var darkBrown: UIColor {
         return UIColor(hex: "#C6A785")!
     }
 
     static var lightBrown: UIColor {
-        return UIColor(hex: "#EFE6DC")!
+        return UIColor { (UITraitCollection: UITraitCollection) -> UIColor in
+            if UITraitCollection.userInterfaceStyle == .dark {
+                return UIColor.lightGray
+            } else {
+                return UIColor(hex: "#EFE6DC")!
+            }
+        }
     }
 
     static var superLightBrown: UIColor {
-        return UIColor(hex: "#F7F2EE")!
+        return UIColor { (UITraitCollection: UITraitCollection) -> UIColor in
+            if UITraitCollection.userInterfaceStyle == .dark {
+                return UIColor.black
+            } else {
+                return UIColor(hex: "#F7F2EE")!
+            }
+        }
     }
 }

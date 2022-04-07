@@ -92,19 +92,19 @@ class UserDetailViewController: BaseViewController<UserDetailPresenter> {
         Style.detail.apply(textStyle: .subtitle, to: userGenderTitleLabel)
         Style.detail.apply(textStyle: .body, to: genderLabel)
         genderImage.image = UIImage(systemName: "person.crop.circle.fill")
-        genderImage.tintColor = .black
+        genderImage.tintColor = .appBlack
 
         setupSubview(userLocationView)
         Style.detail.apply(textStyle: .subtitle, to: userLocationTitleLabel)
         Style.detail.apply(textStyle: .body, to: locationLabel)
         locationImage.image = UIImage(systemName: "location.circle.fill")
-        locationImage.tintColor = .black
+        locationImage.tintColor = .appBlack
 
         setupSubview(userRegisteredView)
         Style.detail.apply(textStyle: .subtitle, to: userRegisteredTitleLabel)
         Style.detail.apply(textStyle: .body, to: registeredLabel)
         registeredImage.image = UIImage(systemName: "calendar.circle.fill")
-        registeredImage.tintColor = .black
+        registeredImage.tintColor = .appBlack
     }
 
     private func setupSubview(_ view: UIView) {
