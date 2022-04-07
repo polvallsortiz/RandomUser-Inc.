@@ -57,6 +57,7 @@ class UsersListTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.setupCell()
+        self.accessibilityIdentifier = "usersListTableViewCell"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -83,6 +84,7 @@ class UsersListTableViewCell: UITableViewCell {
         self.selectionStyle = .none
         containerView.backgroundColor = UIColor.lightBrown
         containerView.layer.cornerRadius = 10
+        containerView.accessibilityIdentifier = "usersListTableViewCell_containerView"
         avatarImageView.layer.cornerRadius = 10
         Style.cells.apply(textStyle: .title, to: nameLabel)
         Style.cells.apply(textStyle: .subtitle, to: emailLabel)

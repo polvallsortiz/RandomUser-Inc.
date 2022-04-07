@@ -20,6 +20,7 @@ class SplashViewController: BaseViewController<SplashPresenter> {
     override func loadView() {
         super.loadView()
         self.loadNibFor(viewControllerClass: SplashViewController.self)
+        self.view.accessibilityIdentifier = "splashView"
     }
 
     override func viewDidLoad() {

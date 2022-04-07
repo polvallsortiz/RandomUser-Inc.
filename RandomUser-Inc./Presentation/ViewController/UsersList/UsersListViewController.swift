@@ -23,6 +23,7 @@ class UsersListViewController: BaseViewController<UsersListPresenter> {
     override func loadView() {
         super.loadView()
         self.loadNibFor(viewControllerClass: UsersListViewController.self)
+        usersTableView.accessibilityIdentifier = "usersTableView"
     }
 
     override func viewDidLoad() {

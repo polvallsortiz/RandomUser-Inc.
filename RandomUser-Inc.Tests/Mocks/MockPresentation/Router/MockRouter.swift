@@ -17,9 +17,8 @@ class MockRouter: Router {
     }
 
     var usersListCalled: Bool = false
-    func usersList() -> Display {
+    func usersList(firstPage: UserResponse) {
         usersListCalled = true
-        return Display(viewController: UIViewController() , modal: false, animated: false)
     }
     
     var userDetailCalled: Bool = false

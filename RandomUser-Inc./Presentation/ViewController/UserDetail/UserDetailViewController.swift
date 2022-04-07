@@ -47,6 +47,7 @@ class UserDetailViewController: BaseViewController<UserDetailPresenter> {
     override func loadView() {
         super.loadView()
         self.loadNibFor(viewControllerClass: UserDetailViewController.self)
+        self.view.accessibilityIdentifier = "userDetailView"
     }
 
     override func viewDidLoad() {

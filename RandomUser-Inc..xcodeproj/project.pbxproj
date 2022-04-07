@@ -107,13 +107,17 @@
 		BCCEF34227FED42300D83B11 /* PlayfairDisplay-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCCEF34127FED42300D83B11 /* PlayfairDisplay-Italic.ttf */; };
 		BCCEF34527FEECCF00D83B11 /* PlayfairDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCCEF34427FEECCF00D83B11 /* PlayfairDisplay-Medium.ttf */; };
 		BCCEF34727FEFEC000D83B11 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEF34627FEFEC000D83B11 /* DateFormatter.swift */; };
+		BCCEF34B27FF318C00D83B11 /* UsersListViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEF34A27FF318C00D83B11 /* UsersListViewControllerUITests.swift */; };
+		BCCEF34D27FF353900D83B11 /* UsersListHeaderViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEF34C27FF353900D83B11 /* UsersListHeaderViewUITests.swift */; };
+		BCCEF34F27FF41D000D83B11 /* UserDetailViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEF34E27FF41D000D83B11 /* UserDetailViewControllerUITests.swift */; };
+		BCCEF35127FF4B5D00D83B11 /* SplashViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEF35027FF4B5D00D83B11 /* SplashViewUITests.swift */; };
+		BCCEF35327FF4D0400D83B11 /* UsersListTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEF35227FF4D0400D83B11 /* UsersListTableViewCellTests.swift */; };
 		BCDCA76527FDDC4F00BCB8B2 /* MockUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDCA76427FDDC4F00BCB8B2 /* MockUser.swift */; };
 		BCDCA76727FDEF4C00BCB8B2 /* UserDefaultsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDCA76627FDEF4C00BCB8B2 /* UserDefaultsRepositoryTests.swift */; };
 		BCDCA76A27FE044700BCB8B2 /* UsersListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDCA76927FE044700BCB8B2 /* UsersListHeaderView.swift */; };
 		BCE0D97427F6D6AA00CDBB6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE0D97327F6D6AA00CDBB6C /* AppDelegate.swift */; };
 		BCE0D97D27F6D6AB00CDBB6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE0D97C27F6D6AB00CDBB6C /* Assets.xcassets */; };
 		BCE0D98027F6D6AB00CDBB6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE0D97E27F6D6AB00CDBB6C /* LaunchScreen.storyboard */; };
-		BCE0D99527F6D6AC00CDBB6C /* RandomUser_Inc_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE0D99427F6D6AC00CDBB6C /* RandomUser_Inc_UITests.swift */; };
 		BCE0D99727F6D6AC00CDBB6C /* RandomUser_Inc_UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE0D99627F6D6AC00CDBB6C /* RandomUser_Inc_UITestsLaunchTests.swift */; };
 		D1F652BB9EE2B80A6760E82A /* Pods_RandomUser_Inc_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485E2BB3B05412EC63193873 /* Pods_RandomUser_Inc_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -244,6 +248,11 @@
 		BCCEF34127FED42300D83B11 /* PlayfairDisplay-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Italic.ttf"; sourceTree = "<group>"; };
 		BCCEF34427FEECCF00D83B11 /* PlayfairDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Medium.ttf"; sourceTree = "<group>"; };
 		BCCEF34627FEFEC000D83B11 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		BCCEF34A27FF318C00D83B11 /* UsersListViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewControllerUITests.swift; sourceTree = "<group>"; };
+		BCCEF34C27FF353900D83B11 /* UsersListHeaderViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListHeaderViewUITests.swift; sourceTree = "<group>"; };
+		BCCEF34E27FF41D000D83B11 /* UserDetailViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewControllerUITests.swift; sourceTree = "<group>"; };
+		BCCEF35027FF4B5D00D83B11 /* SplashViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewUITests.swift; sourceTree = "<group>"; };
+		BCCEF35227FF4D0400D83B11 /* UsersListTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListTableViewCellTests.swift; sourceTree = "<group>"; };
 		BCDCA76427FDDC4F00BCB8B2 /* MockUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUser.swift; sourceTree = "<group>"; };
 		BCDCA76627FDEF4C00BCB8B2 /* UserDefaultsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepositoryTests.swift; sourceTree = "<group>"; };
 		BCDCA76927FE044700BCB8B2 /* UsersListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListHeaderView.swift; sourceTree = "<group>"; };
@@ -254,7 +263,6 @@
 		BCE0D98127F6D6AB00CDBB6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCE0D98627F6D6AC00CDBB6C /* RandomUser-Inc.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RandomUser-Inc.Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE0D99027F6D6AC00CDBB6C /* RandomUser-Inc.UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RandomUser-Inc.UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCE0D99427F6D6AC00CDBB6C /* RandomUser_Inc_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUser_Inc_UITests.swift; sourceTree = "<group>"; };
 		BCE0D99627F6D6AC00CDBB6C /* RandomUser_Inc_UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUser_Inc_UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F3D71CE34556053EC9876232 /* Pods-RandomUser-Inc.-RandomUser-Inc.UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomUser-Inc.-RandomUser-Inc.UITests.debug.xcconfig"; path = "Target Support Files/Pods-RandomUser-Inc.-RandomUser-Inc.UITests/Pods-RandomUser-Inc.-RandomUser-Inc.UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F7E607BDFC59FC03EFD02775 /* Pods-RandomUser-Inc..debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomUser-Inc..debug.xcconfig"; path = "Target Support Files/Pods-RandomUser-Inc./Pods-RandomUser-Inc..debug.xcconfig"; sourceTree = "<group>"; };
@@ -898,8 +906,12 @@
 		BCE0D99327F6D6AC00CDBB6C /* RandomUser-Inc.UITests */ = {
 			isa = PBXGroup;
 			children = (
-				BCE0D99427F6D6AC00CDBB6C /* RandomUser_Inc_UITests.swift */,
 				BCE0D99627F6D6AC00CDBB6C /* RandomUser_Inc_UITestsLaunchTests.swift */,
+				BCCEF34C27FF353900D83B11 /* UsersListHeaderViewUITests.swift */,
+				BCCEF34A27FF318C00D83B11 /* UsersListViewControllerUITests.swift */,
+				BCCEF34E27FF41D000D83B11 /* UserDetailViewControllerUITests.swift */,
+				BCCEF35027FF4B5D00D83B11 /* SplashViewUITests.swift */,
+				BCCEF35227FF4D0400D83B11 /* UsersListTableViewCellTests.swift */,
 			);
 			path = "RandomUser-Inc.UITests";
 			sourceTree = "<group>";
@@ -1295,8 +1307,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCE0D99527F6D6AC00CDBB6C /* RandomUser_Inc_UITests.swift in Sources */,
+				BCCEF34D27FF353900D83B11 /* UsersListHeaderViewUITests.swift in Sources */,
 				BCE0D99727F6D6AC00CDBB6C /* RandomUser_Inc_UITestsLaunchTests.swift in Sources */,
+				BCCEF35327FF4D0400D83B11 /* UsersListTableViewCellTests.swift in Sources */,
+				BCCEF34F27FF41D000D83B11 /* UserDetailViewControllerUITests.swift in Sources */,
+				BCCEF34B27FF318C00D83B11 /* UsersListViewControllerUITests.swift in Sources */,
+				BCCEF35127FF4B5D00D83B11 /* SplashViewUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
