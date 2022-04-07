@@ -71,13 +71,13 @@ class UserDetailViewController: BaseViewController<UserDetailPresenter> {
         emailLabel.text = user.email
         nameLabel.text = user.name.first + " " + user.name.last
 
-        userGenderTitleLabel.text = "Gender"
+        userGenderTitleLabel.text = "user.detail.gender".localized()
         genderLabel.text = user.gender
 
-        userLocationTitleLabel.text = "Location"
+        userLocationTitleLabel.text = "user.detail.location".localized()
         locationLabel.text = "\(user.location.street.name) \(user.location.street.number), \(user.location.city), \(user.location.state)"
 
-        userRegisteredTitleLabel.text = "Registered"
+        userRegisteredTitleLabel.text = "user.detail.registered".localized()
         registeredLabel.text = DateFormatter().defaultFormatter().string(from: user.registered.date)
     }
 

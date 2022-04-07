@@ -14,9 +14,9 @@ enum AppError: Error, LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .general: return "General error"
-        case .apiError(let message): return "API error \(message ?? "")"
-        case .parsing(let message): return "Parsing error \(message ?? "")"
+        case .general: return "error.general.description".localized()
+        case .apiError(let message): return "\("error.api.description".localized()): \(message ?? "")"
+        case .parsing(let message): return "\("error.parsing.description".localized()) \(message ?? "")"
         }
     }
 }

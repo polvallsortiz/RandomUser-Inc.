@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  RandomUser-Inc.
+
+  Created by Pol Valls Ortiz on 8/4/22.
+  
+*/
+
+"app.retry" = "Reintentar";
+"userlist.searchbar.placeholder" = "Bucar usuarios por nombre, apellidos, email";
+"user.detail.gender" = "Género";
+"user.detail.location" = "Dirección";
+"user.detail.registered" = "Registro";
+"error.general.description" = "Error general";
+"error.api.description" = "Error de API";
+"error.parsing.description" = "Error de mapeo";
