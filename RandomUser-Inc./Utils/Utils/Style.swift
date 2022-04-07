@@ -125,11 +125,11 @@ private extension Style.TextStyle {
     var detailAttributes: Style.TextAttributes {
         switch self {
         case .title:
-            return Style.TextAttributes(font: .detailTitle, color: .black)
+            return Style.TextAttributes(font: .detailTitle, color: .appBlack)
         case .subtitle:
-            return Style.TextAttributes(font: .detailSubtitle, color: .black)
+            return Style.TextAttributes(font: .detailSubtitle, color: .appBlack)
         case .body, .button:
-            return Style.TextAttributes(font: .detailBody, color: .black)
+            return Style.TextAttributes(font: .detailBody, color: .appBlack)
         }
     }
 }

@@ -40,7 +40,7 @@ class UsersListHeaderViewUITests: XCTestCase {
         let usersCount = usersList.cells.count
         searchBar.tap()
         searchBar.typeText("pr")
-        app/*@START_MENU_TOKEN@*/.buttons["buscar"]/*[[".keyboards",".buttons[\"buscar\"]",".buttons[\"Search\"]"],[[[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app/*@START_MENU_TOKEN@*/.buttons["buscar"]/*[[".keyboards",".buttons[\"buscar\"]",".buttons[\"Search\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[1]]@END_MENU_TOKEN@*/.tap()
         sleep(1)
         let usersCountAfter = usersList.cells.count
         XCTAssertLessThan(usersCountAfter, usersCount)

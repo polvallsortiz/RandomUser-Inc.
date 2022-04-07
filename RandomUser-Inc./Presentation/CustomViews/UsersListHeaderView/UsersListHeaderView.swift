@@ -41,7 +41,7 @@ class UsersListHeaderView: UIView {
     private func setup() {
         usersSearchBar.backgroundColor = UIColor.clear
         usersSearchBar.backgroundImage = UIImage()
-        usersSearchBar.placeholder = "Search users by name, surname, email"
+        usersSearchBar.placeholder = "userlist.searchbar.placeholder".localized()
         usersSearchBar.tintColor = UIColor.lightBrown
         usersSearchBar.searchTextField.font = UIFont.cellInfo
         usersSearchBar.delegate = self

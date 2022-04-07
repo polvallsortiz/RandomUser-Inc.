@@ -55,7 +55,7 @@ class SplashViewController: BaseViewController<SplashPresenter> {
         errorDescriptionLabel.alpha = 0.0
         errorRetryButton.tintColor = UIColor.darkBrown
         errorRetryButton.titleLabel?.font = UIFont.appButton
-        errorRetryButton.setTitle("Retry", for: .normal)
+        errorRetryButton.setTitle("app.retry".localized(), for: .normal)
         errorRetryButton.alpha = 0.0
     }
 

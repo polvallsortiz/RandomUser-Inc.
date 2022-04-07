@@ -39,7 +39,7 @@ final class RouterImplementation: Router {
         }
         let navController = UINavigationController(rootViewController: viewController)
         navController.setNavigationBarHidden(false, animated: true)
-        navController.navigationBar.tintColor = UIColor.black
+        navController.navigationBar.tintColor = UIColor.appBlack
         navController.navigationBar.backgroundColor = UIColor.clear
         navController.navigationBar.prefersLargeTitles = true
         navController.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.font: UIFont.navBarLargeTitle]
