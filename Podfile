@@ -15,6 +15,7 @@ target 'RandomUser-Inc.' do
   pod 'RealmSwift', '~>10'
   pod 'PKHUD', '~> 5.0'
   pod 'SDWebImage'
+  pod 'lottie-ios'
   
   target 'RandomUser-Inc.Tests' do
     inherit! :search_paths

@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.5.0)
+  - lottie-ios (3.3.0)
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
   - Moya/RxSwift (15.0.0):
@@ -28,6 +29,7 @@ PODS:
     - Swinject (~> 2.7.1)
 
 DEPENDENCIES:
+  - lottie-ios
   - Moya/RxSwift (~> 15.0)
   - PKHUD (~> 5.0)
   - RealmSwift (~> 10)
@@ -42,6 +44,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - lottie-ios
     - Moya
     - PKHUD
     - Realm
@@ -57,6 +60,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   Realm: 22a82aaa0e73f3483e3a6df32549c4c5cd34aa63
@@ -70,6 +74,6 @@ SPEC CHECKSUMS:
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   SwinjectStoryboard: 240ce371396da09a4c43c72ee5c148108500e184
 
-PODFILE CHECKSUM: f02e9c320411280b0fa09aad99441511f37a1ff1
+PODFILE CHECKSUM: 43cd3ad7c164468383e9958cdddf70557ed7ca13
 
 COCOAPODS: 1.11.3

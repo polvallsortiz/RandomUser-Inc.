@@ -16,28 +16,41 @@ class UsersListPresenter: BasePresenter {
         return baseView as? UsersListView
     }
 
-    init(router: Router, randomAPIInteractor: RandomAPIInteractor) {
+    init(router: Router,
+         randomAPIInteractor: RandomAPIInteractor,
+         firstResponse: UserResponse) {
         self.randomAPIInteractor = randomAPIInteractor
+        self.currentResponse = firstResponse
+        self.users = firstResponse.users
+        self.filteredUsers = firstResponse.users.filter({ !$0.deleted })
+        self.total = firstResponse.users.count
+        self.currentPage = firstResponse.info.page
         super.init(router: router)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.getUsers(page: self.currentPage)
+        self.view?.refreshUsers()
     }
 
     // MARK: Private variables
 
     private let randomAPIInteractor: RandomAPIInteractor
-    private var filteredUsers: [User] = []
+    private var filteredUsers: [User]
     private var users: [User] = [] {
         didSet {
             filteredUsers = users.filter({ !$0.deleted })
         }
     }
-    private var currentPageInfo: UserResponseInfo?
-    private var currentPage = 1
-    private var total = 0
+    private var currentResponse: UserResponse {
+        didSet {
+            users.append(contentsOf: currentResponse.users)
+            currentPage = currentResponse.info.page
+            total += currentResponse.users.count
+        }
+    }
+    private var currentPage: Int
+    private var total: Int
     private var fetching: Bool = false
 
     // MARK: Public variables
@@ -88,14 +101,11 @@ class UsersListPresenter: BasePresenter {
 
     private func getUsers(page: Int) {
         self.fetching = true
-        randomAPIInteractor.getRandomUsers(usersToLoad: Config.getPageLength(), seed: currentPageInfo?.seed, page: page)
+        randomAPIInteractor.getRandomUsers(usersToLoad: Config.getPageLength(), seed: currentResponse.info.seed, page: page)
             .subscribe(on: ConcurrentDispatchQueueScheduler(qos: .background))
             .observe(on: MainScheduler.asyncInstance)
             .subscribe(onSuccess: { response in
-                self.currentPage += 1
-                self.currentPageInfo = response.info
-                self.users.append(contentsOf: response.users)
-                self.total += response.users.count
+                self.currentResponse = response
                 self.fetching = false
                 self.view?.refreshUsers()
             }, onFailure: { error in

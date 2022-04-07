@@ -9,14 +9,47 @@ import Foundation
 
 class SplashPresenter: BasePresenter {
 
+    // MARK: BasePresenter
+
     internal var view: SplashView? {
         return baseView as? SplashView
     }
 
+    init(router: Router, randomAPIInteractor: RandomAPIInteractor) {
+        self.randomAPIInteractor = randomAPIInteractor
+        super.init(router: router)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.router.usersList().show(animated: true)
+        DispatchQueue.main.async {
+            self.view?.animate()
         }
+        self.fetchFirstPage()
+    }
+
+    // MARK: Private variables
+
+    private let randomAPIInteractor: RandomAPIInteractor
+    private var firstPageResponse: UserResponse?
+
+    // MARK: Public methods
+
+    func navigateHomeIfReady() {
+        if let firstPageResponse = firstPageResponse {
+            self.router.usersList(firstPage: firstPageResponse)
+        } else {
+            self.view?.animate()
+        }
+    }
+
+    // MARK: Private methods
+
+    private func fetchFirstPage() {
+        randomAPIInteractor.getRandomUsers(usersToLoad: Config.getPageLength(), seed: nil, page: 1).subscribe(onSuccess: { response in
+            self.firstPageResponse = response
+        }, onFailure: { error in
+            print(error)
+        }).disposed(by: self.disposeBag)
     }
 }

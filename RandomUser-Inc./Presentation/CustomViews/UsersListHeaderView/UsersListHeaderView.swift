@@ -39,6 +39,11 @@ class UsersListHeaderView: UIView {
     // MARK: Private methods
 
     private func setup() {
+        usersSearchBar.backgroundColor = UIColor.clear
+        usersSearchBar.backgroundImage = UIImage()
+        usersSearchBar.placeholder = "Search users by name, surname, email"
+        usersSearchBar.tintColor = UIColor.lightBrown
+        usersSearchBar.searchTextField.font = UIFont.cellInfo
         usersSearchBar.delegate = self
         usersSearchBar.searchTextField.delegate = self
     }
@@ -47,6 +52,9 @@ class UsersListHeaderView: UIView {
 extension UsersListHeaderView: UISearchBarDelegate, UITextFieldDelegate {
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        DispatchQueue.main.async {
+            self.usersSearchBar.resignFirstResponder()
+        }
         self.delegate?.searchUsers(filter: searchBar.text ?? "")
     }
 

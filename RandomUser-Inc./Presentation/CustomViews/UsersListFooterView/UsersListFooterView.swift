@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import Lottie
 
 class UsersListFooterView: UIView {
 
     // MARK: Outlets
-    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+
+    @IBOutlet weak var animationView: AnimationView!
 
     // MARK: UIView
 
@@ -29,6 +31,9 @@ class UsersListFooterView: UIView {
     // MARK: Private methods
 
     private func setup() {
-        activityIndicatorView.startAnimating()
+        animationView.contentMode = .scaleAspectFit
+        animationView.animation = Animation.named("loader_animation")
+        animationView.loopMode = .loop
+        animationView.play()
     }
 }
