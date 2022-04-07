@@ -63,6 +63,7 @@ class UsersListViewController: BaseViewController<UsersListPresenter> {
         let header = UsersListHeaderView(frame: CGRect(x: 0, y: 0, width: usersTableView.bounds.size.width, height: 60))
         header.delegate = self
         self.usersTableView.tableHeaderView = header
+        self.usersTableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .bottom, animated: true)
     }
 
     private func hideSearchHeader() {
