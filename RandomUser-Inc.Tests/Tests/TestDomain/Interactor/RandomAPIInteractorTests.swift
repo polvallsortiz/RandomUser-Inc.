@@ -38,10 +38,9 @@ class RandomAPIInteractorTests: XCTestCase {
         
         let _ = randomAPIInteractor.getRandomUsers(usersToLoad: 10, seed: nil, page: 0)
             .subscribe(onFailure: { error in
-                let nserror = error as NSError
-                XCTAssertNotNil(nserror)
-                XCTAssertEqual(nserror.domain, "mockerror")
-                XCTAssertEqual(nserror.code, 0)
+                let appError = error as? AppError
+                XCTAssertNotNil(appError)
+                XCTAssertEqual(appError?.localizedDescription, "API error API fetching error")
             })
     }
     
