@@ -12,7 +12,7 @@ import SwinjectStoryboard
 protocol Router {
     func start()
     // Add views here
-    func usersList()
+    func usersList(firstPage: UserResponse)
     func userDetail(user: User) -> Display
     func popCurrentDisplay(animated: Bool, completion: (() -> Void)?)
     func popToViewContoller(vc: UIViewController.Type, animated: Bool)
@@ -33,8 +33,8 @@ final class RouterImplementation: Router {
 
     // MARK: View methods
 
-    func usersList() {
-        guard let viewController = SwinjectStoryboard.defaultContainer.resolve(UsersListViewController.self) else {
+    func usersList(firstPage: UserResponse) {
+        guard let viewController = SwinjectStoryboard.defaultContainer.resolve(UsersListViewController.self, argument: firstPage) else {
             fatalError("COULD NOT INSTANTIATE USERSLISTVIEWCONTROLLER")
         }
         let navController = UINavigationController(rootViewController: viewController)

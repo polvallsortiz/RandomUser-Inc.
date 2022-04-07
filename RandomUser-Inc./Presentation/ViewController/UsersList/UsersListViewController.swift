@@ -16,7 +16,6 @@ class UsersListViewController: BaseViewController<UsersListPresenter> {
 
     // MARK: Outlets
 
-    // @IBOutlet weak var usersListHeaderView: UsersListHeaderView!
     @IBOutlet weak var usersTableView: UITableView!
 
     // MARK: UIViewController
@@ -42,7 +41,6 @@ class UsersListViewController: BaseViewController<UsersListPresenter> {
         usersTableView.delegate = self
         usersTableView.dataSource = self
         usersTableView.showsVerticalScrollIndicator = false
-        self.addFooterView()
         self.addSearchButton()
     }
 
