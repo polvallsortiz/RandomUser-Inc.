@@ -110,6 +110,7 @@ class UsersListPresenter: BasePresenter {
                 self.view?.refreshUsers()
             }, onFailure: { error in
                 self.fetching = false
+                self.view?.showError(error: error as? AppError ?? AppError.general)
                 print(error)
             }).disposed(by: self.disposeBag)
     }
