@@ -40,7 +40,7 @@ class RandomAPIInteractorTests: XCTestCase {
             .subscribe(onFailure: { error in
                 let appError = error as? AppError
                 XCTAssertNotNil(appError)
-                XCTAssertEqual(appError?.localizedDescription, "API error API fetching error")
+                XCTAssertEqual(appError?.localizedDescription, "API error: API fetching error")
             })
     }
     
