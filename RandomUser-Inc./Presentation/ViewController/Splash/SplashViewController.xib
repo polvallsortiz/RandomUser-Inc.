@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashViewController" customModule="RandomUser_Inc_" customModuleProvider="target">
             <connections>
+                <outlet property="errorDescriptionLabel" destination="bG8-ms-Lfh" id="RNB-Z7-lwg"/>
+                <outlet property="errorRetryButton" destination="3H3-Z7-a51" id="sPm-Rf-cJw"/>
                 <outlet property="splashAnimationView" destination="xvS-nn-aHh" id="nQN-VH-Ytd"/>
             </connections>
         </placeholder>
@@ -21,16 +23,45 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bG8-ms-Lfh">
+                    <rect key="frame" x="0.0" y="710" width="414" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Vp9-KL-lhg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3H3-Z7-a51">
+                    <rect key="frame" x="167" y="758" width="80" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="6nZ-oe-1PI"/>
+                        <constraint firstAttribute="height" constant="40" id="SdA-yz-ToU"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Button" cornerStyle="large"/>
+                    <connections>
+                        <action selector="retryButtonTapped:" destination="-1" eventType="touchUpInside" id="OvG-iC-f82"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="3H3-Z7-a51" secondAttribute="bottom" constant="64" id="9q0-WR-fv6"/>
+                <constraint firstItem="3H3-Z7-a51" firstAttribute="top" secondItem="bG8-ms-Lfh" secondAttribute="bottom" constant="8" id="A05-f9-RGt"/>
                 <constraint firstItem="xvS-nn-aHh" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="D4p-D9-29z"/>
+                <constraint firstItem="bG8-ms-Lfh" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" id="RcS-uQ-dGW"/>
+                <constraint firstItem="3H3-Z7-a51" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="YW4-r3-y6C"/>
                 <constraint firstItem="xvS-nn-aHh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="bPY-0t-qhf"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xvS-nn-aHh" secondAttribute="trailing" id="bpG-CO-tWx"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xvS-nn-aHh" secondAttribute="bottom" id="doS-KT-8kb"/>
+                <constraint firstItem="bG8-ms-Lfh" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="ghm-SU-GcM"/>
             </constraints>
-            <point key="canvasLocation" x="193" y="-23"/>
+            <point key="canvasLocation" x="192.75362318840581" y="-23.4375"/>
         </view>
     </objects>
+    <designables>
+        <designable name="xvS-nn-aHh"/>
+    </designables>
 </document>

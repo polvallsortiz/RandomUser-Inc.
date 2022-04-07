@@ -23,6 +23,7 @@ class RandomAPIRepositoryImplementation: BaseRepositoryImplementation, RandomAPI
         }
         // swiftlint:disable:next line_length
         return getNetworkManager().makeRequest(target: RandomAPITarget.randomUsers(request: RandomUsersRequest(usersToLoad: usersToLoad, seed: seed, page: page)))
+            .filterErrors()
             .map(UserResponseEntity.self)
             .flatMap({ (response) -> Single<UserResponse> in
                 let model = response.parseToModel()

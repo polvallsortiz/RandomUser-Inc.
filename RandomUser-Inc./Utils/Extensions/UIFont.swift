@@ -31,6 +31,10 @@ extension UIFont {
         return UIFont.init(weight: .bold, size: 32)
     }
 
+    static var largeTitle: UIFont {
+        return UIFont.init(weight: .bold, size: 32)
+    }
+
     static var appTitle: UIFont {
         return UIFont.init(weight: .bold, size: 18)
     }

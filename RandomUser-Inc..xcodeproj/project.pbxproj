@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2BC71DCB654D985EA1E9D2E9 /* Pods_RandomUser_Inc__RandomUser_Inc_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5353AA82E722CF6594780FBB /* Pods_RandomUser_Inc__RandomUser_Inc_UITests.framework */; };
 		34EE763091B29565EC7B1FBF /* Pods_RandomUser_Inc_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56CD7448FEB1D55296BD408B /* Pods_RandomUser_Inc_.framework */; };
+		BC2632A927FF7FF400B48C74 /* UsersListFooterErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2632A827FF7FF400B48C74 /* UsersListFooterErrorView.swift */; };
+		BC2632AB27FF80E800B48C74 /* UsersListFooterErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC2632AA27FF80E800B48C74 /* UsersListFooterErrorView.xib */; };
 		BC2FC52B27F70CF100521784 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FC52A27F70CF100521784 /* Config.swift */; };
 		BC2FC53727F78EAD00521784 /* LocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FC53627F78EAD00521784 /* LocalManager.swift */; };
 		BC2FC53927F78ECC00521784 /* UserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FC53827F78ECC00521784 /* UserDefaultsRepository.swift */; };
@@ -119,6 +121,8 @@
 		BCE0D97D27F6D6AB00CDBB6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE0D97C27F6D6AB00CDBB6C /* Assets.xcassets */; };
 		BCE0D98027F6D6AB00CDBB6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE0D97E27F6D6AB00CDBB6C /* LaunchScreen.storyboard */; };
 		BCE0D99727F6D6AC00CDBB6C /* RandomUser_Inc_UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE0D99627F6D6AC00CDBB6C /* RandomUser_Inc_UITestsLaunchTests.swift */; };
+		BCEA518527FF8BCB000DD432 /* PrimitiveSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEA518427FF8BCB000DD432 /* PrimitiveSequence.swift */; };
+		BCEA518727FF8D46000DD432 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEA518627FF8D46000DD432 /* AppError.swift */; };
 		D1F652BB9EE2B80A6760E82A /* Pods_RandomUser_Inc_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485E2BB3B05412EC63193873 /* Pods_RandomUser_Inc_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -147,6 +151,8 @@
 		64D73D768DB7CB2B5852DD57 /* Pods-RandomUser-Inc..release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomUser-Inc..release.xcconfig"; path = "Target Support Files/Pods-RandomUser-Inc./Pods-RandomUser-Inc..release.xcconfig"; sourceTree = "<group>"; };
 		6E9C98E33ECAA96FECDA3E50 /* Pods-RandomUser-Inc.Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomUser-Inc.Tests.release.xcconfig"; path = "Target Support Files/Pods-RandomUser-Inc.Tests/Pods-RandomUser-Inc.Tests.release.xcconfig"; sourceTree = "<group>"; };
 		78171777AEC72DAA4A365D02 /* Pods-RandomUser-Inc.Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomUser-Inc.Tests.debug.xcconfig"; path = "Target Support Files/Pods-RandomUser-Inc.Tests/Pods-RandomUser-Inc.Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		BC2632A827FF7FF400B48C74 /* UsersListFooterErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListFooterErrorView.swift; sourceTree = "<group>"; };
+		BC2632AA27FF80E800B48C74 /* UsersListFooterErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersListFooterErrorView.xib; sourceTree = "<group>"; };
 		BC283F6F27F706B80054FBC5 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		BC283F7027F706C20054FBC5 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		BC2FC52A27F70CF100521784 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -264,6 +270,8 @@
 		BCE0D98627F6D6AC00CDBB6C /* RandomUser-Inc.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RandomUser-Inc.Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE0D99027F6D6AC00CDBB6C /* RandomUser-Inc.UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RandomUser-Inc.UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE0D99627F6D6AC00CDBB6C /* RandomUser_Inc_UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUser_Inc_UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BCEA518427FF8BCB000DD432 /* PrimitiveSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimitiveSequence.swift; sourceTree = "<group>"; };
+		BCEA518627FF8D46000DD432 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		F3D71CE34556053EC9876232 /* Pods-RandomUser-Inc.-RandomUser-Inc.UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomUser-Inc.-RandomUser-Inc.UITests.debug.xcconfig"; path = "Target Support Files/Pods-RandomUser-Inc.-RandomUser-Inc.UITests/Pods-RandomUser-Inc.-RandomUser-Inc.UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F7E607BDFC59FC03EFD02775 /* Pods-RandomUser-Inc..debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomUser-Inc..debug.xcconfig"; path = "Target Support Files/Pods-RandomUser-Inc./Pods-RandomUser-Inc..debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -317,6 +325,15 @@
 				6E9C98E33ECAA96FECDA3E50 /* Pods-RandomUser-Inc.Tests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BC2632A727FF7FD400B48C74 /* UsersListFooterErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				BC2632A827FF7FF400B48C74 /* UsersListFooterErrorView.swift */,
+				BC2632AA27FF80E800B48C74 /* UsersListFooterErrorView.xib */,
+			);
+			path = UsersListFooterErrorView;
 			sourceTree = "<group>";
 		};
 		BC283F6E27F7068A0054FBC5 /* Configuration */ = {
@@ -709,6 +726,7 @@
 			isa = PBXGroup;
 			children = (
 				BC71806A27FB399A002A6A72 /* User */,
+				BCEA518627FF8D46000DD432 /* AppError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -781,6 +799,7 @@
 				BCCEF33727FE5B7500D83B11 /* UIColor.swift */,
 				BCCEF33927FE5B7E00D83B11 /* UIFont.swift */,
 				BCCEF34627FEFEC000D83B11 /* DateFormatter.swift */,
+				BCEA518427FF8BCB000DD432 /* PrimitiveSequence.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -788,6 +807,7 @@
 		BC76B3BD27F7A2C300489B57 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				BC2632A727FF7FD400B48C74 /* UsersListFooterErrorView */,
 				BCDCA76827FE043400BCB8B2 /* UsersListHeaderView */,
 				BC444C6D27FD764400CD25F6 /* UsersListFooterView */,
 				BC444C5D27FC9D7F00CD25F6 /* Cells */,
@@ -1028,6 +1048,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCE0D98027F6D6AB00CDBB6C /* LaunchScreen.storyboard in Resources */,
+				BC2632AB27FF80E800B48C74 /* UsersListFooterErrorView.xib in Resources */,
 				BC444C5A27FC98E400CD25F6 /* UsersListViewController.xib in Resources */,
 				BCCEF33027FE496500D83B11 /* UserDetailViewController.xib in Resources */,
 				BCCEF34227FED42300D83B11 /* PlayfairDisplay-Italic.ttf in Resources */,
@@ -1206,6 +1227,7 @@
 				BC71806E27FB3A98002A6A72 /* UserName.swift in Sources */,
 				BC444C6F27FD766A00CD25F6 /* UsersListFooterView.swift in Sources */,
 				BCCEF33227FE497000D83B11 /* UserDetailViewController.swift in Sources */,
+				BC2632A927FF7FF400B48C74 /* UsersListFooterErrorView.swift in Sources */,
 				BCCEF33427FE498800D83B11 /* UserDetailPresenter.swift in Sources */,
 				BCCEF33827FE5B7500D83B11 /* UIColor.swift in Sources */,
 				BC71803D27FAE816002A6A72 /* RepositoryInjection.swift in Sources */,
@@ -1229,6 +1251,7 @@
 				BC71804527FAF198002A6A72 /* ViewInjection.swift in Sources */,
 				BC444C6927FCED0300CD25F6 /* UsersListTableViewCell.swift in Sources */,
 				BC444C3E27FC2AEC00CD25F6 /* Realm.swift in Sources */,
+				BCEA518527FF8BCB000DD432 /* PrimitiveSequence.swift in Sources */,
 				BC2FC53727F78EAD00521784 /* LocalManager.swift in Sources */,
 				BC444C6327FCA12E00CD25F6 /* UIView.swift in Sources */,
 				BC71809027FB5897002A6A72 /* UserID.swift in Sources */,
@@ -1259,6 +1282,7 @@
 				BC71808627FB53F1002A6A72 /* UserNameLocal.swift in Sources */,
 				BC71804127FAEE45002A6A72 /* RouterInjection.swift in Sources */,
 				BC71808E27FB584D002A6A72 /* UserIDEntity.swift in Sources */,
+				BCEA518727FF8D46000DD432 /* AppError.swift in Sources */,
 				BC71806227FB372E002A6A72 /* UserNameEntity.swift in Sources */,
 				BC71809B27FB9E79002A6A72 /* SplashViewController.swift in Sources */,
 				BC76B39D27F7942800489B57 /* BaseRequest.swift in Sources */,

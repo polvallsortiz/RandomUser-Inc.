@@ -10,6 +10,7 @@ import UIKit
 
 protocol UsersListView: BaseView {
     func refreshUsers()
+    func showError(error: AppError)
 }
 
 class UsersListViewController: BaseViewController<UsersListPresenter> {
@@ -81,6 +82,13 @@ extension UsersListViewController: UsersListView, UITableViewDelegate, UITableVi
         usersTableView.reloadData()
     }
 
+    func showError(error: AppError) {
+        let errorView = UsersListFooterErrorView(frame: CGRect(x: 0, y: 0, width: usersTableView.bounds.size.width, height: 100))
+        errorView.setup(error: error)
+        errorView.delegate = self
+        usersTableView.tableFooterView = errorView
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.currentCount
     }
@@ -144,4 +152,13 @@ extension UsersListViewController: UsersListHeaderViewDelegate {
             self.hideSearchHeader()
         }
     }
+
+}
+
+extension UsersListViewController: UsersListFooterErrorViewDelegate {
+
+    func retryLastFetch() {
+        presenter.fetchNewPage()
+    }
+
 }

@@ -16,7 +16,7 @@ class MockRandomAPIRepositoryImplementation: BaseRepositoryImplementation, Rando
     func getRandomUsers(usersToLoad: Int, seed: String?, page: Int?) -> Single<UserResponse> {
         getRandomUsersCalled = true
         if page == 0 {
-            return Single<UserResponse>.error(NSError(domain: "mockerror", code: 0))
+            return Single.error(AppError.apiError(message: "API fetching error"))
         } else {
             return Single.just(MockUserResponse.getMockUserResponse())
         }

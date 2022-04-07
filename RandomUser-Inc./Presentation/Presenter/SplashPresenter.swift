@@ -43,13 +43,20 @@ class SplashPresenter: BasePresenter {
         }
     }
 
+    func refetchFirstPage() {
+        fetchFirstPage()
+    }
+
     // MARK: Private methods
 
     private func fetchFirstPage() {
         randomAPIInteractor.getRandomUsers(usersToLoad: Config.getPageLength(), seed: nil, page: 1).subscribe(onSuccess: { response in
             self.firstPageResponse = response
         }, onFailure: { error in
-            print(error)
+            DispatchQueue.main.async {
+                self.view?.displayError(error: error as? AppError ?? AppError.general)
+            }
+            print(error.localizedDescription)
         }).disposed(by: self.disposeBag)
     }
 }
