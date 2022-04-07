@@ -32,7 +32,7 @@ struct UsersListTableViewCellViewModel {
     }
 
     init(user: User) {
-        self.avatarUrl = user.picture.thumbnail
+        self.avatarUrl = user.picture.medium
         self.name = user.name.first
         self.surname = user.name.last
         self.email = user.email
@@ -44,6 +44,7 @@ struct UsersListTableViewCellViewModel {
 class UsersListTableViewCell: UITableViewCell {
 
     // MARK: Outlets
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
@@ -79,14 +80,20 @@ class UsersListTableViewCell: UITableViewCell {
     // MARK: Private methods
 
     private func setupCell() {
-        avatarImageView.rounded()
+        self.selectionStyle = .none
+        containerView.backgroundColor = UIColor.lightBrown
+        containerView.layer.cornerRadius = 10
+        avatarImageView.layer.cornerRadius = 10
+        Style.cells.apply(textStyle: .title, to: nameLabel)
+        Style.cells.apply(textStyle: .subtitle, to: emailLabel)
+        Style.cells.apply(textStyle: .body, to: phoneLabel)
         self.layoutIfNeeded()
     }
 
     private func setupContent() {
         if let model = model {
             avatarImageView.sd_setImage(with: URL(string: model.avatarUrl), placeholderImage: UIImage(named: "avatar-placeholder"))
-            avatarImageView.rounded()
+            avatarImageView.layer.cornerRadius = 10
             nameLabel.text = model.displayName
             emailLabel.text = model.email
             phoneLabel.text = model.phone

@@ -33,24 +33,15 @@ extension UIColor {
                   alpha: CGFloat(1.0))
     }
 
-    static var lightBlue: UIColor {
-        return UIColor(hex: "#D4F0F0")!
+    static var darkBrown: UIColor {
+        return UIColor(hex: "#C6A785")!
     }
 
-    static var darkBlue: UIColor {
-        return UIColor(hex: "#8FCACA")!
+    static var lightBrown: UIColor {
+        return UIColor(hex: "#EFE6DC")!
     }
 
-    static var lightGreen: UIColor {
-        return UIColor(hex: "#CCE2CB")!
+    static var superLightBrown: UIColor {
+        return UIColor(hex: "#F7F2EE")!
     }
-
-    static var mediumGreen: UIColor {
-        return UIColor(hex: "#B6CFB6")!
-    }
-
-    static var darkGreen: UIColor {
-        return UIColor(hex: "#97C1A9")!
-    }
-
 }

@@ -64,8 +64,19 @@ extension Style {
         return Style(
             backgroundColor: .lightGray,
             preferredStatusBarStyle: .lightContent,
-            attributesForStyle: { $0.appAttributes }
-            )
+            attributesForStyle: { $0.appAttributes })
+    }
+
+    static var cells: Style {
+        return Style(backgroundColor: .lightGray,
+                     preferredStatusBarStyle: .default,
+                     attributesForStyle: { $0.cellsAttributes })
+    }
+
+    static var detail: Style {
+        return Style(backgroundColor: .superLightBrown,
+                     preferredStatusBarStyle: .default,
+                     attributesForStyle: { $0.detailAttributes })
     }
 
     func apply(textStyle: TextStyle, to label: UILabel) {
@@ -90,11 +101,35 @@ private extension Style.TextStyle {
         case .title:
             return Style.TextAttributes(font: .appTitle, color: .black)
         case .subtitle:
-            return Style.TextAttributes(font: .appSubtitle, color: .darkGreen)
+            return Style.TextAttributes(font: .appSubtitle, color: .darkGray)
         case .body:
-            return Style.TextAttributes(font: .appBody, color: .darkBlue)
+            return Style.TextAttributes(font: .appBody, color: .black)
         case .button:
-            return Style.TextAttributes(font: .appButton, color: .lightBlue, backgroundColor: .mediumGreen)
+            return Style.TextAttributes(font: .appButton, color: .black, backgroundColor: .darkBrown)
+        }
+    }
+
+    var cellsAttributes: Style.TextAttributes {
+        switch self {
+        case .title:
+            return Style.TextAttributes(font: .cellTitle, color: .black)
+        case .subtitle:
+            return Style.TextAttributes(font: .cellSubtitle, color: .black)
+        case .body:
+            return Style.TextAttributes(font: .cellInfo, color: .black)
+        case .button:
+            return Style.TextAttributes(font: .cellSubtitle, color: .white, backgroundColor: .darkBrown)
+        }
+    }
+
+    var detailAttributes: Style.TextAttributes {
+        switch self {
+        case .title:
+            return Style.TextAttributes(font: .detailTitle, color: .black)
+        case .subtitle:
+            return Style.TextAttributes(font: .detailSubtitle, color: .black)
+        case .body, .button:
+            return Style.TextAttributes(font: .detailBody, color: .black)
         }
     }
 }

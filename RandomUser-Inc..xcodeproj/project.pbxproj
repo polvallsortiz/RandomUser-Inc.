@@ -102,6 +102,11 @@
 		BCCEF33627FE5ACE00D83B11 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEF33527FE5ACE00D83B11 /* Style.swift */; };
 		BCCEF33827FE5B7500D83B11 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEF33727FE5B7500D83B11 /* UIColor.swift */; };
 		BCCEF33A27FE5B7E00D83B11 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEF33927FE5B7E00D83B11 /* UIFont.swift */; };
+		BCCEF33E27FED3FD00D83B11 /* PlayfairDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCCEF33D27FED3FD00D83B11 /* PlayfairDisplay-Bold.ttf */; };
+		BCCEF34027FED41100D83B11 /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCCEF33F27FED41100D83B11 /* PlayfairDisplay-Regular.ttf */; };
+		BCCEF34227FED42300D83B11 /* PlayfairDisplay-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCCEF34127FED42300D83B11 /* PlayfairDisplay-Italic.ttf */; };
+		BCCEF34527FEECCF00D83B11 /* PlayfairDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCCEF34427FEECCF00D83B11 /* PlayfairDisplay-Medium.ttf */; };
+		BCCEF34727FEFEC000D83B11 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEF34627FEFEC000D83B11 /* DateFormatter.swift */; };
 		BCDCA76527FDDC4F00BCB8B2 /* MockUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDCA76427FDDC4F00BCB8B2 /* MockUser.swift */; };
 		BCDCA76727FDEF4C00BCB8B2 /* UserDefaultsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDCA76627FDEF4C00BCB8B2 /* UserDefaultsRepositoryTests.swift */; };
 		BCDCA76A27FE044700BCB8B2 /* UsersListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDCA76927FE044700BCB8B2 /* UsersListHeaderView.swift */; };
@@ -234,6 +239,11 @@
 		BCCEF33527FE5ACE00D83B11 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		BCCEF33727FE5B7500D83B11 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		BCCEF33927FE5B7E00D83B11 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		BCCEF33D27FED3FD00D83B11 /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		BCCEF33F27FED41100D83B11 /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		BCCEF34127FED42300D83B11 /* PlayfairDisplay-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Italic.ttf"; sourceTree = "<group>"; };
+		BCCEF34427FEECCF00D83B11 /* PlayfairDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Medium.ttf"; sourceTree = "<group>"; };
+		BCCEF34627FEFEC000D83B11 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		BCDCA76427FDDC4F00BCB8B2 /* MockUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUser.swift; sourceTree = "<group>"; };
 		BCDCA76627FDEF4C00BCB8B2 /* UserDefaultsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepositoryTests.swift; sourceTree = "<group>"; };
 		BCDCA76927FE044700BCB8B2 /* UsersListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListHeaderView.swift; sourceTree = "<group>"; };
@@ -762,6 +772,7 @@
 				BC444C6B27FCEF1800CD25F6 /* UIImageView.swift */,
 				BCCEF33727FE5B7500D83B11 /* UIColor.swift */,
 				BCCEF33927FE5B7E00D83B11 /* UIFont.swift */,
+				BCCEF34627FEFEC000D83B11 /* DateFormatter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -808,6 +819,26 @@
 			path = Loader;
 			sourceTree = "<group>";
 		};
+		BCCEF33B27FED3EC00D83B11 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BCCEF33C27FED3F200D83B11 /* Fonts */,
+				BCE0D97C27F6D6AB00CDBB6C /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		BCCEF33C27FED3F200D83B11 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BCCEF34427FEECCF00D83B11 /* PlayfairDisplay-Medium.ttf */,
+				BCCEF34127FED42300D83B11 /* PlayfairDisplay-Italic.ttf */,
+				BCCEF33F27FED41100D83B11 /* PlayfairDisplay-Regular.ttf */,
+				BCCEF33D27FED3FD00D83B11 /* PlayfairDisplay-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		BCDCA76827FE043400BCB8B2 /* UsersListHeaderView */ = {
 			isa = PBXGroup;
 			children = (
@@ -849,7 +880,7 @@
 				BC76B3B327F79C8600489B57 /* Presentation */,
 				BC76B3B927F79E9B00489B57 /* Utils */,
 				BCE0D97327F6D6AA00CDBB6C /* AppDelegate.swift */,
-				BCE0D97C27F6D6AB00CDBB6C /* Assets.xcassets */,
+				BCCEF33B27FED3EC00D83B11 /* Assets */,
 				BCE0D98127F6D6AB00CDBB6C /* Info.plist */,
 			);
 			path = "RandomUser-Inc.";
@@ -987,11 +1018,15 @@
 				BCE0D98027F6D6AB00CDBB6C /* LaunchScreen.storyboard in Resources */,
 				BC444C5A27FC98E400CD25F6 /* UsersListViewController.xib in Resources */,
 				BCCEF33027FE496500D83B11 /* UserDetailViewController.xib in Resources */,
+				BCCEF34227FED42300D83B11 /* PlayfairDisplay-Italic.ttf in Resources */,
 				BCCEF32E27FE254B00D83B11 /* UsersListHeaderView.xib in Resources */,
 				BCE0D97D27F6D6AB00CDBB6C /* Assets.xcassets in Resources */,
 				BC7180A427FBB45D002A6A72 /* SplashViewController.xib in Resources */,
 				BC444C7127FD77C800CD25F6 /* UsersListFooterView.xib in Resources */,
+				BCCEF34027FED41100D83B11 /* PlayfairDisplay-Regular.ttf in Resources */,
+				BCCEF34527FEECCF00D83B11 /* PlayfairDisplay-Medium.ttf in Resources */,
 				BC444C6A27FCED0300CD25F6 /* UsersListTableViewCell.xib in Resources */,
+				BCCEF33E27FED3FD00D83B11 /* PlayfairDisplay-Bold.ttf in Resources */,
 				BC444C7427FD87F100CD25F6 /* LoaderViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1215,6 +1250,7 @@
 				BC71806227FB372E002A6A72 /* UserNameEntity.swift in Sources */,
 				BC71809B27FB9E79002A6A72 /* SplashViewController.swift in Sources */,
 				BC76B39D27F7942800489B57 /* BaseRequest.swift in Sources */,
+				BCCEF34727FEFEC000D83B11 /* DateFormatter.swift in Sources */,
 				BC71806027FB358C002A6A72 /* UserEntity.swift in Sources */,
 				BC71809227FB594C002A6A72 /* UserIDLocal.swift in Sources */,
 				BC71803B27FAE7AE002A6A72 /* ManagerInjection.swift in Sources */,

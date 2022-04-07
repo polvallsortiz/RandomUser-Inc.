@@ -16,7 +16,7 @@ class SplashPresenter: BasePresenter {
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.router.usersList().show(animated: true)
+            self.router.usersList()
         }
     }
 }

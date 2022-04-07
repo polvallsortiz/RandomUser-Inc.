@@ -12,7 +12,7 @@ import SwinjectStoryboard
 protocol Router {
     func start()
     // Add views here
-    func usersList() -> Display
+    func usersList()
     func userDetail(user: User) -> Display
     func popCurrentDisplay(animated: Bool, completion: (() -> Void)?)
     func popToViewContoller(vc: UIViewController.Type, animated: Bool)
@@ -33,11 +33,18 @@ final class RouterImplementation: Router {
 
     // MARK: View methods
 
-    func usersList() -> Display {
-        guard let view = SwinjectStoryboard.defaultContainer.resolve(UsersListViewController.self) else {
+    func usersList() {
+        guard let viewController = SwinjectStoryboard.defaultContainer.resolve(UsersListViewController.self) else {
             fatalError("COULD NOT INSTANTIATE USERSLISTVIEWCONTROLLER")
         }
-        return Display(viewController: view, modal: false, animated: true)
+        let navController = UINavigationController(rootViewController: viewController)
+        navController.setNavigationBarHidden(false, animated: true)
+        navController.navigationBar.tintColor = UIColor.black
+        navController.navigationBar.backgroundColor = UIColor.clear
+        navController.navigationBar.prefersLargeTitles = true
+        navController.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.font: UIFont.navBarLargeTitle]
+        navController.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.navBarTitle]
+        UIApplication.shared.keyWindow?.replaceRootViewControllerWith(navController, animated: true, completion: nil)
     }
 
     func userDetail(user: User) -> Display {

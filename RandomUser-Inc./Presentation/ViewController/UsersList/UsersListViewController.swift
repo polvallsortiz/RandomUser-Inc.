@@ -16,7 +16,7 @@ class UsersListViewController: BaseViewController<UsersListPresenter> {
 
     // MARK: Outlets
 
-    @IBOutlet weak var usersListHeaderView: UsersListHeaderView!
+    // @IBOutlet weak var usersListHeaderView: UsersListHeaderView!
     @IBOutlet weak var usersTableView: UITableView!
 
     // MARK: UIViewController
@@ -34,13 +34,16 @@ class UsersListViewController: BaseViewController<UsersListPresenter> {
     // MARK: Private methods
 
     private func setupView() {
+        self.title = "Random Users"
+        self.view.backgroundColor = UIColor.superLightBrown
+        usersTableView.separatorStyle = .none
         usersTableView.register(UINib(nibName: String(describing: UsersListTableViewCell.self), bundle: nil),
                                 forCellReuseIdentifier: String(describing: UsersListTableViewCell.self))
         usersTableView.delegate = self
         usersTableView.dataSource = self
         usersTableView.showsVerticalScrollIndicator = false
-        usersListHeaderView.delegate = self
         self.addFooterView()
+        self.addSearchButton()
     }
 
     private func addFooterView() {
@@ -48,6 +51,25 @@ class UsersListViewController: BaseViewController<UsersListPresenter> {
             let footer = UsersListFooterView(frame: CGRect(x: 0, y: 0, width: usersTableView.bounds.size.width, height: 100))
             usersTableView.tableFooterView = footer
         }
+    }
+
+    private func addSearchButton() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(showSearchHeader))
+    }
+
+    private func hideSearchButton() {
+        navigationItem.rightBarButtonItem = nil
+    }
+
+    @objc private func showSearchHeader() {
+        let header = UsersListHeaderView(frame: CGRect(x: 0, y: 0, width: usersTableView.bounds.size.width, height: 60))
+        header.delegate = self
+        self.usersTableView.tableHeaderView = header
+    }
+
+    private func hideSearchHeader() {
+        usersTableView.tableHeaderView = nil
+        addSearchButton()
     }
 
 }
@@ -74,7 +96,7 @@ extension UsersListViewController: UsersListView, UITableViewDelegate, UITableVi
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 100
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -118,5 +140,8 @@ extension UsersListViewController: UsersListHeaderViewDelegate {
 
     func searchUsers(filter: String) {
         presenter.searchUsers(filter: filter)
+        if filter == "" {
+            self.hideSearchHeader()
+        }
     }
 }
