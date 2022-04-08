@@ -17,6 +17,7 @@ protocol CascadeDeleting {
 }
 
 extension Realm: CascadeDeleting {
+
     func delete<S: Sequence>(_ objects: S, cascading: Bool) where S.Iterator.Element: Object {
         for obj in objects {
             delete(obj, cascading: cascading)
@@ -30,9 +31,11 @@ extension Realm: CascadeDeleting {
             delete(entity)
         }
     }
+
 }
 
 private extension Realm {
+
     private func cascadeDelete(_ entity: RLMObjectBase) {
         guard let entity = entity as? Object else { return }
         var toBeDeleted = Set<RLMObjectBase>()
@@ -59,4 +62,5 @@ private extension Realm {
         }
         delete(element)
     }
+
 }

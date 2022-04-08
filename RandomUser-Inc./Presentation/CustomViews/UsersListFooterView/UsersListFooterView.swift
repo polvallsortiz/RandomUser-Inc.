@@ -36,4 +36,5 @@ class UsersListFooterView: UIView {
         animationView.loopMode = .loop
         animationView.play()
     }
+
 }

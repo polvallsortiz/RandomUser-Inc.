@@ -33,4 +33,5 @@ class RandomUsersRequest: BaseRequest {
         }
         return parameters
     }
+
 }

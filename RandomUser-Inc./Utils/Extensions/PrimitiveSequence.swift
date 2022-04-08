@@ -10,11 +10,13 @@ import RxSwift
 import Moya
 
 struct ErrorResponse: Codable {
+
     var error: String?
 
     enum CodingKeys: String, CodingKey {
         case error
     }
+
 }
 
 extension PrimitiveSequence where Trait == SingleTrait, Element == Response {
@@ -36,4 +38,5 @@ extension PrimitiveSequence where Trait == SingleTrait, Element == Response {
             }
         }
     }
+
 }

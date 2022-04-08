@@ -15,11 +15,9 @@ protocol InteractorInjectionProtocol {
 class InteractorInjection: InteractorInjectionProtocol {
 
     func registerInteractors(container: Container) {
-
         container.register(RandomAPIInteractor.self) { resolver in
             RandomAPIInteractorImplementation(randomAPIRepository: resolver.resolve(RandomAPIRepository.self)!)
         }
-
     }
 
 }

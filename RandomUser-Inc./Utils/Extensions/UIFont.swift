@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 extension UIFont {
+
     enum PlayfairDisplayWeight: String {
         case italic = "PlayfairDisplay-Italic"
         case regular = "PlayfairDisplay-Regular"
@@ -82,4 +83,5 @@ extension UIFont {
     static var detailBody: UIFont {
         return UIFont.init(weight: .medium, size: 12)
     }
+
 }

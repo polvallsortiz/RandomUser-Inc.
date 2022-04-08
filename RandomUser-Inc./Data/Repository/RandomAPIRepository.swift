@@ -40,4 +40,5 @@ class RandomAPIRepositoryImplementation: BaseRepositoryImplementation, RandomAPI
     func searchUsers(filter: String) -> Single<[User]> {
         return self.getLocalManager().getUsersByFilter(filter: filter)
     }
+
 }

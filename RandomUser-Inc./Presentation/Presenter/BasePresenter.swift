@@ -37,4 +37,5 @@ class BasePresenter: BasePresenterProtocol {
     func attachView<T>(view: T) where T : BaseView {
         self.baseView = view
     }
+
 }

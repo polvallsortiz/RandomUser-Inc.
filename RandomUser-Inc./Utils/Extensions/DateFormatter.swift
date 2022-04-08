@@ -8,6 +8,7 @@
 import Foundation
 
 extension DateFormatter {
+
     func defaultFormatter() -> DateFormatter {
         let formatter = DateFormatter()
         if let locale = Bundle.main.preferredLocalizations.first?.prefix(2) {
@@ -18,4 +19,5 @@ extension DateFormatter {
         formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yyyyMMdd", options: 0, locale: formatter.locale)
         return formatter
     }
+
 }

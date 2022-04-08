@@ -33,4 +33,5 @@ class UserDefaultsRepositoryImplementation: UserDefaultsRepository {
         let value = defaults.integer(forKey: UserDefaultsRepositoryKeys.page.rawValue)
         return value == 0 ? nil : value + 1
     }
+
 }

@@ -22,4 +22,5 @@ extension UserRegistered {
         userRegisteredLocal.age = self.age
         return userRegisteredLocal
     }
+
 }

@@ -10,4 +10,4 @@
 
 #include "Pods/Target Support Files/Pods-RandomUser-Inc./Pods-RandomUser-Inc..debug.xcconfig"
 
-APP_NAME = RandomUser-Inc. Debug
+APP_NAME = RandomUsersDebug

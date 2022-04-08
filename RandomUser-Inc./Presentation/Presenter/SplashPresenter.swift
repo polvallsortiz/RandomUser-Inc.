@@ -59,4 +59,5 @@ class SplashPresenter: BasePresenter {
             print(error.localizedDescription)
         }).disposed(by: self.disposeBag)
     }
+
 }
