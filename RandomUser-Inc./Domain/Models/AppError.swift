@@ -8,6 +8,7 @@
 import Foundation
 
 enum AppError: Error, LocalizedError {
+
     case general
     case apiError(message: String?)
     case parsing(message: String?)
@@ -19,4 +20,5 @@ enum AppError: Error, LocalizedError {
         case .parsing(let message): return "\("error.parsing.description".localized()) \(message ?? "")"
         }
     }
+
 }

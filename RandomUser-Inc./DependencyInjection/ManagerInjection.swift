@@ -16,12 +16,10 @@ protocol ManagerInjectionProtocol {
 class ManagerInjection: ManagerInjectionProtocol {
 
     func registerManagers(container: Container) {
-
         container.register(LocalManager.self) { resolver in
             LocalManagerImplementation(userDefaultsRepository: resolver.resolve(UserDefaultsRepository.self)!,
                                        databaseRepository: resolver.resolve(DatabaseRepository.self)!)
         }
-
         container.register(NetworkManager.self) { _ in
             // swiftlint:disable:next line_length
             let provider = MoyaProvider<MultiTarget>(stubClosure: (NSClassFromString("XCTestCase") != nil) ? MoyaProvider.immediatelyStub : MoyaProvider.neverStub,
@@ -30,4 +28,5 @@ class ManagerInjection: ManagerInjectionProtocol {
             return NetworkManagerImplementation(provider: provider)
         }
     }
+
 }

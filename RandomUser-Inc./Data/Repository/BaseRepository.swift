@@ -30,4 +30,5 @@ class BaseRepositoryImplementation: BaseRepository {
     func getNetworkManager() -> NetworkManager {
         return self.networkManager
     }
+
 }

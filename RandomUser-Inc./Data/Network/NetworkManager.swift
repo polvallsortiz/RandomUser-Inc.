@@ -30,4 +30,5 @@ class NetworkManagerImplementation: NetworkManager {
     static func getBaseUrl() -> String {
         return Config.getBaseUrl()
     }
+
 }

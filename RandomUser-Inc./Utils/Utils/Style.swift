@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class Style {
+
     enum TextStyle {
         case title
         case subtitle
@@ -60,6 +61,7 @@ class Style {
 }
 
 extension Style {
+
     static var app: Style {
         return Style(
             backgroundColor: .lightGray,
@@ -132,4 +134,5 @@ private extension Style.TextStyle {
             return Style.TextAttributes(font: .detailBody, color: .appBlack)
         }
     }
+
 }

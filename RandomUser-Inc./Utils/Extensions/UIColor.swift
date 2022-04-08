@@ -32,7 +32,7 @@ extension UIColor {
                   blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
                   alpha: CGFloat(1.0))
     }
-    
+
     static var appBlack: UIColor {
         return UIColor { (UITraitCollection: UITraitCollection) -> UIColor in
             if UITraitCollection.userInterfaceStyle == .dark {
@@ -66,4 +66,5 @@ extension UIColor {
             }
         }
     }
+
 }

@@ -18,6 +18,7 @@ protocol LocalManager {
 }
 
 class LocalManagerImplementation: LocalManager {
+
     private let userDefaultsRepository: UserDefaultsRepository
     private let databaseRepository: DatabaseRepository
 

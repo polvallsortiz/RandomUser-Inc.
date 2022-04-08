@@ -18,4 +18,5 @@ extension SwinjectStoryboard {
         PresenterInjection().registerPresenters(container: defaultContainer)
         ViewInjection().registerViews(container: defaultContainer)
     }
+
 }

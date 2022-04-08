@@ -15,10 +15,8 @@ protocol RouterInjectionProtocol {
 class RouterInjection: RouterInjectionProtocol {
 
     func registerRouter(container: Container) {
-
         container.register(Router.self) { _ in
             RouterImplementation()
         }.inObjectScope(.container)
-
     }
 }

@@ -24,4 +24,5 @@ extension UserPicture {
         userPictureLocal.thumbnail = self.thumbnail
         return userPictureLocal
     }
+
 }
